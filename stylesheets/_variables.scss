@@ -1,0 +1,42 @@
+//
+//  Variables
+//
+
+//
+//  Colors
+//
+
+$blue-light: #58d0ed !default; 			// Nav active / nav highlight
+$blue-med-light: #52c4df !default; 		// "Bov" blue
+$blue-med: #315561 !default; 			//logo stroke
+
+$gray-dark: #212121 !default; 			// main font
+$gray-med-dark: #22262a !default;		// main header bg
+$gray-blue: #758aa0 !default;			// main header font "Academy"
+
+$purple-light: #a06fbd !default;		// button normal stroke / button hover bg
+$purple-medium: #6a497d !default; 		// square active button
+$purple-dark-desat: #31363b;			// rounded button hover // search stroke
+
+$white-light-off: #fffefe !default;		// page background
+$white-med-off: #c3c8ce !default;		// top nav active
+$white-mid: #e7e7e7 !default;			// left nav header
+
+//
+// Fonts
+//
+
+$font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-content:		  $font-size-base !default;
