@@ -1,0 +1,310 @@
+/****** General CSS that applies to entire area containing the tabs *********************/
+
+.container{
+  font-family: Arial, Helvetica, sans-serif;
+  border:1px solid black;
+  background-color:#fffefe;
+  line-height:25px;
+  margin-left:10%;
+  margin-right:10%;
+  padding:100px;
+  position:relative;
+  width:960px;
+  box-sizing:border-box;
+}
+
+h1,h2{
+  font-weight:800;
+}
+
+
+input{
+  display:none;
+  margin:0;
+  padding:0;
+}
+
+/********* Common CSS that applies to each of the tab sets *******************/
+
+
+.horizontal-tabs-1 .display-area,
+.horizontal-tabs-2 .display-area{
+  display:none;
+  position:absolute;
+  width:100%;
+  padding:50px 30px;
+  top:55px;
+  border-radius:0 0 1% 1%;
+  border:1px solid black;
+  border-top:transparent;
+}
+
+
+.horizontal-tabs-1 input:nth-of-type(1):checked ~ .display-area:nth-of-type(1),
+.horizontal-tabs-1 input:nth-of-type(2):checked ~ .display-area:nth-of-type(2),
+.horizontal-tabs-1 input:nth-of-type(3):checked ~ .display-area:nth-of-type(3),
+.horizontal-tabs-1 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4),
+.horizontal-tabs-2 input:nth-of-type(1):checked ~ .display-area:nth-of-type(1),
+.horizontal-tabs-2 input:nth-of-type(2):checked ~ .display-area:nth-of-type(2),
+.horizontal-tabs-2 input:nth-of-type(3):checked ~ .display-area:nth-of-type(3),
+.horizontal-tabs-2 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4){
+  display:block;
+}
+
+/******** CSS applying specifically to the contents for each of the tabs ********************/
+
+
+.tab-img{
+  float:left;
+  width:251px;
+}
+
+img{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  height:210px;
+  border-radius:2%;
+}
+
+.tab-text{
+  position:relative;
+  display:inline-block;
+  left:20px;
+  padding:0;margin:0;
+
+  width:60%;
+
+  h1{
+    font-size:2.0em;
+    margin-bottom:40px;
+  }
+
+  p{
+    color:#bdbdbd;
+    font-size:0.7em;
+    margin-top:-6px;
+    line-height:1.7em;
+  }
+
+  .btn{
+    font-weight:bold;
+    font-size:1em;
+    float:right;
+    width:125px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    padding:5px 0;
+    margin-top:8px;
+    color:#000;
+    border-radius:3%;
+    border:1px solid #212121;
+
+  }
+}
+
+
+/*******CSS applying only to the first set horizontal tabs****************************/
+
+
+div[class="horizontal-tabs-1"] {
+
+  margin:100px 0;
+  position:relative;
+  width:85%;
+  height:360px;
+}
+
+.horizontal-tabs-1 .tabs-label{
+  position:relative;
+  float:left;
+  text-align:center;
+  width:95px;
+  height:30px;
+  padding:15px 25px;
+  margin:0;
+  border-top-right-radius:5%;
+  border-top-left-radius:5%;
+  border-bottom:1px solid black;
+  color:#fff;
+
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+
+
+.horizontal-tabs-1:after{
+  content:"";
+  position:absolute;
+  display:block;
+  width:126px;
+  height:55px;
+  left:581px;
+  border-bottom:1px solid black;
+}
+
+
+.horizontal-tabs-1 label:nth-of-type(1){
+  background-color:#5e3676;
+  height:30px;
+  top:-5px;
+}
+
+.horizontal-tabs-1 label:nth-of-type(2){
+background-color:#633f8a;
+  height:25px;
+  top:0;
+}
+
+.horizontal-tabs-1 label:nth-of-type(3){
+background-color:#a06fbd;
+  height:22px;
+  top:3px;
+}
+
+.horizontal-tabs-1 label:nth-of-type(4){
+background-color:#decde8;
+  height:18px;
+  top:7px;
+}
+
+.horizontal-tabs-1 input:checked + label{
+  height:36px;
+  top:-11px;
+  background-color:#fffefe;
+  border:1px solid black;
+  border-bottom:transparent;
+  color:#000;
+  font-weight:600;
+  
+}
+
+/************CSS that applies to the second set of horizontal tags only**********/
+
+.horizontal-tabs-2 .display-area{
+  border: 0 solid transparent;
+  border-bottom:5px solid #bdbdbd;
+  border-radius:0;
+}
+
+.horizontal-tabs-2 .tabs-label{
+  position:relative;
+  float:left;
+  text-align:left;
+  width:120px;
+  height:20px;
+  margin-right:5px;
+  border: 0 solid transparent;
+  border-bottom:5px solid #bdbdbd;
+  color:#000;
+  border-radius:0;
+
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+.horizontal-tabs-2 input:nth-of-type(1):checked ~ .display-area:nth-of-type(1),
+.horizontal-tabs-2 input:nth-of-type(2):checked ~ .display-area:nth-of-type(2),
+.horizontal-tabs-2 input:nth-of-type(3):checked ~ .display-area:nth-of-type(3),
+.horizontal-tabs-2 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4){
+	border-bottom:5px solid #bdbdbd;
+}
+
+.horizontal-tabs-2 input:nth-of-type(1):checked ~ .tabs-label:nth-of-type(1),
+.horizontal-tabs-2 input:nth-of-type(2):checked ~ .tabs-label:nth-of-type(2),
+.horizontal-tabs-2 input:nth-of-type(3):checked ~ .tabs-label:nth-of-type(3),
+.horizontal-tabs-2 input:nth-of-type(4):checked ~ .tabs-label:nth-of-type(4){
+	font-weight:bold;
+}
+
+#highlight-label-1,#highlight-label-2,
+#highlight-label-3,#highlight-label-4{
+	position:relative;
+	height:0px;
+	max-width:0em;
+    top:20px;
+    left:60px;
+    transform:translateX(0);
+	border:3px solid transparent;
+	transition: max-width 0.5s, border-color 1s, transform 0.5s;
+}
+
+#highlight-label-2{
+	top:8px;
+	left:185px;
+}
+
+#highlight-label-3{
+	top:-4px;
+	left:310px;
+}
+
+#highlight-label-4{
+	top:-16px;
+	left:435px;;
+}
+
+
+.horizontal-tabs-2 input:nth-of-type(1):checked ~ #highlight-label-1,
+.horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-label-2,
+.horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-label-3,
+.horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-label-4{
+	max-width:7.2em;
+    border-color:#9b68b9;
+    transform:translateX(-60px);
+	transition: max-width 0.5s, transform 0.5s;
+
+}
+
+div[class="horizontal-tabs-2"] {
+
+  margin:100px 0;
+  position:relative;
+  width:100%;
+  height:360px;
+}
+
+.horizontal-tabs-2 .display-area{
+	width:700px;
+}
+
+
+#highlight-bottom-1,
+#highlight-bottom-2,
+#highlight-bottom-3,
+#highlight-bottom-4{
+	position:relative;
+	height:0px;
+	max-width:0px;
+	top:366px;
+	left:380px;
+	transform:translateX(0);
+	border:3px solid transparent;;
+	transition:max-width 0.5s, border-color 1s, transform 0.5s;
+}
+
+#highlight-bottom-2{
+	top:353px;
+}
+
+#highlight-bottom-3{
+	top:342px;
+}
+
+#highlight-bottom-4{
+	top:330px;
+}
+
+.horizontal-tabs-2 input:nth-of-type(1):checked ~ #highlight-bottom-1,
+.horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-bottom-2,
+.horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-bottom-3,
+.horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-bottom-4{
+	max-width:100%;
+	border-color:#9b68b9;
+	transform:translateX(-379px);
+	transition:max-width 0.5s, transform 0.5s;
+}

@@ -1,0 +1,139 @@
+
+/* Written by Jorge Rafael Garcia. February 27th 2017 */
+
+$radius: 5px;
+$card-title-font-size: 24px;
+$card-width: 300px;
+$card-margin: 30px;
+$body-padding: 15px;
+$header-height: 50px;
+$header-color: $purple-medium;
+
+.card {
+	display: inline-block;
+	border-radius: $radius;
+	width: $card-width;
+	margin: $card-margin;
+	vertical-align: top;
+	font-family: $font-family;
+	box-shadow: 0px 0px 5px #aaa;
+	transition: all .2s ease-in-out;
+	position: relative;
+
+	.card-body {
+		padding: $body-padding;
+
+		h1 {
+			maring: 0px;
+			margin-bottom: 20px;
+			font-size: $card-title-font-size;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		hr {
+			width: 80%;
+			border: 1px solid;
+			margin: 20px auto;
+		}
+
+		p {
+			margin: 10px 0px;
+			font-size: $font-size-base;
+		}
+
+		a {
+			color: $blue-light;
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 13px #bbb;
+	}
+}
+
+
+.card.article {
+
+	.card-header {
+		font-size: $font-size-base;
+		color: $white-med-off; 
+		margin-top: 0px;
+	}
+	
+	.card-body {
+
+		hr {
+			border-color: $purple-light;	
+		}
+	}
+
+	.card-button {
+		float: right;
+	}
+}
+
+
+.card.contact {
+
+	.contact-img {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		left: calc(50% - 50px);
+		top: 150px;
+		border-radius: 50%;
+		border: 1px solid white;
+	}
+
+	.card-body {
+
+		h1 {
+			margin-top: 60px;
+			margin-bottom: 10px;
+			color: $purple-light;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		hr {
+			color: #aaa;
+		}
+	}
+
+	.social-media {
+		text-align: center;
+
+		a {
+			font-size: 32px;
+			margin: 0px 20px;
+			color: #aaa;
+			transition: .2s all ease-in-out;
+
+			&:hover {
+				color: $purple-light;
+			}
+		}
+	}
+}
+
+
+.card.action {
+	
+	.card-header {
+		height: $header-height;
+		background-color: $header-color;
+
+		.header-icon {
+			font-size: 32px;
+			color: white;
+			float: right;
+			height: $header-height;
+		    padding: 5px;
+		    margin-right: 10px;
+		}
+	}
+}
+

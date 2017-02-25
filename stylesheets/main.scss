@@ -2,11 +2,11 @@
 * Team 2 Hackathon Framework
 */
 
-// Initial Reset
-@import "reset";
+// Utilities
+@import "utils/index";
 
-// Colors and Font Settings
-@import "variables";
+// Base
+@import "base/index";
 
 // Components
-@import "tabs";
+@import "components/index";
