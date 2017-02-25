@@ -27,8 +27,12 @@ time, mark, audio, video {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+h2 {
+  font: 2rem "Helvetica Neue", arial, sans-serif; }
+
 .ui_carousel-large {
-  position: relative; }
+  position: relative;
+  margin: 20px; }
 
 .ui_carousel-large input[type=radio] {
   display: none; }
@@ -60,7 +64,7 @@ time, mark, audio, video {
 .ui_carousel-images > label {
   display: none; }
 
-.ui_carousel-images > img {
+.ui_carousel-images img {
   transistion: all .5s; }
 
 .ui_carousel-images > label {
