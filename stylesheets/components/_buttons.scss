@@ -1,0 +1,261 @@
+//--------------------------------------------------------------
+// GLOBAL STYLES FOR EXAMPLE PAGE
+//--------------------------------------------------------------
+.buttons-container {
+	margin: 50px auto;
+	max-width: 1066px;
+
+	.wrap {
+		margin: 0 auto;
+		max-width: 790px;
+		width: 100%;
+	}
+
+	.content {
+		margin: 50px 0;
+		padding: 0 25px;
+
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+//--------------------------------------------------------------
+// BUTTON RESETS
+//--------------------------------------------------------------
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.btn {
+	-webkit-appearance: none;
+	background: none;
+	border: none;
+	display: inline-block;
+	outline: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+//--------------------------------------------------------------
+// BASE BUTTON STYLES
+//--------------------------------------------------------------
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.btn {
+	border-radius: 2px;
+	cursor: pointer;
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin: 0 auto 16px;
+	max-width: 300px;
+	padding: 12px 25px;
+	text-align: center;
+	transition: background-color 0.3s ease-out;
+	width: 100%;
+
+	@media screen and (min-width: 640px) {
+		display: inline-block;
+		width: auto;
+	}
+
+	// Disabled buttons.
+	&:disabled,
+	&.disabled {
+		background: $white-med-off;
+		border: 1px solid $white-med-off;
+		color: #fff;
+		cursor: default;
+
+		&:hover {
+			background-color: $white-med-off;
+		}
+	}
+
+	// Hover States
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: #000000;
+		color: #ffffff;
+	}
+
+	&.btn-primary {
+		color: $purple-light;
+		border: 1px solid $purple-light;
+
+		&:disabled,
+		&.disabled {
+			background-color: $white-med-off;
+			border: 1px solid $white-med-off;
+			color: #fff;
+
+			&:hover {
+				background-color: $white-med-off;
+				border: 1px solid $white-med-off;
+			}
+		}
+
+		// Hover States
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $purple-light;
+			color: $white-light-off;
+		}
+	}
+
+	// Secondary button colors.
+	&.btn-secondary {
+		color: #ffffff;
+		background-color: $purple-medium;
+
+		&:disabled,
+		&.disabled {
+			background-color: $white-med-off;
+			border: none;
+			color: #fff;
+
+			&:hover {
+				background-color: $white-med-off;
+			}
+		}
+
+		// Hover states.
+		&:hover {
+			background-color: $purple-dark-desat;
+		}
+
+		// Active/focus states.
+		&:active,
+		&:focus {
+			background-color: $purple-light
+		}
+	}
+
+	// Rounded buttons.
+	&.btn-rounded {
+		border-radius: 30px;
+	}
+}
+
+//--------------------------------------------------------------
+// PRIMARY BUTTON CLASS STYLES
+//
+// These are only used to be able to showcase what a button
+// Would like like when hovered or active.
+//--------------------------------------------------------------
+.btn.btn-primary {
+
+	// Hover and active states.
+	&-hover,
+	&-active {
+		color: $white-light-off;
+	}
+
+	// Hover only.
+	&-hover {
+		background-color: $purple-light;
+	}
+
+	// Active only.
+	&-active {
+		background-color: $purple-medium;
+	}
+}
+
+//--------------------------------------------------------------
+// SECONDARY BUTTON CLASS STYLES
+//
+// These are only used to be able to showcase what a button
+// Would like like when hovered or active.
+//--------------------------------------------------------------
+.btn.btn-secondary {
+
+	// Hover and active states.
+	&-hover,
+	&-active {
+		color: $white-light-off;
+	}
+
+	// Hover only.
+	&-hover {
+		background-color: $purple-dark-desat;
+		border-color: $purple-dark-desat;
+	}
+
+	// Active only.
+	&-active {
+		background-color: $purple-light;
+	}
+}
+
+//--------------------------------------------------------------
+// BUTTON GROUPS
+//--------------------------------------------------------------
+.btn-group {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.btn {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+
+		// Target all but first button.
+		&:nth-child(n + 2) {
+			border-left: none;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			margin-left: -1px;
+		}
+
+		// Target the last button in the group.
+		&:last-child {
+			border-bottom-right-radius: 2px;
+			border-top-right-radius: 2px;
+		}
+	}
+
+	&-rounded {
+
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		button,
+		.btn {
+			border: 1px solid #fff;
+			margin-left: 0;
+
+			// Target all but first button.
+			&:nth-child(n + 2) {
+				margin-left: 0;
+			}
+
+			// Target first button.
+			&:first-child {
+				border-top-left-radius: 30px;
+				border-bottom-left-radius: 30px;
+			}
+
+			// Target the last button.
+			&:last-child {
+				border-top-right-radius: 30px;
+				border-bottom-right-radius: 30px;
+			}
+		}
+	}
+}
