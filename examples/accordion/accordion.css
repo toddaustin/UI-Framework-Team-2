@@ -45,6 +45,23 @@ h5 {
 h6 {
   font-size: 12px; }
 
+[class^="ui_accordion-list"] > header {
+  background-color: #f1c40f;
+  color: #212121;
+  padding: 5px;
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+[class*="375"] > header {
+  width: 375px;
+}
+
+[class*="750"] > header {
+  width: 750px;
+}
+
 .ui_accordion-holder {
   background-color: #fffefe;
   border: #212121 1px solid;
@@ -54,29 +71,31 @@ h6 {
   position: relative;
   width: 960px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  .ui_accordion-holder .ui-accordion-list {
-    width: 475px; }
   .ui_accordion-holder > p {
     margin: 25px 0; }
 
-.ui_accordion-main {
+/*
+White Header - White Background - No Border - 375px wide
+*/
+
+.ui_accordion-list-wwn .ui_accordion-main {
   list-style-type: none;
   overflow: auto;
-  width: 500px; }
-  .ui_accordion-main input {
+  width: 375px; }
+  .ui_accordion-list-wwn .ui_accordion-main input {
     display: none; }
-    .ui_accordion-main input:checked ~ article {
+    .ui_accordion-list-wwn .ui_accordion-main input:checked ~ article {
       display: block; }
-    .ui_accordion-main input:checked ~ label {
+    .ui_accordion-list-wwn .ui_accordion-main input:checked ~ label {
       color: #fffefe; }
-      .ui_accordion-main input:checked ~ label header {
+      .ui_accordion-list-wwn .ui_accordion-main input:checked ~ label header {
         border-bottom: #6a497d 4px solid; }
-      .ui_accordion-main input:checked ~ label i {
+      .ui_accordion-list-wwn .ui_accordion-main input:checked ~ label i {
         transform: rotate(180deg);
         top: 8px; }
-  .ui_accordion-main:last-child label header {
+  .ui_accordion-list-wwn .ui_accordion-main:last-child label header {
     border-bottom: none; }
-  .ui_accordion-main > label header {
+  .ui_accordion-list-wwn .ui_accordion-main > label header {
     line-height: 25px;
     position: relative;
     font-weight: 300;
@@ -85,30 +104,273 @@ h6 {
     color: #212121;
     border-bottom: #212121 1px solid;
     padding: 7px 10px; }
-    .ui_accordion-main > label header:hover {
+    .ui_accordion-list-wwn .ui_accordion-main > label header:hover {
       cursor: pointer;
       background-color: #fafafa;
       color: #a06fbd; }
-    .ui_accordion-main > label header i {
+    .ui_accordion-list-wwn .ui_accordion-main > label header i {
       transition: all 400ms ease;
       position: absolute;
       right: 8px;
       top: 6px;
       font-size: 25px; }
-  .ui_accordion-main article.ui_accordion-content {
+  .ui_accordion-list-wwn .ui_accordion-main article.ui_accordion-content {
     display: none;
     background-color: #fffefe;
     color: #212121;
     padding: 25px; }
-    .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+    .ui_accordion-list-wwn .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
       float: right;
-      width: 300px;
+      width: 175px;
       vertical-align: top;
       padding-bottom: 15px; }
-      .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+      .ui_accordion-list-wwn .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
         font-weight: bold;
         padding-bottom: 15px; }
-      .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+      .ui_accordion-list-wwn .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+        font-size: 12px;
+        color: #999;
+        letter-spacing: 1.2px;
+        padding-bottom: 10px;
+        padding-right: 15px; }
+
+/*
+Dark Header - White Background - No Border - 735px wide
+*/
+
+.ui_accordion-list-dwn .ui_accordion-main {
+  list-style-type: none;
+  overflow: auto;
+  width: 750px; }
+  .ui_accordion-list-dwn .ui_accordion-main input {
+    display: none; }
+    .ui_accordion-list-dwn .ui_accordion-main input:checked ~ article {
+      display: block; }
+    .ui_accordion-list-dwn .ui_accordion-main input:checked ~ label {
+      color: #fffefe; }
+      .ui_accordion-list-dwn .ui_accordion-main input:checked ~ label header {
+        border-bottom: #6a497d 4px solid; }
+      .ui_accordion-list-dwn .ui_accordion-main input:checked ~ label i {
+        transform: rotate(180deg);
+        top: 8px; }
+  .ui_accordion-list-dwn .ui_accordion-main:last-child label header {
+    border-bottom: none; }
+  .ui_accordion-list-dwn .ui_accordion-main > label header {
+    line-height: 25px;
+    position: relative;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: #212121;
+    color: #c3c8ce;
+    border-bottom: #212121 1px solid;
+    padding: 7px 10px; }
+    .ui_accordion-list-dwn .ui_accordion-main > label header:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #bfbfbf; }
+    .ui_accordion-list-dwn .ui_accordion-main > label header i {
+      transition: all 400ms ease;
+      position: absolute;
+      right: 8px;
+      top: 6px;
+      font-size: 25px; }
+  .ui_accordion-list-dwn .ui_accordion-main article.ui_accordion-content {
+    display: none;
+    background-color: #fffefe;
+    color: #212121;
+    padding: 25px; }
+    .ui_accordion-list-dwn .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+      float: right;
+      width: 550px;
+      vertical-align: top;
+      padding-bottom: 15px; }
+      .ui_accordion-list-dwn .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+        font-weight: bold;
+        padding-bottom: 15px; }
+      .ui_accordion-list-dwn .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+        font-size: 12px;
+        color: #999;
+        letter-spacing: 1.2px;
+        padding-bottom: 10px;
+        padding-right: 15px; }
+
+/*
+Dark Header - Dark Background - Border - 750px wide
+*/
+
+.ui_accordion-list-ddb .ui_accordion-main {
+  list-style-type: none;
+  overflow: auto;
+  border: 1px solid #212121;
+  width: 750px; }
+  .ui_accordion-list-ddb .ui_accordion-main input {
+    display: none; }
+    .ui_accordion-list-ddb .ui_accordion-main input:checked ~ article {
+      display: block; }
+    .ui_accordion-list-ddb .ui_accordion-main input:checked ~ label {
+      color: #fffefe; }
+      .ui_accordion-list-ddb .ui_accordion-main input:checked ~ label header {
+        border-bottom: #6a497d 4px solid; }
+      .ui_accordion-list-ddb .ui_accordion-main input:checked ~ label i {
+        transform: rotate(180deg);
+        top: 8px; }
+  .ui_accordion-list-ddb .ui_accordion-main:last-child label header {
+    border-bottom: none; }
+  .ui_accordion-list-ddb .ui_accordion-main > label header {
+    line-height: 25px;
+    position: relative;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: #212121;
+    color: #c3c8ce;
+    border-bottom: #c3c8ce 1px solid;
+    padding: 7px 10px; }
+    .ui_accordion-list-ddb .ui_accordion-main > label header:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #bfbfbf; }
+    .ui_accordion-list-ddb .ui_accordion-main > label header i {
+      transition: all 400ms ease;
+      position: absolute;
+      right: 8px;
+      top: 6px;
+      font-size: 25px; }
+  .ui_accordion-list-ddb .ui_accordion-main article.ui_accordion-content {
+    display: none;
+    background-color: #212121;
+    color: #6a497d;
+    padding: 25px; }
+    .ui_accordion-list-ddb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+      float: right;
+      width: 550px;
+      vertical-align: top;
+      padding-bottom: 15px; }
+      .ui_accordion-list-ddb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+        font-weight: bold;
+        padding-bottom: 15px; }
+      .ui_accordion-list-ddb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+        font-size: 12px;
+        color: #999;
+        letter-spacing: 1.2px;
+        padding-bottom: 10px;
+        padding-right: 15px; }
+
+/*
+White Header - White Background - Border - 735px wide
+*/
+
+.ui_accordion-list-wwb .ui_accordion-main {
+  list-style-type: none;
+  overflow: auto;
+  border: 1px solid #212121;
+  width: 375px; }
+  .ui_accordion-list-wwb .ui_accordion-main input {
+    display: none; }
+    .ui_accordion-list-wwb .ui_accordion-main input:checked ~ article {
+      display: block; }
+    .ui_accordion-list-wwb .ui_accordion-main input:checked ~ label {
+      color: #fffefe; }
+      .ui_accordion-list-wwb .ui_accordion-main input:checked ~ label header {
+        border-bottom: #6a497d 4px solid; }
+      .ui_accordion-list-wwb .ui_accordion-main input:checked ~ label i {
+        transform: rotate(180deg);
+        top: 8px; }
+  .ui_accordion-list-wwb .ui_accordion-main:last-child label header {
+    border-bottom: none; }
+  .ui_accordion-list-wwb .ui_accordion-main > label header {
+    line-height: 25px;
+    position: relative;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: #fffefe;
+    color: #212121;
+    border-bottom: #c3c8ce 1px solid;
+    padding: 7px 10px; }
+    .ui_accordion-list-wwb .ui_accordion-main > label header:hover {
+      cursor: pointer;
+      background-color: #fafafa;
+      color: #a06fbd; }
+    .ui_accordion-list-wwb .ui_accordion-main > label header i {
+      transition: all 400ms ease;
+      position: absolute;
+      right: 8px;
+      top: 6px;
+      font-size: 25px; }
+  .ui_accordion-list-wwb .ui_accordion-main article.ui_accordion-content {
+    display: none;
+    background-color: #fffefe;
+    color: #212121;
+    padding: 25px; }
+    .ui_accordion-list-wwb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+      float: right;
+      width: 175px;
+      vertical-align: top;
+      padding-bottom: 15px; }
+      .ui_accordion-list-wwb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+        font-weight: bold;
+        padding-bottom: 15px; }
+      .ui_accordion-list-wwb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+        font-size: 12px;
+        color: #999;
+        letter-spacing: 1.2px;
+        padding-bottom: 10px;
+        padding-right: 15px; }
+
+/*
+White Header - Dark Background - Border - 375px wide
+*/
+
+.ui_accordion-list-wdb .ui_accordion-main {
+  list-style-type: none;
+  overflow: auto;
+  border: 1px solid #212121;
+  width: 375px; }
+  .ui_accordion-list-wdb .ui_accordion-main input {
+    display: none; }
+    .ui_accordion-list-wdb .ui_accordion-main input:checked ~ article {
+      display: block; }
+    .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label {
+      color: #fffefe; }
+      .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label header {
+        border-bottom: #6a497d 4px solid; }
+      .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label i {
+        transform: rotate(180deg);
+        top: 8px; }
+  .ui_accordion-list-wdb .ui_accordion-main:last-child label header {
+    border-bottom: none; }
+  .ui_accordion-list-wdb .ui_accordion-main > label header {
+    line-height: 25px;
+    position: relative;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: #fffefe;
+    color: #212121;
+    border-bottom: #c3c8ce 1px solid;
+    padding: 7px 10px; }
+    .ui_accordion-list-wdb .ui_accordion-main > label header:hover {
+      cursor: pointer;
+      background-color: #fafafa;
+      color: #a06fbd; }
+    .ui_accordion-list-wdb .ui_accordion-main > label header i {
+      transition: all 400ms ease;
+      position: absolute;
+      right: 8px;
+      top: 6px;
+      font-size: 25px; }
+  .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content {
+    display: none;
+    background-color: #212121;
+    color: #6a497d;
+    padding: 25px; }
+    .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+      float: right;
+      width: 175px;
+      vertical-align: top;
+      padding-bottom: 15px; }
+      .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+        font-weight: bold;
+        padding-bottom: 15px; }
+      .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
         font-size: 12px;
         color: #999;
         letter-spacing: 1.2px;

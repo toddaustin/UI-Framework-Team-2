@@ -1,4 +1,4 @@
-// @import "../utils/_reset.scss";
+@import "../utils/_reset.scss";
 @import "../utils/_variables.scss";
 
 $headers: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
@@ -13,10 +13,10 @@ $headers: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size
 //  PROJECT SPECIFIC VARIABLES
 //
 
-$accordion-width: 500px;
-$border: false;
+$accordion-width: 375px;
+$border: true;
 $header-bg: white;
-$content-bg: white;
+$content-bg: dark;
 
 //
 //
@@ -31,15 +31,12 @@ $content-bg: white;
 	position:relative;
 	width:960px;
 	font-family: $font-family;
-	.ui-accordion-list {
-		width:475px;
-	}
 	> p {
 		margin: 25px 0;
 	}
 }
 	
-.ui_accordion-main {
+.ui_accordion-list-wdb .ui_accordion-main {
 	input {
 		display: none;
 		&:checked {
@@ -70,9 +67,9 @@ $content-bg: white;
 		position: relative;
 		font-weight: 300;
 		text-transform: uppercase;	
-		@if $header-bg == dark { background-color:$gray-dark; color: $white-med;
+		@if $header-bg == dark { background-color:$gray-dark; color: $white-med-off;
 		} @else if $header-bg == white { background-color:$white-light-off; color: $gray-dark;}
-		@if $border == true { border-bottom: $white-med 1px solid; 
+		@if $border == true { border-bottom: $white-med-off 1px solid; 
 		} @else if $border == false { border-bottom: $gray-dark 1px solid; }
 		padding: 7px 10px;	
 		&:hover {
