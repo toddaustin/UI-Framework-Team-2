@@ -1975,4 +1975,50 @@ er
   transform: scale(1);
 }
 
+.markup__container {
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  overflow: auto; }
+
+.markup {
+  clear: both;
+  color: #a06fbd;
+  dislay: flex;
+  width: 100%;
+  padding: 10px; }
+
+.markup__pre {
+  background-color: black;
+  width: 95%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: auto;
+  margin: 0 auto; }
+
+.markup__code {
+  border: 1px solid black;
+  width: 100%; }
+
+.markup__codeIcon {
+  float: left; }
+
+.markup__codeIcon--text {
+  padding: 5px; }
+
+.markup__codeIcon--purple {
+  color: #6a497d; }
+
+.markup__header {
+  float: right;
+  cursor: pointer; }
+
+.markup__header--text {
+  font-weight: 500;
+  padding: 5px;
+  font-size: 18px; }
+
+.markup__header--purple {
+  color: #6a497d; }
+
 /*# sourceMappingURL=main.css.map */
