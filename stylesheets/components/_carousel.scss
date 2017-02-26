@@ -2,6 +2,8 @@
 $carouselHeight : 350px;
 $carouselWidth : 786px;
 $numImages : 3;
+$numImagesMulti : 7;
+$sections : 3;
 
 .carousel-content {
     margin: 50px 0;
@@ -13,6 +15,10 @@ $numImages : 3;
     position: relative;
     margin: 0px auto;
 }
+
+/******************************************************************************
+ * Carousel Large  ************************************************************
+ ******************************************************************************/
 
 .ui_carousel-large {
     width: $carouselWidth;
@@ -26,10 +32,9 @@ $numImages : 3;
 
 .ui_carousel-large .ui_carousel-images {
     margin-top: 20px;
-     transition: transform 0.5s ease 0s;
-     background-color:#000;
-     height: $carouselHeight;
-
+    transition: transform 0.5s ease 0s;
+    background-color:#000;
+    height: $carouselHeight;
 }
 
 .ui_carousel-large .ui_carousel-dots  {
@@ -55,16 +60,20 @@ $numImages : 3;
   
 } 
 
-.ui_carousel-images img {
+.ui_carousel-large .ui_carousel-images img {
     transition: all .5s ease;
     position:absolute;
     top: 0
     // left: 787px;
 }
 
-.ui_carousel-images > img:nth-of-type(1) { transform:translateX(0%)}
-.ui_carousel-images > img:nth-of-type(2) { transform:translateX(100%); opacity: 0.5;}
-.ui_carousel-images > img:nth-of-type(3) { transform:translateX(200%); opacity: 0.5;}
+@for $i from 1 through $numImages { 
+    .ui_carousel-large .ui_carousel-images > img:nth-of-type(#{$i}) {
+       $i : $i - 1;
+       transform: translateX(#{$i * 100%});
+        opacity: 0.5;
+    }
+}
 
 .ui_carousel-large > label {
     height: 30px;
@@ -96,11 +105,6 @@ $numImages : 3;
                 $b : 0;
              }
         }
-    // } @else if $type == 'images' {
-    //     @for $i from 1 through $num {
-    //         $foo : $foo + $start + $i + $imagesMiddle + ' , 
-    //         ';
-    //     }
     } @else if $type == 'dots' {
         @for $i from 1 through $num {
             $foo : $foo + $start + $i + $dotsMiddle + $i +'),
@@ -127,12 +131,6 @@ $numImages : 3;
     z-index: 4;
 }
 
-//  @include createRules($numImages, 'images'){
-//        transform: translateX(0%);
-//         top: 0;
-//         opacity: 1;
-// }
-
 @include createRules($numImages, 'dots'){
     background-color: rgba(255, 255, 255, .75);
 }
@@ -147,9 +145,146 @@ $numImages : 3;
         top: 0;
     }
 }
-@for $i from 1 through ($numImages - 1) { 
-    .ui_carousel-large input[type=radio]:nth-of-type(#{$i+1}):checked ~ .ui_carousel-images img:nth-of-type(#{$i+1}) {
-        opacity: 1;
+
+// @for $i from 1 through $numImages { 
+//     .ui_carousel-large input[type=radio]:nth-of-type(#{$i}):checked ~ .ui_carousel-images img:nth-of-type(#{$i}) {
+//         opacity: 1;
+//     }
+// }
+@mixin setOpacity($num){
+    $foo : '';
+    @for $i from 1 through $num {
+        $foo : $foo +  '.ui_carousel-large input[type=radio]:nth-of-type('+ $i+'):checked ~ .ui_carousel-images img:nth-of-type('+$i+'),
+        ';
+    }
+
+    #{$foo} {
+        @content;
     }
 }
 
+@include setOpacity($numImages){
+     opacity: 1;
+}
+
+/******************************************************************************
+ * Carousel Multi  ************************************************************
+ ******************************************************************************/
+.ui_carousel-multi {
+    width: $carouselWidth;
+    height: $carouselHeight;
+    overflow: hidden;
+}
+
+.ui_carousel-multi input[type=radio] {
+   display: none;
+}
+
+.ui_carousel-multi .ui_carousel-images {
+    margin: 20px 0 0 30px;
+    transition: transform 0.5s ease 0s;
+    height: $carouselHeight;
+
+}
+
+.ui_carousel-multi img {
+    margin: 0 5px;
+}
+
+.ui_carousel-multi > label {
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+}
+
+.ui_carousel-multi .ui_carousel-images section {
+    margin:  10px 0px;
+    transition: all .5s ease;
+    display: inline-block;
+    vertical-align: top;
+    position:absolute;
+    top: 0;
+    width: 728px;
+}
+
+
+@for $i from 1 through $sections { 
+    $c:'';
+        .ui_carousel-multi .ui_carousel-images > section:nth-of-type(#{$i}) {
+        @if $i == 1 {
+            $c : 0;
+        } @else {
+            $c : $i;
+        }
+           transform: translateX(#{$c * 110%});
+            opacity: 0.5;
+            
+    }
+}
+
+
+@mixin createRulesMulti($num, $type){
+    $foo : '';
+    $start : '.ui_carousel-multi input[type=radio]:nth-of-type(';
+    $imagesRight : '):checked ~ label:nth-of-type(';
+    $imagesMiddle : '):checked ~ .ui_carousel-images';
+    
+    $numBack : $num;
+    $b : 1;
+    @if $type == 'left' {
+        @for $i from 1 through $num {
+            $foo : $foo + $start + $i + $imagesRight + $numBack + '),
+            ';
+            $numBack : $i;
+        }
+    } @else if $type == 'right'{
+        @for $i from 1 through $num {
+            $b : $b + 1;
+            $foo : $foo + $start + $i + $imagesRight + $b +'),
+            ';
+             @if $i == $num - 1  {
+                $b : 0;
+             }
+        }
+    } 
+
+    #{$foo} {
+        @content;
+    }
+}
+
+@include createRulesMulti($sections,'left'){
+     background: transparent url(../images/carousel/left-dark.png) no-repeat;
+     display: block;
+     left: 0px;
+     z-index: 5;
+}
+
+@include createRulesMulti($sections, 'right'){
+    background:transparent url(../images/carousel/right-dark.png) no-repeat;
+    display: block;
+    right:0px;
+    z-index: 5;
+}
+
+// .ui_carousel-multi input[type=radio]:nth-of-type(1) ~ .ui_carousel-images {
+//   transform: translateX(0%);
+//   opacity: 1;
+// }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images {
+  transform: translateX(0%);
+  top: 0; }
+
+@for $i from 2 through $sections { 
+    .ui_carousel-multi input[type=radio]:nth-of-type(#{$i}):checked ~ .ui_carousel-images {
+        transform: translateX(#{$i * -106%});
+        top: 0;
+    }
+}
+@for $i from 1 through $sections { 
+    .ui_carousel-multi input[type=radio]:nth-of-type(#{$i}):checked ~ .ui_carousel-images section:nth-of-type(#{$i}) {
+        opacity: 1;
+    }
+}

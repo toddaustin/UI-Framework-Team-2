@@ -6,6 +6,9 @@
   position: relative;
   margin: 0px auto; }
 
+/******************************************************************************
+ * Carousel Large  ************************************************************
+ ******************************************************************************/
 .ui_carousel-large {
   width: 786px;
   height: 350px;
@@ -36,19 +39,20 @@
   margin: 0 5px;
   width: 15px; }
 
-.ui_carousel-images img {
+.ui_carousel-large .ui_carousel-images img {
   transition: all .5s ease;
   position: absolute;
   top: 0; }
 
-.ui_carousel-images > img:nth-of-type(1) {
-  transform: translateX(0%); }
+.ui_carousel-large .ui_carousel-images > img:nth-of-type(1) {
+  transform: translateX(0%);
+  opacity: 0.5; }
 
-.ui_carousel-images > img:nth-of-type(2) {
+.ui_carousel-large .ui_carousel-images > img:nth-of-type(2) {
   transform: translateX(100%);
   opacity: 0.5; }
 
-.ui_carousel-images > img:nth-of-type(3) {
+.ui_carousel-large .ui_carousel-images > img:nth-of-type(3) {
   transform: translateX(200%);
   opacity: 0.5; }
 
@@ -90,10 +94,92 @@
   transform: translateX(-200%);
   top: 0; }
 
-.ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images img:nth-of-type(2) {
+.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images img:nth-of-type(1),
+.ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images img:nth-of-type(2),
+.ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images img:nth-of-type(3) {
   opacity: 1; }
 
-.ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images img:nth-of-type(3) {
+/******************************************************************************
+ * Carousel Multi  ************************************************************
+ ******************************************************************************/
+.ui_carousel-multi {
+  width: 786px;
+  height: 350px;
+  overflow: hidden; }
+
+.ui_carousel-multi input[type=radio] {
+  display: none; }
+
+.ui_carousel-multi .ui_carousel-images {
+  margin: 20px 0 0 30px;
+  transition: transform 0.5s ease 0s;
+  height: 350px; }
+
+.ui_carousel-multi img {
+  margin: 0 5px; }
+
+.ui_carousel-multi > label {
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  width: 30px; }
+
+.ui_carousel-multi .ui_carousel-images section {
+  margin: 10px 0px;
+  transition: all .5s ease;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  width: 728px; }
+
+.ui_carousel-multi .ui_carousel-images > section:nth-of-type(1) {
+  transform: translateX(0%);
+  opacity: 0.5; }
+
+.ui_carousel-multi .ui_carousel-images > section:nth-of-type(2) {
+  transform: translateX(220%);
+  opacity: 0.5; }
+
+.ui_carousel-multi .ui_carousel-images > section:nth-of-type(3) {
+  transform: translateX(330%);
+  opacity: 0.5; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3),
+.ui_carousel-multi input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1),
+.ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(2) {
+  background: transparent url(../images/carousel/left-dark.png) no-repeat;
+  display: block;
+  left: 0px;
+  z-index: 5; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(2),
+.ui_carousel-multi input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(3),
+.ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(1) {
+  background: transparent url(../images/carousel/right-dark.png) no-repeat;
+  display: block;
+  right: 0px;
+  z-index: 5; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images {
+  transform: translateX(0%);
+  top: 0; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images {
+  transform: translateX(-212%);
+  top: 0; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images {
+  transform: translateX(-318%);
+  top: 0; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images section:nth-of-type(1) {
+  opacity: 1; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images section:nth-of-type(2) {
+  opacity: 1; }
+
+.ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images section:nth-of-type(3) {
   opacity: 1; }
 
 /*# sourceMappingURL=carousel.css.map */
