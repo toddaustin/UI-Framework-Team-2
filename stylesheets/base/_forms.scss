@@ -1,0 +1,52 @@
+//--------------------------------------------------------------
+// BASE FORM ELEMENT RESETS
+//--------------------------------------------------------------
+select {
+	-webkit-appearance: none;
+}
+
+label {
+	display: inline-block;
+	font-size: $font-size-large;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+label.inline {
+	display: inline-block;
+	width: auto;
+}
+
+label.label-input-icon i {
+	margin-right: 5px;
+}
+
+fieldset {
+	border: 2px solid #e0e0e0;
+	padding: 24px;
+}
+
+select {
+	border: 2px solid #e0e0e0;
+	border-radius: 2px;
+	display: block;
+	font-size: 18px;
+	height: 56px;
+	outline: none;
+	padding: 10px 32px 10px 15px;
+	position: relative;
+	width: 100%;
+}
+
+select:focus {
+	border: 2px solid #c9c9c9;
+	outline: none;
+}
+
+textarea {
+	border: 2px solid #e0e0e0;
+	display: block;
+	font-size: 18px;
+	padding: 15px;
+	width: 100%;
+}
