@@ -1,0 +1,114 @@
+@import "reset";
+@import "variables";
+
+$headers: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
+
+@for $i from 1 through length($headers) {
+	h#{$i} {
+		font-size: nth($headers, $i)
+	}
+}
+
+//
+//  PROJECT SPECIFIC VARIABLES
+//
+
+$accordion-width: 500px;
+$border: false;
+$header-bg: white;
+$content-bg: white;
+
+//
+//
+//
+
+.ui_accordion-holder {
+	background-color:$white-light-off;
+	border:$gray-dark 1px solid;
+	color:$gray-dark;
+	margin:auto;
+	padding:100px;
+	position:relative;
+	width:960px;
+	font-family: $font-family;
+	.ui-accordion-list {
+		width:475px;
+	}
+	> p {
+		margin: 25px 0;
+	}
+}
+	
+.ui_accordion-main {
+	input {
+		display: none;
+		&:checked {
+			~ article {
+				display: block;
+			}
+			~ label {
+				color: $white-light-off;
+				header {
+					border-bottom: $purple-medium 4px solid;
+				}
+				i {
+					transform: rotate(180deg);
+					top: 8px;
+				}
+			}
+		}
+	}
+	&:last-child label header {
+		border-bottom: none;
+	}
+	list-style-type:none;
+	overflow: auto;
+	@if $border == true { border: 1px solid $gray-dark; }
+	width: $accordion-width;
+	> label header {
+		line-height: 25px;
+		position: relative;
+		font-weight: 300;
+		text-transform: uppercase;	
+		@if $header-bg == dark { background-color:$gray-dark; color: $white-med;
+		} @else if $header-bg == white { background-color:$white-light-off; color: $gray-dark;}
+		@if $border == true { border-bottom: $white-med 1px solid; 
+		} @else if $border == false { border-bottom: $gray-dark 1px solid; }
+		padding: 7px 10px;	
+		&:hover {
+			cursor: pointer;
+			@if $header-bg == dark { background-color: rgba(0,0,0,.9); color: darken(#fff, 25%);
+			} @else if $header-bg == white { background-color: darken(white, 2%); color: $purple-light;  }
+		}
+		i {
+			transition: all 400ms ease;
+			position: absolute;
+			right: 8px;
+			top: 6px;
+			font-size: 25px;
+		}
+	}
+	article.ui_accordion-content {	
+		display: none;
+		@if $content-bg == dark { background-color:$gray-dark; color: $purple-medium;
+		} @else if $content-bg == white { background-color:$white-light-off; color: $gray-dark;}
+		padding: 25px;
+		.ui_accordion-content-text {
+			float: right;
+			width: ( $accordion-width - 200);
+			vertical-align: top;
+			padding-bottom: 15px;
+			header {
+				font-weight: bold;
+				padding-bottom: 15px;
+			}
+			p {
+				font-size: $font-size-small;
+				color: #999;
+				letter-spacing: 1.2px;
+				padding-bottom: 10px;
+				padding-right: 15px;
+			}
+		}
+	}
+}
