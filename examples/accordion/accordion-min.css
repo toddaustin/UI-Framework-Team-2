@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  /* added to original reset */
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+.ui_accordion-holder {
+  background-color: #fffefe;
+  border: #212121 1px solid;
+  color: #212121;
+  margin: auto;
+  padding: 100px;
+  position: relative;
+  width: 960px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.ui_accordion-holder .ui-accordion-list {
+  width: 475px; }
+
+.ui_accordion-holder > p {
+  margin: 25px 0; }
+
+.ui_accordion-main {
+  list-style-type: none;
+  overflow: auto;
+  width: 500px; }
+
+.ui_accordion-main input {
+  display: none; }
+
+.ui_accordion-main input:checked ~ article {
+  display: block; }
+
+.ui_accordion-main input:checked ~ label {
+  color: #fffefe; }
+
+.ui_accordion-main input:checked ~ label header {
+  border-bottom: #6a497d 4px solid; }
+
+.ui_accordion-main input:checked ~ label i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 8px; }
+
+.ui_accordion-main:last-child label header {
+  border-bottom: none; }
+
+.ui_accordion-main > label header {
+  line-height: 25px;
+  position: relative;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #fffefe;
+  color: #212121;
+  border-bottom: #212121 1px solid;
+  padding: 7px 10px; }
+
+.ui_accordion-main > label header:hover {
+  cursor: pointer;
+  background-color: #fafafa;
+  color: #a06fbd; }
+
+.ui_accordion-main > label header i {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  font-size: 25px; }
+
+.ui_accordion-main article.ui_accordion-content {
+  display: none;
+  background-color: #fffefe;
+  color: #212121;
+  padding: 25px; }
+
+.ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+  float: right;
+  width: 300px;
+  vertical-align: top;
+  padding-bottom: 15px; }
+
+.ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+  font-weight: bold;
+  padding-bottom: 15px; }
+
+.ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 1.2px;
+  padding-bottom: 10px;
+  padding-right: 15px; }
