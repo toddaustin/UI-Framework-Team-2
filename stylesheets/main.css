@@ -126,19 +126,22 @@ h3 {
     padding: 5px;
     margin-right: 10px; }
 
-.ui_carousel-large {
+.ui_carousel {
   position: relative;
   margin: 20px; }
+
+.ui_carousel-large {
+  width: 786px;
+  height: 350px;
+  overflow: hidden; }
 
 .ui_carousel-large input[type=radio] {
   display: none; }
 
 .ui_carousel-large .ui_carousel-images {
-  height: 350px;
-  list-style: none;
-  overflow: hidden;
-  position: relative;
-  width: 786px; }
+  transition: transform 0.5s ease 0s;
+  background-color: #000;
+  height: 350px; }
 
 .ui_carousel-large .ui_carousel-dots {
   bottom: 5px;
@@ -156,12 +159,20 @@ h3 {
   margin: 0 5px;
   width: 15px; }
 
-.ui_carousel-images > img,
-.ui_carousel-images > label {
-  display: none; }
-
 .ui_carousel-images img {
-  transistion: all .5s; }
+  transition: all .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0; }
+
+.ui_carousel-images > label:nth-of-type(1) + img {
+  transform: translateX(0%); }
+
+.ui_carousel-images > label:nth-of-type(2) + img {
+  transform: translateX(100%); }
+
+.ui_carousel-images > label:nth-of-type(3) + img {
+  transform: translateX(200%); }
 
 .ui_carousel-images > label {
   height: 30px;
@@ -188,8 +199,9 @@ h3 {
 .ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images > label:nth-of-type(1) + img,
 .ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images > label:nth-of-type(2) + img,
 .ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images > label:nth-of-type(3) + img {
-  display: block;
-  z-index: 1; }
+  transform: translateX(0%);
+  top: 0;
+  opacity: 1; }
 
 .ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(1),
 .ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(2),
@@ -197,7 +209,7 @@ h3 {
   background-color: rgba(255, 255, 255, 0.75); }
 
 /****** General CSS that applies to entire area containing the tabs *********************/
-.container {
+.tabs-container {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
   background-color: #fffefe;
@@ -209,17 +221,18 @@ h3 {
   width: 960px;
   box-sizing: border-box; }
 
-h1, h2 {
+.tabs-container h1, .tabs-container h2 {
   font-weight: 800; }
 
-input {
+.tabs-container input {
   display: none;
   margin: 0;
   padding: 0; }
 
 /********* Common CSS that applies to each of the tab sets *******************/
 .horizontal-tabs-1 .display-area,
-.horizontal-tabs-2 .display-area {
+.horizontal-tabs-2 .display-area,
+.horizontal-tabs-3 .display-area {
   display: none;
   position: absolute;
   width: 100%;
@@ -227,7 +240,7 @@ input {
   top: 55px;
   border-radius: 0 0 1% 1%;
   border: 1px solid black;
-  border-top: transparent; }
+  border-color: transparent #000 #000 #000; }
 
 .horizontal-tabs-1 input:nth-of-type(1):checked ~ .display-area:nth-of-type(1),
 .horizontal-tabs-1 input:nth-of-type(2):checked ~ .display-area:nth-of-type(2),
@@ -236,7 +249,11 @@ input {
 .horizontal-tabs-2 input:nth-of-type(1):checked ~ .display-area:nth-of-type(1),
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ .display-area:nth-of-type(2),
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ .display-area:nth-of-type(3),
-.horizontal-tabs-2 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4) {
+.horizontal-tabs-2 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4),
+.horizontal-tabs-3 input:nth-of-type(1):checked ~ .display-area:nth-of-type(1),
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ .display-area:nth-of-type(2),
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ .display-area:nth-of-type(3),
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4) {
   display: block; }
 
 /******** CSS applying specifically to the contents for each of the tabs ********************/
@@ -244,7 +261,7 @@ input {
   float: left;
   width: 251px; }
 
-img {
+.tabs-container img {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -262,7 +279,7 @@ img {
     font-size: 2.0em;
     margin-bottom: 40px; }
   .tab-text p {
-    color: #bdbdbd;
+    color: #707070;
     font-size: 0.7em;
     margin-top: -6px;
     line-height: 1.7em; }
@@ -280,13 +297,15 @@ img {
     border-radius: 3%;
     border: 1px solid #212121; }
 
-/*******CSS applying only to the first set horizontal tabs****************************/
-div[class="horizontal-tabs-1"] {
+/*********CSS applying to first and third horizontal tab sets******************/
+div.horizontal-tabs-1,
+div.horizontal-tabs-3 {
   margin: 100px 0;
   position: relative;
   width: 85%;
   height: 360px; }
 
+/*******CSS applying only to the first set horizontal tabs****************************/
 .horizontal-tabs-1 .tabs-label {
   position: relative;
   float: left;
@@ -306,7 +325,7 @@ div[class="horizontal-tabs-1"] {
   content: "";
   position: absolute;
   display: block;
-  width: 126px;
+  width: 125px;
   height: 55px;
   left: 581px;
   border-bottom: 1px solid black; }
@@ -342,6 +361,7 @@ div[class="horizontal-tabs-1"] {
 
 /************CSS that applies to the second set of horizontal tags only**********/
 .horizontal-tabs-2 .display-area {
+  width: 700px;
   border: 0 solid transparent;
   border-bottom: 5px solid #bdbdbd;
   border-radius: 0; }
@@ -355,7 +375,7 @@ div[class="horizontal-tabs-1"] {
   margin-right: 5px;
   border: 0 solid transparent;
   border-bottom: 5px solid #bdbdbd;
-  color: #000;
+  color: #bdbdbd;
   border-radius: 0; }
   .horizontal-tabs-2 .tabs-label:hover {
     cursor: pointer; }
@@ -370,7 +390,8 @@ div[class="horizontal-tabs-1"] {
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ .tabs-label:nth-of-type(2),
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ .tabs-label:nth-of-type(3),
 .horizontal-tabs-2 input:nth-of-type(4):checked ~ .tabs-label:nth-of-type(4) {
-  font-weight: bold; }
+  font-weight: bold;
+  color: #000; }
 
 #highlight-label-1, #highlight-label-2,
 #highlight-label-3, #highlight-label-4 {
@@ -411,7 +432,7 @@ div[class="horizontal-tabs-2"] {
   height: 360px; }
 
 .horizontal-tabs-2 .display-area {
-  width: 700px; }
+  width: 645px; }
 
 #highlight-bottom-1,
 #highlight-bottom-2,
@@ -424,7 +445,7 @@ div[class="horizontal-tabs-2"] {
   left: 380px;
   transform: translateX(0);
   border: 3px solid transparent;
-  transition: max-width 0.5s, border-color 1s, transform 0.5s; }
+  transition: max-width 0s, border-color 1s, transform 0.5s; }
 
 #highlight-bottom-2 {
   top: 353px; }
@@ -439,10 +460,212 @@ div[class="horizontal-tabs-2"] {
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-bottom-2,
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-bottom-3,
 .horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-bottom-4 {
-  max-width: 100%;
+  max-width: 698px;
   border-color: #9b68b9;
   transform: translateX(-379px);
   transition: max-width 0.5s, transform 0.5s; }
+
+/***** CSS relating to the third set of horizontal tabs*********************************/
+div.horizontal-tabs-3 {
+  width: 700px; }
+
+.horizontal-tabs-3 .display-area {
+  width: 90%;
+  border-color: transparent #bdbdbd #bdbdbd transparent; }
+
+.horizontal-tabs-3 .tabs-label {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 95px;
+  height: 10px;
+  padding: 15px 25px;
+  margin-right: 10px;
+  border-style: solid;
+  border-top-right-radius: 2%;
+  border-width: 1px 2px 0 0;
+  border-color: #bdbdbd #bdbdbd transparent transparent;
+  color: #bdbdbd;
+  font-weight: 700;
+  transform: skewX(25deg); }
+  .horizontal-tabs-3 .tabs-label:hover {
+    cursor: pointer; }
+
+.horizontal-tabs-3 .tabs-label .label-text {
+  transform: skewX(-25deg); }
+
+.horizontal-tabs-3 input:nth-of-type(1):checked ~ .tabs-label:nth-of-type(1),
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ .tabs-label:nth-of-type(2),
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ .tabs-label:nth-of-type(3),
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ .tabs-label:nth-of-type(4) {
+  font-weight: bold;
+  color: #9b68b9; }
+
+/***** Tab highlight animation for top of first tab when unclicked ****************************/
+#tabs3-label-top-highlight1,
+#tabs3-label-top-highlight2,
+#tabs3-label-top-highlight3,
+#tabs3-label-top-highlight4 {
+  position: relative;
+  height: 0px;
+  /*width:145px;*/
+  max-width: 0;
+  top: 0px;
+  left: 137px;
+  transform-origin: left;
+  transform: rotate(180deg);
+  border: 1px solid transparent;
+  transition: max-width 0.2s, border-color 0.2s, transform 0.2s; }
+
+#tabs3-label-top-highlight2 {
+  left: 295px;
+  top: -8px; }
+
+#tabs3-label-top-highlight3 {
+  left: 451px;
+  top: -17px; }
+
+#tabs3-label-top-highlight4 {
+  left: 609px;
+  top: -24px; }
+
+/***** Tab highlight animation for top of first tab when clicked*************/
+.horizontal-tabs-3 input:nth-of-type(1):checked ~ #tabs3-label-top-highlight1,
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ #tabs3-label-top-highlight2,
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ #tabs3-label-top-highlight3,
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ #tabs3-label-top-highlight4 {
+  max-width: 145px;
+  border-color: #9b68b9;
+  transform: rotate(180deg);
+  transition: max-width 0.5s, transform 0.2s; }
+
+/****Tab highlight animation for right of first tab when unclicked**********************/
+#tabs3-label-right-highlight1,
+#tabs3-label-right-highlight2,
+#tabs3-label-right-highlight3,
+#tabs3-label-right-highlight4 {
+  position: relative;
+  height: 0px;
+  /*width:145px;*/
+  /*width:40px;*/
+  max-width: 0;
+  top: -2px;
+  left: 136px;
+  transform: rotate(65deg);
+  border: 1px solid transparent;
+  transition: max-width 0.5s, border-color 0.5s, left 0.5s, top 0.5s; }
+
+#tabs3-label-right-highlight2 {
+  left: 294px;
+  top: -10px; }
+
+#tabs3-label-right-highlight3 {
+  left: 450px;
+  top: -17px; }
+
+#tabs3-label-right-highlight4 {
+  left: 606px;
+  top: -23px; }
+
+/*******Tab highlight animation for right of first tab when clicked*********************/
+.horizontal-tabs-3 input:nth-of-type(1):checked ~ #tabs3-label-right-highlight1,
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ #tabs3-label-right-highlight2,
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ #tabs3-label-right-highlight3,
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ #tabs3-label-right-highlight4 {
+  max-width: 145px;
+  border-color: #9b68b9;
+  max-width: 43px;
+  left: 124px;
+  top: 18px;
+  transition: max-width 0.5s, left 0.5s, top 0.5s; }
+
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ #tabs3-label-right-highlight2 {
+  left: 282px;
+  top: 10px; }
+
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ #tabs3-label-right-highlight3 {
+  left: 437px;
+  top: 1px; }
+
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ #tabs3-label-right-highlight4 {
+  left: 596px;
+  top: -6px; }
+
+/**************Tab highlight animation for bottom of tab 1 third set******************/
+div#tabs3-display-bottom-highlight1,
+div#tabs3-display-bottom-highlight2,
+div#tabs3-display-bottom-highlight3,
+div#tabs3-display-bottom-highlight4 {
+  position: relative;
+  height: 0px;
+  max-width: 0px;
+  /*width:705px;*/
+  top: 368px;
+  left: 0px;
+  transform: translateX(0);
+  border: 1px solid transparent;
+  transition: max-width 0s, border-color 1s, transform 0.5s; }
+
+div#tabs3-display-bottom-highlight2 {
+  top: 360px; }
+
+div#tabs3-display-bottom-highlight3 {
+  top: 352px; }
+
+div#tabs3-display-bottom-highlight4 {
+  top: 344px; }
+
+.horizontal-tabs-3 input:nth-of-type(1):checked ~ div#tabs3-display-bottom-highlight1,
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-bottom-highlight2,
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-bottom-highlight3,
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-bottom-highlight4 {
+  max-width: 690px;
+  border-color: #9b68b9;
+  transition: max-width 0.5s; }
+
+/************Tab highlight animation for right of tab 1 third set************************/
+div#tabs3-display-right-highlight1,
+div#tabs3-display-right-highlight2,
+div#tabs3-display-right-highlight3,
+div#tabs3-display-right-highlight4 {
+  position: relative;
+  height: 0px;
+  /*width:316px;*/
+  /*width:40px;*/
+  max-width: 0;
+  top: 50px;
+  left: 691px;
+  transform: rotate(90deg);
+  border: 1px solid transparent;
+  transition: max-width 0.5s, left 0.5s, top 0.5s; }
+
+div#tabs3-display-right-highlight2 {
+  top: 40px; }
+
+div#tabs3-display-right-highlight3 {
+  top: 36px; }
+
+div#tabs3-display-right-highlight4 {
+  top: 28px; }
+
+.horizontal-tabs-3 input:nth-of-type(1):checked ~ div#tabs3-display-right-highlight1,
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-right-highlight2,
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3,
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4 {
+  max-width: 316px;
+  left: 533px;
+  top: 208px;
+  border-color: #9b68b9;
+  transition: max-width 1s left 1s top 1s; }
+
+.horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-right-highlight2 {
+  top: 200px; }
+
+.horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3 {
+  top: 192px; }
+
+.horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4 {
+  top: 184px; }
 
 .buttons-container {
   margin: 50px auto;
