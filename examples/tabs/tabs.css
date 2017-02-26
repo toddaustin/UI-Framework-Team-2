@@ -56,6 +56,19 @@
 .vertical-tabs-2 input:nth-of-type(4):checked ~ .display-area:nth-of-type(4) {
   display: block; }
 
+/******Innovative Tab Spy ************************************************/
+.tabs input:not(:checked) + .tabs-label:hover + div.display-area {
+  display: block;
+  width: 50%;
+  left: 706px;
+  top: -150px;
+  z-index: 100;
+  background-color: black; }
+  .tabs input:not(:checked) + .tabs-label:hover + div.display-area > .tab-text h1 {
+    color: white; }
+  .tabs input:not(:checked) + .tabs-label:hover + div.display-area > .tab-text .btn {
+    color: white; }
+
 /******** CSS applying specifically to the contents for each of the tabs ********************/
 .tab-img {
   float: left;
@@ -81,7 +94,7 @@
   .tab-text p {
     color: #707070;
     font-size: 0.7em;
-    margin-top: -6px;
+    margin-top: 0px;
     line-height: 1.7em; }
   .tab-text .btn {
     font-weight: bold;
@@ -241,20 +254,20 @@ div[class="horizontal-tabs-2"] {
   position: relative;
   height: 0px;
   max-width: 0px;
-  top: 366px;
+  top: 377px;
   left: 380px;
   transform: translateX(0);
   border: 3px solid transparent;
   transition: max-width 0s, border-color 1s, transform 0.5s; }
 
 #highlight-bottom-2 {
-  top: 353px; }
+  top: 364px; }
 
 #highlight-bottom-3 {
-  top: 342px; }
+  top: 353px; }
 
 #highlight-bottom-4 {
-  top: 330px; }
+  top: 341px; }
 
 .horizontal-tabs-2 input:nth-of-type(1):checked ~ #highlight-bottom-1,
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-bottom-2,
@@ -400,20 +413,20 @@ div#tabs3-display-bottom-highlight4 {
   height: 0px;
   max-width: 0px;
   /*width:705px;*/
-  top: 368px;
+  top: 380px;
   left: 0px;
   transform: translateX(0);
   border: 1px solid transparent;
   transition: max-width 0s, border-color 1s, transform 0.5s; }
 
 div#tabs3-display-bottom-highlight2 {
-  top: 360px; }
+  top: 372px; }
 
 div#tabs3-display-bottom-highlight3 {
-  top: 352px; }
+  top: 364px; }
 
 div#tabs3-display-bottom-highlight4 {
-  top: 344px; }
+  top: 356px; }
 
 .horizontal-tabs-3 input:nth-of-type(1):checked ~ div#tabs3-display-bottom-highlight1,
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-bottom-highlight2,
@@ -421,7 +434,7 @@ div#tabs3-display-bottom-highlight4 {
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-bottom-highlight4 {
   max-width: 690px;
   border-color: #9b68b9;
-  transition: max-width 0.5s; }
+  transition: max-width 0.4s; }
 
 /************Tab highlight animation for right of tab 1 third set************************/
 div#tabs3-display-right-highlight1,
@@ -434,10 +447,10 @@ div#tabs3-display-right-highlight4 {
   /*width:40px;*/
   max-width: 0;
   top: 50px;
-  left: 691px;
+  left: 690px;
   transform: rotate(90deg);
   border: 1px solid transparent;
-  transition: max-width 0.5s, left 0.5s, top 0.5s; }
+  transition: max-width 0.3s, left 0.3s, top 0.3s, border-color 1s; }
 
 div#tabs3-display-right-highlight2 {
   top: 40px; }
@@ -452,20 +465,20 @@ div#tabs3-display-right-highlight4 {
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-right-highlight2,
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3,
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4 {
-  max-width: 316px;
-  left: 533px;
-  top: 208px;
+  max-width: 330px;
+  left: 525px;
+  top: 213px;
   border-color: #9b68b9;
-  transition: max-width 1s left 1s top 1s; }
+  transition: max-width 0.6s left 0.6s; }
 
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-right-highlight2 {
-  top: 200px; }
+  top: 205px; }
 
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3 {
-  top: 192px; }
+  top: 196px; }
 
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4 {
-  top: 184px; }
+  top: 188px; }
 
 /****** VERTICAL TABS SEcTION *************************************************/
 /**** CSS applying to the first set of vertical tabs *************************/
@@ -530,7 +543,7 @@ div.vertical-tabs-2 {
   position: absolute;
   display: block;
   width: 125px;
-  height: 110px;
+  height: 122px;
   left: 2px;
   top: 262px;
   border-left: 1px solid #000; }
