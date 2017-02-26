@@ -46,11 +46,11 @@
 
 .ui_carousel-images > img:nth-of-type(2) {
   transform: translateX(100%);
-  opacity: 0; }
+  opacity: 0.5; }
 
 .ui_carousel-images > img:nth-of-type(3) {
   transform: translateX(200%);
-  opacity: 0; }
+  opacity: 0.5; }
 
 .ui_carousel-large > label {
   height: 30px;
