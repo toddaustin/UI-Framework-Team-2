@@ -78,10 +78,8 @@ h3 {
   font-size: 14px;
   color: #c3c8ce;
   margin-top: 0px; }
-
 .card.article .card-body hr {
   border-color: #a06fbd; }
-
 .card.article .card-button {
   float: right; }
 
@@ -93,18 +91,14 @@ h3 {
   top: 150px;
   border-radius: 50%;
   border: 1px solid white; }
-
 .card.contact .card-body h1 {
   margin-top: 60px;
   margin-bottom: 10px;
   color: #a06fbd; }
-
 .card.contact .card-body p {
   text-align: center; }
-
 .card.contact .card-body hr {
   color: #aaa; }
-
 .card.contact .social-media {
   text-align: center; }
   .card.contact .social-media a {
@@ -186,25 +180,19 @@ h3 {
   top: 52.5%;
   width: 30px; }
 
-.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3),
-.ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1),
-.ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(2) {
+.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3), .ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1), .ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(2) {
   background: transparent url(../images/carousel/left.png) no-repeat;
   display: block;
   left: 10px;
   z-index: 5; }
 
-.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(2),
-.ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(3),
-.ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(1) {
+.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(2), .ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(3), .ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(1) {
   background: transparent url(../images/carousel/right.png) no-repeat;
   display: block;
   right: 10px;
   z-index: 4; }
 
-.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(1),
-.ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(2),
-.ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(3) {
+.ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(1), .ui_carousel-large input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(2), .ui_carousel-large input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(3) {
   background-color: rgba(255, 255, 255, 0.75); }
 
 .ui_carousel-large input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images {
@@ -872,20 +860,16 @@ button,
 
 .btn.btn-primary-hover, .btn.btn-primary-active {
   color: #fffefe; }
-
 .btn.btn-primary-hover {
   background-color: #a06fbd; }
-
 .btn.btn-primary-active {
   background-color: #6a497d; }
 
 .btn.btn-secondary-hover, .btn.btn-secondary-active {
   color: #fffefe; }
-
 .btn.btn-secondary-hover {
   background-color: #31363b;
   border-color: #31363b; }
-
 .btn.btn-secondary-active {
   background-color: #a06fbd; }
 
@@ -1062,3 +1046,47 @@ h6 {
         letter-spacing: 1.2px;
         padding-bottom: 10px;
         padding-right: 15px; }
+
+.pagination {
+  display: flex;
+  justify-content: center; }
+
+.pagination__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  color: #6a497d;
+  font-size: 18px; }
+
+.pagination__item--round:hover {
+  background-color: #a06fbd; }
+
+.pagination__item--round {
+  border-radius: 50%;
+  border: solid 1px #6a497d; }
+
+.pagination__item--square {
+  border: radius 2px;
+  border: solid 1px #6a497d; }
+
+.pagination__item:not(:last-child) {
+  margin-right: 10px; }
+
+.pagination__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #6a497d; }
+
+.pagination__link:link {
+  color: #6a497d; }
+
+.pagination__link:visited,
+.pagination__link:active {
+  color: #6a497d; }
+
+.pagination__link:hover {
+  color: #a06fbd; }
+
+/*# sourceMappingURL=main.css.map */
