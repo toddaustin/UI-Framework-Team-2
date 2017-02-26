@@ -13,10 +13,6 @@
 	font-size:$font-size-large;
 }
 
-.pagination__item--round:hover {
-	background-color: $purple-light;
-}
-
 .pagination__item--round {
 	border-radius: 50%;
 	border: solid 1px $purple-medium;
@@ -29,6 +25,16 @@
 
 .pagination__item:not(:last-child) {
 	margin-right:10px;
+}
+
+.pagination__item--round:hover,
+.pagination__item--square:hover {
+	background-color: $purple-light;
+}
+
+.pagination__item--round:hover > .pagination__link,
+.pagination__item--square:hover > .pagination__link{
+	color:white;
 }
 
 .pagination__link {

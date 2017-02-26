@@ -1032,9 +1032,6 @@ h6 {
   color: #6a497d;
   font-size: 18px; }
 
-.pagination__item--round:hover {
-  background-color: #a06fbd; }
-
 .pagination__item--round {
   border-radius: 50%;
   border: solid 1px #6a497d; }
@@ -1045,6 +1042,14 @@ h6 {
 
 .pagination__item:not(:last-child) {
   margin-right: 10px; }
+
+.pagination__item--round:hover,
+.pagination__item--square:hover {
+  background-color: #a06fbd; }
+
+.pagination__item--round:hover > .pagination__link,
+.pagination__item--square:hover > .pagination__link {
+  color: white; }
 
 .pagination__link {
   cursor: pointer;
