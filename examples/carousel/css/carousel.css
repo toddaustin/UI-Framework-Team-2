@@ -1,10 +1,26 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 24px; }
+
+body {
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 .carousel-content {
   margin: 50px 0;
   min-width: 1066px; }
 
 .ui_carousel {
   position: relative;
-  margin: 0px auto; }
+  margin: 0px auto 20px; }
 
 /******************************************************************************
  * Carousel Large  ************************************************************

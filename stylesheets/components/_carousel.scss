@@ -1,19 +1,25 @@
-
+@import '../utils/_variables.scss';
+@import '../base/_typography.scss';
 $carouselHeight : 350px;
 $carouselWidth : 786px;
 $numImages : 3;
 $numImagesMulti : 7;
 $sections : 3;
 
+body {
+    font: $font-family;
+}
+
 .carousel-content {
     margin: 50px 0;
     min-width: 1066px;
+   
 }
 
 
 .ui_carousel {
     position: relative;
-    margin: 0px auto;
+    margin: 0px auto 20px;
 }
 
 /******************************************************************************
