@@ -1,0 +1,314 @@
+//--------------------------------------------------------------
+// These are styles that are for the example page only.
+// They can be removed once a proper presentation page is
+// setup.
+//--------------------------------------------------------------
+.forms-container {
+	margin: 50px auto;
+	max-width: 1066px;
+
+	.wrap {
+		margin: 0 auto;
+		max-width: 790px;
+		width: 100%;
+	}
+
+	.content {
+		margin: 50px 0;
+		padding: 0 25px;
+
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.form-container {
+	margin: 0 auto;
+	max-width: 400px;
+
+	&.full-width {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+//--------------------------------------------------------------
+// FORMS
+//--------------------------------------------------------------
+form {
+	overflow: auto;
+	padding: 30px;
+
+	// Form headings
+	.form-heading {
+		margin-bottom: 30px;
+	}
+
+	&.primary-form {
+		border: 2px solid $purple-light;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: $purple-light;
+		}
+	}
+
+	&.secondary-form {
+		background: $purple-light;
+		border: none;
+		border-radius: 3px;
+		color: #ffffff;
+	}
+}
+
+//--------------------------------------------------------------
+// INPUTS
+//--------------------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+input[type="number"] {
+	border: 1px solid $purple-light;
+	border-radius: 2px;
+	display: inline-block;
+	font-family: $font-family;
+	font-size: $font-size-large;
+	outline: none;
+	margin: 0;
+	padding: 9px 15px;
+	vertical-align: middle;
+	width: 100%;
+
+	.secondary-form & {
+		background-color: rgba(255,255,255, 0.3);
+		border: 1px solid rgba(255,255,255, 0.3);
+		color: #ffffff;
+	}
+}
+
+// Inputs with focus
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+	border: 1px solid $purple-light;
+	outline: none;
+}
+
+// Radio / Checkbox
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+// Radio / Checkbox labels
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label,
+input[type="checkbox"]:not(:checked) + label,
+input[type="checkbox"]:checked + label {
+	cursor: pointer;
+	display: inline-block;
+	height: 25px;
+	padding-left: 35px;
+	position: relative;
+}
+
+input[type="radio"]+label:before,
+input[type="radio"]+label:after,
+input[type="checkbox"]+label:before,
+input[type="checkbox"]+label:after {
+	content: '';
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 3px 4px;
+	width: 16px;
+	height: 16px;
+	z-index: 0;
+	transition: 0.3s ease;
+}
+
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:before,
+input[type="radio"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:checked + label:after {
+	border: 2px solid $purple-light;
+	border-radius: 50%;
+}
+
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:checked + label:after {
+	border-radius: 0;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="checkbox"]:checked + label:after {
+	background: $purple-medium;
+	border-color: $purple-medium;
+}
+
+input[type="checkbox"]:checked + label.label-icon:after {
+	display: none;
+}
+
+input[type="checkbox"] + label.label-icon i {
+	display: none;
+}
+
+input[type="checkbox"]:checked + label.label-icon i {
+	display: block;
+	left: 6px;
+	position: absolute;
+	top: 2px;
+}
+
+input[type="checkbox"]:checked + label.label-icon-light i {
+	color: $purple-light;
+}
+
+input[type="checkbox"]:checked + label.label-icon-dark i {
+	color: $purple-medium;
+}
+
+input[type="range"] {
+	vertical-align: middle;
+	width: 100%;
+}
+
+// Placeholders
+input::-webkit-input-placeholder {
+	opacity: .6;
+}
+
+input:-moz-placeholder {
+	opacity: .6;
+}
+
+input::-moz-placeholder {
+	opacity: .6;
+}
+
+input:-ms-input-placeholder {
+	opacity: .6;
+}
+
+textarea {
+	.secondary-form & {
+		background-color: rgba(255,255,255, 0.3);
+		border: 1px solid rgba(255,255,255, 0.3);
+		color: #ffffff;
+	}
+}
+
+//--------------------------------------------------------------
+// UTILITY FORM CLASSES
+//--------------------------------------------------------------
+.button-right {
+	margin-left: 16px;
+}
+
+.form-row-group {
+	margin-bottom: 48px;
+}
+
+.form-row {
+	margin-bottom: 24px;
+}
+
+.form-row-icon {
+	padding-left: 40px;
+	position: relative;
+
+	i {
+		align-items: center;
+		background-color: $purple-light;
+		color: #ffffff;
+		display: flex;
+		font-size: $font-size-large;
+		height: 100%;
+		left: 0;
+		line-height: 1;
+		justify-content: center;
+		position: absolute;
+		text-align: center;
+		width: 41px;
+	}
+}
+
+.form-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.form-row:last-of-type {
+	margin-bottom: 0;
+}
+
+.form-row:last-of-type {
+	margin-bottom: 0;
+}
+
+// Two column forms!
+.form-row.two-column {
+
+	@media screen and (min-width: 640px) {
+		float: left;
+		margin-right: 2%;
+		width: 48%;
+	}
+}
+
+.form-row.two-column.last {
+	margin-right: 0;
+
+	@media screen and (min-width: 640px) {
+		width: 50%;
+	}
+}
+
+.field-group-inline {
+	float: left;
+	margin-right: 5px;
+}
+
+.field-group-inline.last {
+	margin-right: 0;
+}
+
+.field-group-inline label {
+	display: block;
+	width: auto;
+}
+
+.field-inline,
+.field-inline select {
+	display: inline-block;
+	width: auto;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
