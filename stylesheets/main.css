@@ -1893,8 +1893,14 @@ input:-ms-input-placeholder {
 .menu-vertical .menu-link {
   padding: 15px 59px 15px 15px;
 }
+er
 .menu-vertical .menu-link:hover, .menu-vertical .menu-link:active, .menu-vertical .menu-link:focus {
   color: #58d0ed;
+  
+.pagination__item--round {
+  border-radius: 50%;
+  border: solid 1px #6a497d;
+
 }
 .menu-vertical .menu-link-border-right {
   position: relative;
@@ -1910,8 +1916,23 @@ input:-ms-input-placeholder {
   transform: scale(0);
   width: 6px;
 }
+
 .menu-vertical .menu-link-border-right:hover:after {
   transform: scale(1);
+
+.pagination__item--round:hover,
+.pagination__item--square:hover {
+  background-color: #a06fbd; }
+
+.pagination__item--round:hover > .pagination__link,
+.pagination__item--square:hover > .pagination__link {
+  color: white; }
+
+.pagination__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #6a497d;
+
 }
 .menu-horizontal {
   align-items: center;
