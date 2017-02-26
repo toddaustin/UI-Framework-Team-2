@@ -3,10 +3,15 @@ $carouselHeight : 350px;
 $carouselWidth : 786px;
 $numImages : 3;
 
+.carousel-content {
+    margin: 50px 0;
+    min-width: 1066px;
+}
+
 
 .ui_carousel {
     position: relative;
-    margin: 20px;
+    margin: 0px auto;
 }
 
 .ui_carousel-large {
@@ -20,7 +25,7 @@ $numImages : 3;
 }
 
 .ui_carousel-large .ui_carousel-images {
-
+    margin-top: 20px;
      transition: transform 0.5s ease 0s;
      background-color:#000;
      height: $carouselHeight;
@@ -64,7 +69,7 @@ $numImages : 3;
 .ui_carousel-large > label {
     height: 30px;
     position: absolute;
-    top: 45%;
+    top: 52.5%;
     width: 30px;
 }
 
