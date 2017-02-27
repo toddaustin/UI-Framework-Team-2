@@ -35,7 +35,7 @@
 						</header>
 						<div class="component-container">
 							<h3>Basic Primary</h3>
-							<div class="component flex-center">
+							<div class="component">
 								<button class="btn btn-primary">Primary</button>
 								<button class="btn btn-primary btn-primary-hover">Hover</button>
 								<button class="btn btn-primary btn-primary-active">Active</button>
@@ -55,7 +55,7 @@
 						</div>
 						<div class="component-container">
 							<h3>Basic Secondary</h3>
-							<div class="component flex-center">
+							<div class="component ">
 								<button class="btn btn-secondary">Secondary</button>
 								<button class="btn btn-secondary btn-secondary-hover">Hover</button>
 								<button class="btn btn-secondary btn-secondary-active">Active</button>
@@ -76,7 +76,7 @@
 
 						<div class="component-container">
 							<h3>Basic Primary Rounded</h3>
-							<div class="component flex-center">
+							<div class="component">
 								<a href="#" class="btn btn-primary btn-rounded">Primary</a>
 								<a href="#" class="btn btn-primary btn-primary-hover btn-rounded">Hover</a>
 								<a href="#" class="btn btn-primary btn-primary-active btn-rounded">Active</a>
@@ -97,7 +97,7 @@
 
 						<div class="component-container">
 							<h3>Basic Secondary Rounded</h3>
-							<div class="component flex-center">
+							<div class="component">
 								<a href="#" class="btn btn-secondary btn-rounded">Primary</a>
 								<a href="#" class="btn btn-secondary btn-secondary-hover btn-rounded">Hover</a>
 								<a href="#" class="btn btn-secondary btn-secondary-active btn-rounded">Active</a>
@@ -118,7 +118,7 @@
 
 						<div class="component-container">
 							<h3>Button Group One</h3>
-							<div class="component flex-center">
+							<div class="component">
 								<div class="btn-group">
 									<button class="btn btn-primary btn-primary-active">Active</button>
 									<button class="btn btn-primary">Button 2</button>
@@ -130,7 +130,7 @@
 
 						<div class="component-container">
 							<h3>Button Group Two</h3>
-							<div class="component flex-center">
+							<div class="component">
 								<div class="btn-group btn-group-rounded">
 									<button class="btn btn-secondary btn-secondary-active">Active</button>
 									<button class="btn btn-secondary">Button 2</button>
@@ -597,16 +597,116 @@
 						</header>
 
 						<div class="component-container">
-							<h3>Pagination One</h3>
+							<h3>Pagination - Simple</h3>
 							<div class="component">
-								Pagination one goes here
+								<ul class="pagination">
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">1</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">...</a></li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">14</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">15</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">16</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">...</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">32</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 
 						<div class="component-container">
-							<h3>Pagination Two</h3>
+							<h3>Pagination Round</h3>
 							<div class="component">
-								Pagination two goes here
+								<ul class="pagination">
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">
+												<i class="fa fa-angle-left" aria-hidden="true"></i>
+											</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">1</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">...</a></li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">14</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">15</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">16</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">...</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">32</a>
+										</li>
+										<li class="pagination__item pagination__item--round">
+											<a class="pagination__link" href="#">
+												<i class="fa fa-angle-right" aria-hidden="true"></i>
+											</a>
+										</li>
+									</ul>
+
+							</div>
+							<div class="component-container">
+								<h3>Pagination - Square</h3>
+							</div>
+							<div class="component">
+								<ul class="pagination">
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">1</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">...</a></li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">14</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">15</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">16</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">...</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">32</a>
+									</li>
+									<li class="pagination__item pagination__item--square">
+										<a class="pagination__link" href="#">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -616,16 +716,81 @@
 						</header>
 
 						<div class="component-container">
-							<h3>Carousel One</h3>
+							<h3>Large Carousel</h3>
 							<div class="component">
-								Carousel one goes here
+								<div class="carousel-content">
+								    <div class="ui_carousel ui_carousel-large">
+								        <input type="radio" id="image-1" name="ui_carousel" checked />
+								        <input type="radio" id="image-2" name="ui_carousel" />
+								        <input type="radio" id="image-3" name="ui_carousel" />
+								        <label for="image-1"></label>
+								        <label for="image-2"></label>
+								        <label for="image-3"></label>
+								        <div class="ui_carousel-dots">
+								            <label for="image-1" class="ui_carousel-dot"></label>
+								            <label for="image-2" class="ui_carousel-dot"></label>
+								            <label for="image-3" class="ui_carousel-dot"></label>
+								        </div>
+								        <div class="ui_carousel-images">
+								            <img src="images/carousel/image-1.jpg" alt="" /><img src="images/carousel/image-2.jpg" alt="" /><img src="images/carousel/image-3.jpg" alt="" />
+								        </div>
+								    </div>
+								</div>
 							</div>
 						</div>
 
 						<div class="component-container">
-							<h3>Carousel Two</h3>
+							<h3>Multi Image Carousel</h3>
 							<div class="component">
-								Carousel two goes here
+								<div class="carousel-content">
+								    <div class="ui_carousel ui_carousel-multi">
+								        <input type="radio" id="image-1-m" name="ui_carousel-multi" checked />
+								        <input type="radio" id="image-2-m" name="ui_carousel-multi" />
+								        <input type="radio" id="image-3-m" name="ui_carousel-multi" />
+								        <label for="image-1-m"></label>
+								        <label for="image-2-m"></label>
+								        <label for="image-3-m"></label>
+								        <div class="ui_carousel-images">
+								            <section>
+								                <img src="images/carousel/image-1-m.jpg" alt="" />
+								                <img src="images/carousel/image-2-m.jpg" alt="" />
+								                <img src="images/carousel/image-3-m.jpg" alt="" />
+								            </section>
+								            <section>
+								                <img src="images/carousel/image-4-m.jpg" alt="" />
+								                <img src="images/carousel/image-5-m.jpg" alt="" />
+								                <img src="images/carousel/image-4-m.jpg" alt="" />
+								            </section>
+								            <section>
+								                <img src="images/carousel/image-5-m.jpg" alt="" />
+								            </section>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+						<div class="component-container">
+						<h3>Carousel with Thumbnails</h3>
+							<div class="component">
+								<div class="carousel-content">
+								    <div class="ui_carousel ui_carousel-thumbs">
+								        <input type="radio" id="image-1-t" name="ui_carousel-t" checked />
+								        <input type="radio" id="image-2-t" name="ui_carousel-t" />
+								        <input type="radio" id="image-3-t" name="ui_carousel-t" />
+								        <label for="image-1-t"></label>
+								        <label for="image-2-t"></label>
+								        <label for="image-3-t"></label>
+								        <div class="ui_carousel-thumbnails">
+								            <label for="image-1-t" class="ui_carousel-thumb-image"><img src="images/carousel/image-1-thumb.jpg" alt=""></label>
+								            <label for="image-2-t" class="ui_carousel-thumb-image"><img src="images/carousel/image-2-thumb.jpg" alt=""></label>
+								            <label for="image-3-t" class="ui_carousel-thumb-image"><img src="images/carousel/image-3-thumb.jpg" alt=""></label>
+								        </div>
+								        <div class="ui_carousel-images">
+								            <img src="images/carousel/image-1.jpg" alt="" /><img src="images/carousel/image-2.jpg" alt="" /><img src="images/carousel/image-3.jpg" alt="" />
+								        </div>
+								    </div>
+								</div>
+
 							</div>
 						</div>
 					</section>
