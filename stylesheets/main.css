@@ -171,7 +171,8 @@ textarea {
 .sidebar {
   float: left;
   padding-top: 46px;
-  width: 265px; }
+  width: 265px;
+  position: fixed; }
 
 .sidebar-heading {
   color: #fffefe;
