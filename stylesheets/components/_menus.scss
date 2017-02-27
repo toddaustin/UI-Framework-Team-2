@@ -1,0 +1,106 @@
+//--------------------------------------------------------------
+// MENUS
+//--------------------------------------------------------------
+.menu {
+	list-style: none;
+
+	.menu-link {
+		color: $gray-blue-light;
+		display: block;
+		font-size: $font-size-large;
+		font-weight: 500;
+		padding: 15px;
+		text-decoration: none;
+	}
+
+	&-vertical {
+
+		.menu-link {
+			padding: 15px 59px 15px 15px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: $blue-light;
+			}
+
+			&-border-right {
+				position: relative;
+
+				&:after {
+					background-color: $blue-light;
+					content: '';
+					position: absolute;
+					height: 100%;
+					right: -3px;
+					top: 0;
+					transition: transform 0.4s;
+					transform: scale(0);
+					width: 6px;
+				}
+
+				&:hover {
+
+					&:after {
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+
+	&-horizontal {
+		align-items: center;
+		display: flex;
+
+		li:first-of-type {
+			margin-left: 0;
+		}
+
+		.menu-item {
+			margin-left: 40px;
+		}
+
+		.menu-link {
+			padding: 0 5px 15px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: $white-med-off;
+			}
+
+			&-border-bottom {
+				position: relative;
+
+				&:after {
+					background-color: $blue-light;
+					content: '';
+					position: absolute;
+					height: 4px;
+					left: 0;
+					bottom: 0;
+					transform: scale(0);
+					transition: transform 0.4s;
+					width: 100%;
+				}
+
+				&:hover {
+
+					&:after {
+						transform: scale(1);
+					}
+				}
+
+				&.menu-active {
+					color: $white-med-off;
+
+					&:after {
+						content: '';
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+}
