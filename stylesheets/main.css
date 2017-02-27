@@ -1,3 +1,6 @@
+/*
+* Team 2 Hackathon Framework
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1494,24 +1497,6 @@ button,
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px; }
 
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3 {
-  font-size: 24px; }
-
-h4 {
-  font-size: 18px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  font-size: 12px; }
-
 .ui_accordion-holder {
   background-color: #fffefe;
   border: #212121 1px solid;
@@ -1524,57 +1509,94 @@ h6 {
   .ui_accordion-holder > p {
     margin: 25px 0; }
 
-.ui_accordion-list-wdb .ui_accordion-main {
-  list-style-type: none;
-  overflow: auto;
-  border: 1px solid #212121;
+.ui_accordion-large .ui_accordion-main {
+  width: 775px; }
+  .ui_accordion-large .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+    width: 375px; }
+
+.ui_accordion-medium .ui_accordion-main {
+  width: 575px; }
+  .ui_accordion-medium .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+    width: 375px; }
+
+.ui_accordion-small .ui_accordion-main {
   width: 375px; }
-  .ui_accordion-list-wdb .ui_accordion-main input {
+  .ui_accordion-small .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+    width: 175px; }
+
+.ui_accordion-lightHeadBG .ui_accordion-main > label header {
+  background-color: #fffefe;
+  color: #212121; }
+  .ui_accordion-lightHeadBG .ui_accordion-main > label header:hover {
+    background-color: #fafafa;
+    color: #a06fbd; }
+
+.ui_accordion-darkHeadBG .ui_accordion-main > label header {
+  background-color: #212121;
+  color: #c3c8ce; }
+  .ui_accordion-darkHeadBG .ui_accordion-main > label header:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #bfbfbf; }
+
+.ui_accordion-lightContBG .ui_accordion-main article.ui_accordion-content {
+  background-color: #fffefe;
+  color: #212121; }
+
+.ui_accordion-darkContBG .ui_accordion-main article.ui_accordion-content {
+  background-color: #212121;
+  color: #6a497d; }
+
+.ui_accordion-noBorder .ui_accordion-main > label header {
+  border-bottom: #212121 1px solid; }
+
+.ui_accordion-bordered .ui_accordion-main {
+  border: 1px solid #212121; }
+  .ui_accordion-bordered .ui_accordion-main > label header {
+    border-bottom: #c3c8ce 1px solid; }
+
+.ui_accordion-list .ui_accordion-main {
+  list-style-type: none;
+  overflow: auto; }
+  .ui_accordion-list .ui_accordion-main input {
     display: none; }
-    .ui_accordion-list-wdb .ui_accordion-main input:checked ~ article {
+    .ui_accordion-list .ui_accordion-main input:checked ~ article {
       display: block; }
-    .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label {
+    .ui_accordion-list .ui_accordion-main input:checked ~ label {
       color: #fffefe; }
-      .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label header {
+      .ui_accordion-list .ui_accordion-main input:checked ~ label header {
         border-bottom: #6a497d 4px solid; }
-      .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label i {
+      .ui_accordion-list .ui_accordion-main input:checked ~ label i {
         transform: rotate(180deg);
         top: 8px; }
-  .ui_accordion-list-wdb .ui_accordion-main:last-child label header {
+  .ui_accordion-list .ui_accordion-main:last-child label header {
     border-bottom: none; }
-  .ui_accordion-list-wdb .ui_accordion-main > label header {
-    line-height: 25px;
-    position: relative;
-    font-weight: 300;
-    text-transform: uppercase;
-    background-color: #fffefe;
-    color: #212121;
-    border-bottom: #c3c8ce 1px solid;
-    padding: 7px 10px; }
-    .ui_accordion-list-wdb .ui_accordion-main > label header:hover {
-      cursor: pointer;
-      background-color: #fafafa;
-      color: #a06fbd; }
-    .ui_accordion-list-wdb .ui_accordion-main > label header i {
-      transition: all 400ms ease;
-      position: absolute;
-      right: 8px;
-      top: 6px;
-      font-size: 25px; }
-  .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content {
+  .ui_accordion-list .ui_accordion-main > label {
+    padding-bottom: 0px; }
+    .ui_accordion-list .ui_accordion-main > label header {
+      line-height: 25px;
+      position: relative;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding: 7px 10px; }
+      .ui_accordion-list .ui_accordion-main > label header:hover {
+        cursor: pointer; }
+      .ui_accordion-list .ui_accordion-main > label header i {
+        transition: all 400ms ease;
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        font-size: 25px; }
+  .ui_accordion-list .ui_accordion-main article.ui_accordion-content {
     display: none;
-    background-color: #212121;
-    color: #6a497d;
     padding: 25px; }
-    .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
+    .ui_accordion-list .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
       float: right;
-      width: 175px;
       vertical-align: top;
       padding-bottom: 15px; }
-      .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
+      .ui_accordion-list .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
         font-weight: bold;
         padding-bottom: 15px; }
-      .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
+      .ui_accordion-list .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
         font-size: 12px;
         color: #999;
         letter-spacing: 1.2px;
@@ -2019,7 +2041,40 @@ input:-ms-input-placeholder {
 .markup__header--purple {
   color: #6a497d; }
 
+.progress-bar {
+  width: 100%;
+  position: relative;
+  border-radius: 25px;
+  padding: 5px;
+  border: 1px solid #6a497d; }
 
-/*# sourceMappingURL=main.css.map */
+.progress-bar__fill {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 90%;
+  border-radius: 25px; }
 
+.progress-bar--small {
+  height: 20px; }
 
+.progress-bar--medium {
+  height: 30px; }
+
+.progress-bar--large {
+  height: 40px; }
+
+.progress-bar__fill--light {
+  background-color: #a06fbd; }
+
+.progress-bar__fill--medium {
+  background-color: #6a497d; }
+
+.progress-bar__fill--candyCane:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent); }
