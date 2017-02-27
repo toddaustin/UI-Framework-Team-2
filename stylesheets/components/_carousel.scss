@@ -23,17 +23,17 @@ body {
 
 
 .ui_carousel {
-    position: relative;
     margin: 0px auto 20px;
+    position: relative;
 }
 
 /******************************************************************************
  * Carousel Large  ************************************************************
  ******************************************************************************/
 .ui_carousel-large {
-    width: $carouselWidth;
     overflow: hidden;
     position: relative;
+    width: $carouselWidth;
 }
 
 .ui_carousel-large input[type=radio] {
@@ -41,11 +41,11 @@ body {
 }
 
 .ui_carousel-large .ui_carousel-images {
+    background-color:#000;
+    border-radius: 5px;
+    height: $carouselHeight;
     margin-top: 20px;
     transition: transform 0.5s ease 0s;
-    background-color:#000;
-    height: $carouselHeight;
-    border-radius: 3px;
 }
 
 .ui_carousel-large .ui_carousel-dots  {
@@ -71,10 +71,10 @@ body {
 } 
 
 .ui_carousel-large .ui_carousel-images img {
-    transition: all .5s ease;
+    border-radius: 5px;
     position:absolute;
-    top: 0
-    // left: 787px;
+    top: 0;
+    transition: all .5s ease;
 }
 
 @for $i from 1 through $numImages { 
@@ -176,10 +176,10 @@ body {
  * Carousel Multi  ************************************************************
  ******************************************************************************/
 .ui_carousel-multi {
-    width: $carouselWidth;
+    height: 380px;
     overflow: hidden;
     position: relative;
-    height: 380px;
+    width: $carouselWidth;
 }
 
 .ui_carousel-multi input[type=radio] {
@@ -187,9 +187,9 @@ body {
 }
 
 .ui_carousel-multi .ui_carousel-images {
+    height: $carouselHeight;
     margin: 20px 0 0 30px;
     transition: transform 0.5s ease 0s;
-    height: $carouselHeight;
 
 }
 
@@ -205,14 +205,14 @@ body {
 }
 
 .ui_carousel-multi .ui_carousel-images section {
-    margin:  10px 0px;
-    transition: all .5s ease;
     display: inline-block;
     height: $carouselHeight;
+    margin:  10px 0px;
     overflow: hidden;
-    vertical-align: top;
     position:absolute;
     top: 0;
+    transition: all .5s ease;
+    vertical-align: top;
     width: 728px;
 }
 
@@ -296,10 +296,10 @@ body {
  * Carousel Thumbs  ************************************************************
  ******************************************************************************/
  .ui_carousel-thumbs {
-     width: $carouselWidth;
+     height: 510px;
      overflow: hidden;
      position: relative;
-     height: 510px;
+     width: $carouselWidth;
  }
 
  .ui_carousel-thumbs input[type=radio] {
@@ -307,10 +307,10 @@ body {
  }
 
  .ui_carousel-thumbs .ui_carousel-images {
-     transition: transform 0.5s ease 0s;
      background-color:#000;
+     border-radius: 5px;
      height: $carouselHeight;
-     border-radius: 3px;
+     transition: transform 0.5s ease 0s;
  }
 
  .ui_carousel-thumbs .ui_carousel-thumbnails  {
@@ -330,10 +330,11 @@ body {
  }
 
  .ui_carousel-thumb-image img {
+    border-radius: 5px;
     height: 45px;
-    width: 45px;
     opacity: 0.5;
     transition: all .5s ease;
+    width: 45px;
  }
 
  .ui_carousel-thumb-image img:hover {
@@ -345,9 +346,10 @@ body {
 
 
  .ui_carousel-thumbs .ui_carousel-images img {
-     transition: all .5s ease;
-     position:absolute;
-     top: 0;
+    border-radius: 5px;
+    position:absolute;
+    top: 0;
+    transition: all .5s ease;
  }
 
  @for $i from 1 through $numThumbs { 

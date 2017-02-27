@@ -31,26 +31,26 @@ body {
   width: auto; }
 
 .ui_carousel {
-  position: relative;
-  margin: 0px auto 20px; }
+  margin: 0px auto 20px;
+  position: relative; }
 
 /******************************************************************************
  * Carousel Large  ************************************************************
  ******************************************************************************/
 .ui_carousel-large {
-  width: 786px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  width: 786px; }
 
 .ui_carousel-large input[type=radio] {
   display: none; }
 
 .ui_carousel-large .ui_carousel-images {
-  margin-top: 20px;
-  transition: transform 0.5s ease 0s;
   background-color: #000;
+  border-radius: 5px;
   height: 350px;
-  border-radius: 3px; }
+  margin-top: 20px;
+  transition: transform 0.5s ease 0s; }
 
 .ui_carousel-large .ui_carousel-dots {
   bottom: 5px;
@@ -69,9 +69,10 @@ body {
   width: 15px; }
 
 .ui_carousel-large .ui_carousel-images img {
-  transition: all .5s ease;
+  border-radius: 5px;
   position: absolute;
-  top: 0; }
+  top: 0;
+  transition: all .5s ease; }
 
 .ui_carousel-large .ui_carousel-images > img:nth-of-type(1) {
   transform: translateX(0%);
@@ -132,18 +133,18 @@ body {
  * Carousel Multi  ************************************************************
  ******************************************************************************/
 .ui_carousel-multi {
-  width: 786px;
+  height: 380px;
   overflow: hidden;
   position: relative;
-  height: 380px; }
+  width: 786px; }
 
 .ui_carousel-multi input[type=radio] {
   display: none; }
 
 .ui_carousel-multi .ui_carousel-images {
+  height: 350px;
   margin: 20px 0 0 30px;
-  transition: transform 0.5s ease 0s;
-  height: 350px; }
+  transition: transform 0.5s ease 0s; }
 
 .ui_carousel-multi img {
   margin: 0 5px; }
@@ -155,14 +156,14 @@ body {
   width: 30px; }
 
 .ui_carousel-multi .ui_carousel-images section {
-  margin: 10px 0px;
-  transition: all .5s ease;
   display: inline-block;
   height: 350px;
+  margin: 10px 0px;
   overflow: hidden;
-  vertical-align: top;
   position: absolute;
   top: 0;
+  transition: all .5s ease;
+  vertical-align: top;
   width: 728px; }
 
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(1) {
@@ -218,19 +219,19 @@ body {
  * Carousel Thumbs  ************************************************************
  ******************************************************************************/
 .ui_carousel-thumbs {
-  width: 786px;
+  height: 510px;
   overflow: hidden;
   position: relative;
-  height: 510px; }
+  width: 786px; }
 
 .ui_carousel-thumbs input[type=radio] {
   display: none; }
 
 .ui_carousel-thumbs .ui_carousel-images {
-  transition: transform 0.5s ease 0s;
   background-color: #000;
+  border-radius: 5px;
   height: 350px;
-  border-radius: 3px; }
+  transition: transform 0.5s ease 0s; }
 
 .ui_carousel-thumbs .ui_carousel-thumbnails {
   bottom: 0px;
@@ -247,10 +248,11 @@ body {
   width: 65px; }
 
 .ui_carousel-thumb-image img {
+  border-radius: 5px;
   height: 45px;
-  width: 45px;
   opacity: 0.5;
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  width: 45px; }
 
 .ui_carousel-thumb-image img:hover {
   height: 65px;
@@ -259,9 +261,10 @@ body {
   transform: translateY(10px); }
 
 .ui_carousel-thumbs .ui_carousel-images img {
-  transition: all .5s ease;
+  border-radius: 5px;
   position: absolute;
-  top: 0; }
+  top: 0;
+  transition: all .5s ease; }
 
 .ui_carousel-thumbs .ui_carousel-images > img:nth-of-type(1) {
   transform: translateX(0%);
