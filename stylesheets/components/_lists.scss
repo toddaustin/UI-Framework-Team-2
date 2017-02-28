@@ -1,18 +1,70 @@
 @import "../utils/_variables.scss";
 
 
-.u-list {
-    list-style-type: none;
-    margin-left: 5px;
-    font-size: $font-size-base;
-  
- li {
-    background: url(../images/bullet.png) 0px 3px no-repeat;
-    padding: 0px 15px;
+.ui_list {
+        list-style-type: none;
+        margin-left: 20px;
+        font-size: $font-size-base;
+      
+     li {
+        padding: 0px 15px;
+        line-height: 1.425;
+     }
+     li:before{
+         content:'\29bf  '; 
+         color:  #a06fbd;
+     }
 }
+  
+
+.u-list li {
+    padding: 0px 5px;
+    list-style-type:none;
 }
 
+
+
+
 .o-list {
-    margin-left: 20px;
     font-size: $font-size-base;
+    list-style-type: decimal;
+    margin-left: 35px;
+    li {
+        padding: 0;
+    }
+    li:before{
+        content:''; 
+        color:  #a06fbd;
+    }
 }
+
+.u-list{
+
+    .doc, .post, .link, .form {
+        background: url('../images/lists/document.png') no-repeat 0 2px;
+        padding: 0 0 5px 10px;
+        
+        &:before{
+            content:''; 
+        }
+    }
+
+    .post {
+        background-image: url('../images/lists/poster.png');
+    }
+
+    .link {
+        background-image: url('../images/lists/link.png');
+    }
+
+    .form {
+        background-image: url('../images/lists/form.png');
+    }
+
+    .doc a, .post a, .link a, .form a {
+        padding: 10px 0 5px 15px;
+        letter-spacing: 1px;
+    } 
+
+}
+
