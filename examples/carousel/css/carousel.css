@@ -1,15 +1,24 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 36px;
+  margin-bottom: 42px; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px; }
+
+p {
+  margin-bottom: 30px; }
 
 body {
   font: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -196,6 +205,99 @@ body {
   opacity: 1; }
 
 .ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images section:nth-of-type(3) {
+  opacity: 1; }
+
+/******************************************************************************
+ * Carousel Thumbs  ************************************************************
+ ******************************************************************************/
+.ui_carousel-thumbs {
+  width: 786px;
+  height: 350px;
+  overflow: hidden; }
+
+.ui_carousel-thumbs input[type=radio] {
+  display: none; }
+
+.ui_carousel-thumbs .ui_carousel-images {
+  margin-top: 20px;
+  transition: transform 0.5s ease 0s;
+  background-color: #000;
+  height: 350px; }
+
+.ui_carousel-thumbs .ui_carousel-dots {
+  bottom: 5px;
+  position: absolute;
+  text-align: center;
+  width: 786px;
+  z-index: 5; }
+
+.ui_carousel-thumbs .ui_carousel-dots .ui_carousel-dot {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  list-style-type: none;
+  margin: 0 5px;
+  width: 15px; }
+
+.ui_carousel-thumbs .ui_carousel-images img {
+  transition: all .5s ease;
+  position: absolute;
+  top: 0; }
+
+.ui_carousel-thumbs .ui_carousel-images > img:nth-of-type(1) {
+  transform: translateX(0%);
+  opacity: 0.5; }
+
+.ui_carousel-thumbs .ui_carousel-images > img:nth-of-type(2) {
+  transform: translateX(100%);
+  opacity: 0.5; }
+
+.ui_carousel-thumbs .ui_carousel-images > img:nth-of-type(3) {
+  transform: translateX(200%);
+  opacity: 0.5; }
+
+.ui_carousel-thumbs > label {
+  height: 30px;
+  position: absolute;
+  top: 52.5%;
+  width: 30px; }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(2) {
+  background: transparent url(../images/carousel/left.png) no-repeat;
+  display: block;
+  left: 10px;
+  z-index: 5; }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(2),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(3),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(1) {
+  background: transparent url(../images/carousel/right.png) no-repeat;
+  display: block;
+  right: 10px;
+  z-index: 4; }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(1),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(2),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(3) {
+  background-color: rgba(255, 255, 255, 0.75); }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images {
+  transform: translateX(0%); }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images {
+  transform: translateX(-100%);
+  top: 0; }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images {
+  transform: translateX(-200%);
+  top: 0; }
+
+.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images img:nth-of-type(1),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-images img:nth-of-type(2),
+.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images img:nth-of-type(3) {
   opacity: 1; }
 
 /*# sourceMappingURL=carousel.css.map */
