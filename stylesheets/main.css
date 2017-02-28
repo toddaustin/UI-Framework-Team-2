@@ -172,7 +172,8 @@ textarea {
   float: left;
   padding-top: 0px;
   width: 265px;
-  position: fixed; }
+  position: sticky;
+  top: 20px; }
 
 .sidebar-heading {
   color: #fffefe;
@@ -1948,6 +1949,56 @@ input:-ms-input-placeholder {
           .menu-horizontal .menu-link-border-bottom.menu-active:after {
             content: '';
             transform: scale(1); }
+
+.progress-bar {
+  width: 100%;
+  position: relative;
+  border-radius: 25px;
+  padding: 5px;
+  border: 1px solid #6a497d; }
+
+.progress-bar__fill {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 90%;
+  border-radius: 25px; }
+
+.progress-bar--small {
+  height: 20px; }
+
+.progress-bar--medium {
+  height: 30px; }
+
+.progress-bar--large {
+  height: 40px; }
+
+.progress-bar__fill--light {
+  background-color: #a06fbd; }
+
+.progress-bar__fill--medium {
+  background-color: #6a497d; }
+
+.progress-bar__fill--candyCane:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent); }
+
+.u-list {
+  list-style-type: none;
+  margin-left: 5px;
+  font-size: 14px; }
+  .u-list li {
+    background: url(../images/bullet.png) 0px 3px no-repeat;
+    padding: 0px 15px; }
+
+.o-list {
+  margin-left: 20px;
+  font-size: 14px; }
 
 .pagination {
   display: flex;

@@ -1,0 +1,18 @@
+@import "../utils/_variables.scss";
+
+
+.u-list {
+    list-style-type: none;
+    margin-left: 5px;
+    font-size: $font-size-base;
+  
+ li {
+    background: url(../images/bullet.png) 0px 3px no-repeat;
+    padding: 0px 15px;
+}
+}
+
+.o-list {
+    margin-left: 20px;
+    font-size: $font-size-base;
+}
