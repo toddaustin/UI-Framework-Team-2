@@ -170,8 +170,9 @@ textarea {
 
 .sidebar {
   float: left;
-  padding-top: 46px;
-  width: 265px; }
+  padding-top: 0px;
+  width: 265px;
+  position: fixed; }
 
 .sidebar-heading {
   color: #fffefe;
@@ -507,7 +508,7 @@ body {
  * Carousel Thumbs  ************************************************************
  ******************************************************************************/
 .ui_carousel-thumbs {
-  height: 510px;
+  height: 450px;
   overflow: hidden;
   position: relative;
   width: 786px; }
@@ -584,16 +585,14 @@ body {
 
 /****** General CSS that applies to entire area containing the tabs *********************/
 .tabs-container {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid black;
-  background-color: #fffefe;
-  line-height: 25px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 100px;
-  position: relative;
-  width: 960px;
-  box-sizing: border-box; }
+  font-size: 14px;
+  box-sizing: content-box; }
+
+.tabs-continer label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 0;
+  width: auto; }
 
 .tabs-container h1, .tabs-container h2 {
   font-weight: 800; }
@@ -699,7 +698,7 @@ div.horizontal-tabs-1,
 div.horizontal-tabs-3 {
   margin: 100px 0;
   position: relative;
-  width: 85%;
+  width: auto;
   height: 360px; }
 
 /*******CSS applying only to the first set horizontal tabs****************************/
@@ -829,7 +828,7 @@ div[class="horizontal-tabs-2"] {
   height: 360px; }
 
 .horizontal-tabs-2 .display-area {
-  width: 645px; }
+  width: auto; }
 
 #highlight-bottom-1,
 #highlight-bottom-2,
@@ -864,7 +863,7 @@ div[class="horizontal-tabs-2"] {
 
 /***** CSS relating to the third set of horizontal tabs*********************************/
 div.horizontal-tabs-3 {
-  width: 700px; }
+  width: auto; }
 
 .horizontal-tabs-3 .display-area {
   width: 90%;
@@ -1070,7 +1069,7 @@ div.vertical-tabs-1,
 div.vertical-tabs-2 {
   margin: 100px 0;
   position: relative;
-  width: 83%;
+  width: auto;
   height: 360px;
   left: 100px; }
 
