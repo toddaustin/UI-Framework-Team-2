@@ -1,0 +1,35 @@
+
+.info, .success, .warning, .error {
+    border-radius: 50px;
+    border: 2px solid;
+    padding: 5px 10px;
+    vertical-align: middle;
+    .fa  {
+    vertical-align: middle;
+    padding-right: 20px;
+    }
+    span {
+        font-weight: bold;
+    }
+}
+
+.info {
+    background-color: #BBDEFB;
+    color: #0D47A1;
+}
+
+.success {
+    background-color: #DCEDC8;
+    color: #1B5E20;
+}
+
+.warning {
+    background-color: #FFECB3;
+    color: #FF6F00;
+}
+
+.error {
+    background-color: #FFCDD2;
+    color: #D50000;
+}
+

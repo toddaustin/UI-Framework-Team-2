@@ -1,22 +1,10 @@
-@import "../utils/_reset.scss";
-@import "../utils/_variables.scss";
-
-$headers: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
-
-@for $i from 1 through length($headers) {
-	h#{$i} {
-		font-size: nth($headers, $i)
-	}
-}
-
 //
 //  PROJECT SPECIFIC VARIABLES
 //
 
-$accordion-width: 375px;
-$border: true;
-$header-bg: white;
-$content-bg: dark;
+$accordion-width-sm: 375px;
+$accordion-width-med: 575px;
+$accordion-width-lg: 775px;
 
 //
 //
@@ -35,8 +23,92 @@ $content-bg: dark;
 		margin: 25px 0;
 	}
 }
+
+
+.ui_accordion-large {
+	.ui_accordion-main {
+		width: $accordion-width-lg;
+		article.ui_accordion-content {	
+			.ui_accordion-content-text {
+				width: ( $accordion-width-med - 200);
+			}
+		}
+	}
+}
+.ui_accordion-medium {
+	.ui_accordion-main {
+		width: $accordion-width-med;
+		article.ui_accordion-content {	
+			.ui_accordion-content-text {
+				width: ( $accordion-width-med - 200);
+			}
+		}
+	}
+}
+.ui_accordion-small {
+	.ui_accordion-main {
+		width: $accordion-width-sm;
+		article.ui_accordion-content {	
+			.ui_accordion-content-text {
+				width: ( $accordion-width-sm - 200);
+			}
+		}
+	}
+}
+.ui_accordion-lightHeadBG {
+	 .ui_accordion-main {
+		>label header {
+			background-color:$white-light-off; color: $gray-dark;
+			&:hover {
+				background-color: darken(white, 2%); color: $purple-light;	
+			}
+		}
+	}
+}
+.ui_accordion-darkHeadBG {
+	.ui_accordion-main {
+		>label header {
+			background-color:$gray-dark; color: $white-med-off;
+			&:hover {
+				background-color: rgba(0,0,0,.9); color: darken(#fff, 25%);
+			}
+		}
+	}
+}
+.ui_accordion-lightContBG {
+	.ui_accordion-main {
+		article.ui_accordion-content {
+			background-color:$white-light-off; color: $gray-dark;	
+		}
+	}
+}
+.ui_accordion-darkContBG {
+	.ui_accordion-main {
+		article.ui_accordion-content {
+			background-color:$gray-dark; color: $purple-medium;		
+		}
+	}
+}
+.ui_accordion-noBorder {
+	.ui_accordion-main {
+		>label header {
+			border-bottom: $gray-dark 1px solid;
+		}
+	}
+}
+.ui_accordion-bordered {
+	.ui_accordion-main {
+		border: 1px solid $gray-dark;
+		> label header {
+			border-bottom: $white-med-off 1px solid;
+		}
+	}
+}
 	
-.ui_accordion-list-wdb .ui_accordion-main {
+	
+.ui_accordion-list .ui_accordion-main {
+	list-style-type:none;
+	overflow: auto;
 	input {
 		display: none;
 		&:checked {
@@ -58,41 +130,31 @@ $content-bg: dark;
 	&:last-child label header {
 		border-bottom: none;
 	}
-	list-style-type:none;
-	overflow: auto;
-	@if $border == true { border: 1px solid $gray-dark; }
-	width: $accordion-width;
-	> label header {
-		line-height: 25px;
-		position: relative;
-		font-weight: 300;
-		text-transform: uppercase;	
-		@if $header-bg == dark { background-color:$gray-dark; color: $white-med-off;
-		} @else if $header-bg == white { background-color:$white-light-off; color: $gray-dark;}
-		@if $border == true { border-bottom: $white-med-off 1px solid; 
-		} @else if $border == false { border-bottom: $gray-dark 1px solid; }
-		padding: 7px 10px;	
-		&:hover {
-			cursor: pointer;
-			@if $header-bg == dark { background-color: rgba(0,0,0,.9); color: darken(#fff, 25%);
-			} @else if $header-bg == white { background-color: darken(white, 2%); color: $purple-light;  }
-		}
-		i {
-			transition: all 400ms ease;
-			position: absolute;
-			right: 8px;
-			top: 6px;
-			font-size: 25px;
+	> label {
+		padding-bottom: 0px;
+		header {
+			line-height: 25px;
+			position: relative;
+			font-weight: 300;
+			text-transform: uppercase;	
+			padding: 7px 10px;
+			&:hover {
+				cursor: pointer;
+			}
+			i {
+				transition: all 400ms ease;
+				position: absolute;
+				right: 8px;
+				top: 6px;
+				font-size: 25px;
+			}
 		}
 	}
 	article.ui_accordion-content {	
 		display: none;
-		@if $content-bg == dark { background-color:$gray-dark; color: $purple-medium;
-		} @else if $content-bg == white { background-color:$white-light-off; color: $gray-dark;}
 		padding: 25px;
 		.ui_accordion-content-text {
 			float: right;
-			width: ( $accordion-width - 200);
 			vertical-align: top;
 			padding-bottom: 15px;
 			header {

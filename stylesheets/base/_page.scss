@@ -1,0 +1,146 @@
+//--------------------------------------------------------------
+// GLOBAL LAYOUT
+//--------------------------------------------------------------
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.flex-center {
+	@media screen and (min-width : 700px) {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+}
+
+.text-align {
+	&-center {
+		text-align: center;
+	}
+
+	&-right {
+		text-align: right;
+	}
+
+	&-left {
+		text-align: left;
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+//--------------------------------------------------------------
+// PAGE ELEMENTS
+//--------------------------------------------------------------
+.site-header {
+	background-color: $gray-med-dark;
+	padding: 50px 0 0;
+}
+
+.main-nav {
+	margin-top: 50px;
+}
+
+.page {
+	@include clearfix;
+
+	background-color: $purple-dark-desat;
+}
+
+.wrap {
+	@include clearfix;
+
+	margin: 0 auto;
+	max-width: 1330px;
+	width: 100%;
+}
+
+.site-name {
+	color: $gray-blue;
+}
+
+.site-content {
+	padding-top: 65px;
+}
+
+.content-container {
+	background-color: $white-light-off;
+	float: right;
+	max-width: 1065px;
+	min-height: 100vh;
+	padding: 75px 20px;
+	width: 100%;
+
+	@media screen and (min-width : 1024) {
+		padding: 125px 0 0;
+	}
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 790px;
+	width: 100%;
+}
+
+.component-container {
+	margin-bottom: 40px;
+
+	.component {
+		margin-bottom: 40px;
+	}
+}
+
+.sidebar {
+	float: left;
+	padding-top: 0px;
+	width: 265px;
+	position: sticky;
+	top: 20px;
+}
+
+.sidebar-heading {
+	color: $white-light-off;
+	font-weight: 700;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+}
+
+.avatar {
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+//--------------------------------------------------------------
+// FOOTER
+//--------------------------------------------------------------
+.site-footer {
+	@include clearfix;
+
+	color: $gray-blue-light;
+	height: 450px;
+	padding: 80px 20px 0;
+
+	.footer-content {
+		float: right;
+		max-width: 1065px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.menu {
+		justify-content: space-around;
+		margin-top: 30px;
+	}
+
+	.developer {
+		display: block;
+		margin-top: 15px;
+	}
+}

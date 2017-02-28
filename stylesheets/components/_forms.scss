@@ -112,80 +112,82 @@ input[type="checkbox"] {
 	display: none;
 }
 
-// Radio / Checkbox labels
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label,
-input[type="checkbox"]:not(:checked) + label,
-input[type="checkbox"]:checked + label {
-	cursor: pointer;
-	display: inline-block;
-	height: 25px;
-	padding-left: 35px;
-	position: relative;
-}
+form {
+	// Radio / Checkbox labels
+	input[type="radio"]:checked + label,
+	input[type="radio"]:not(:checked) + label,
+	input[type="checkbox"]:not(:checked) + label,
+	input[type="checkbox"]:checked + label {
+		cursor: pointer;
+		display: inline-block;
+		height: 25px;
+		padding-left: 35px;
+		position: relative;
+	}
 
-input[type="radio"]+label:before,
-input[type="radio"]+label:after,
-input[type="checkbox"]+label:before,
-input[type="checkbox"]+label:after {
-	content: '';
-	cursor: pointer;
-	position: absolute;
-	left: 0;
-	top: 0;
-	margin: 3px 4px;
-	width: 16px;
-	height: 16px;
-	z-index: 0;
-	transition: 0.3s ease;
-}
+	input[type="radio"]+label:before,
+	input[type="radio"]+label:after,
+	input[type="checkbox"]+label:before,
+	input[type="checkbox"]+label:after {
+		content: '';
+		cursor: pointer;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin: 3px 4px;
+		width: 16px;
+		height: 16px;
+		z-index: 0;
+		transition: 0.3s ease;
+	}
 
-input[type="radio"]:not(:checked) + label:before,
-input[type="radio"]:not(:checked) + label:after,
-input[type="radio"]:checked + label:before,
-input[type="radio"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:before,
-input[type="checkbox"]:not(:checked) + label:after,
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:checked + label:after {
-	border: 2px solid $purple-light;
-	border-radius: 50%;
-}
+	input[type="radio"]:not(:checked) + label:before,
+	input[type="radio"]:not(:checked) + label:after,
+	input[type="radio"]:checked + label:before,
+	input[type="radio"]:checked + label:after,
+	input[type="checkbox"]:not(:checked) + label:before,
+	input[type="checkbox"]:not(:checked) + label:after,
+	input[type="checkbox"]:checked + label:before,
+	input[type="checkbox"]:checked + label:after {
+		border: 2px solid $purple-light;
+		border-radius: 50%;
+	}
 
-input[type="checkbox"]:not(:checked) + label:before,
-input[type="checkbox"]:not(:checked) + label:after,
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:checked + label:after {
-	border-radius: 0;
-}
+	input[type="checkbox"]:not(:checked) + label:before,
+	input[type="checkbox"]:not(:checked) + label:after,
+	input[type="checkbox"]:checked + label:before,
+	input[type="checkbox"]:checked + label:after {
+		border-radius: 0;
+	}
 
-input[type="radio"]:checked + label:after,
-input[type="checkbox"]:checked + label:after {
-	background: $purple-medium;
-	border-color: $purple-medium;
-}
+	input[type="radio"]:checked + label:after,
+	input[type="checkbox"]:checked + label:after {
+		background: $purple-medium;
+		border-color: $purple-medium;
+	}
 
-input[type="checkbox"]:checked + label.label-icon:after {
-	display: none;
-}
+	input[type="checkbox"]:checked + label.label-icon:after {
+		display: none;
+	}
 
-input[type="checkbox"] + label.label-icon i {
-	display: none;
-}
+	input[type="checkbox"] + label.label-icon i {
+		display: none;
+	}
 
-input[type="checkbox"]:checked + label.label-icon i {
-	display: block;
-	left: 6px;
-	position: absolute;
-	top: 2px;
-}
+	input[type="checkbox"]:checked + label.label-icon i {
+		display: block;
+		left: 6px;
+		position: absolute;
+		top: 2px;
+	}
 
-input[type="checkbox"]:checked + label.label-icon-light i {
-	color: $purple-light;
-}
+	input[type="checkbox"]:checked + label.label-icon-light i {
+		color: $purple-light;
+	}
 
-input[type="checkbox"]:checked + label.label-icon-dark i {
-	color: $purple-medium;
+	input[type="checkbox"]:checked + label.label-icon-dark i {
+		color: $purple-medium;
+	}
 }
 
 input[type="range"] {
