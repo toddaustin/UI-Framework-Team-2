@@ -19,7 +19,7 @@
   padding:3px;
 }
 
-[class*="col"]{
+.grid-row > [class*="col"]{
   float:left;
   border:2px solid black;
   margin:2px 2px 2px 2px;
