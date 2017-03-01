@@ -32,18 +32,6 @@ time, mark, audio, video {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-<<<<<<< HEAD
-  font-size: 14px; }
-
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3 {
-  font-size: 24px; }
-=======
   font-size: 14px;
   -webkit-font-smoothing: antialiased; }
 
@@ -63,7 +51,6 @@ h3 {
 
 p {
   margin-bottom: 30px; }
->>>>>>> upstream/master
 
 select {
   -webkit-appearance: none; }
@@ -106,8 +93,6 @@ textarea {
   font-size: 18px;
   padding: 15px;
   width: 100%; }
-<<<<<<< HEAD
-=======
 
 .float-left {
   float: left; }
@@ -218,7 +203,6 @@ textarea {
   .site-footer .developer {
     display: block;
     margin-top: 15px; }
->>>>>>> upstream/master
 
 /* Written by Jorge Rafael Garcia. February 27th 2017 */
 .card {
@@ -299,18 +283,6 @@ textarea {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-<<<<<<< HEAD
-  font-size: 14px; }
-
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3 {
-  font-size: 24px; }
-=======
   font-size: 14px;
   -webkit-font-smoothing: antialiased; }
 
@@ -330,20 +302,11 @@ h3 {
 
 p {
   margin-bottom: 30px; }
->>>>>>> upstream/master
 
 body {
   font: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .carousel-content {
-<<<<<<< HEAD
-  margin: 50px 0;
-  min-width: 1066px; }
-
-.ui_carousel {
-  position: relative;
-  margin: 0px auto 20px; }
-=======
   margin: 0; }
 
 .ui_carousel label {
@@ -352,35 +315,24 @@ body {
 .ui_carousel {
   margin: 0px auto 20px;
   position: relative; }
->>>>>>> upstream/master
 
 /******************************************************************************
  * Carousel Large  ************************************************************
  ******************************************************************************/
 .ui_carousel-large {
-<<<<<<< HEAD
-  width: 786px;
-  height: 350px;
-  overflow: hidden; }
-=======
   overflow: hidden;
   position: relative;
   width: 786px; }
->>>>>>> upstream/master
 
 .ui_carousel-large input[type=radio] {
   display: none; }
 
 .ui_carousel-large .ui_carousel-images {
   background-color: #000;
-<<<<<<< HEAD
-  height: 350px; }
-=======
   border-radius: 5px;
   height: 350px;
   margin-top: 20px;
   transition: transform 0.5s ease 0s; }
->>>>>>> upstream/master
 
 .ui_carousel-large .ui_carousel-dots {
   bottom: 5px;
@@ -401,12 +353,8 @@ body {
 .ui_carousel-large .ui_carousel-images img {
   border-radius: 5px;
   position: absolute;
-<<<<<<< HEAD
-  top: 0; }
-=======
   top: 0;
   transition: all .5s ease; }
->>>>>>> upstream/master
 
 .ui_carousel-large .ui_carousel-images > img:nth-of-type(1) {
   transform: translateX(0%);
@@ -459,30 +407,18 @@ body {
  * Carousel Multi  ************************************************************
  ******************************************************************************/
 .ui_carousel-multi {
-<<<<<<< HEAD
-  width: 786px;
-  height: 350px;
-  overflow: hidden; }
-=======
   height: 380px;
   overflow: hidden;
   position: relative;
   width: 786px; }
->>>>>>> upstream/master
 
 .ui_carousel-multi input[type=radio] {
   display: none; }
 
 .ui_carousel-multi .ui_carousel-images {
-<<<<<<< HEAD
-  margin: 20px 0 0 30px;
-  transition: transform 0.5s ease 0s;
-  height: 350px; }
-=======
   height: 350px;
   margin: 20px 0 0 30px;
   transition: transform 0.5s ease 0s; }
->>>>>>> upstream/master
 
 .ui_carousel-multi img {
   margin: 0 5px; }
@@ -500,26 +436,12 @@ body {
   overflow: hidden;
   position: absolute;
   top: 0;
-<<<<<<< HEAD
-=======
   transition: all .5s ease;
   vertical-align: top;
->>>>>>> upstream/master
   width: 728px; }
 
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(1) {
   transform: translateX(0%);
-<<<<<<< HEAD
-  opacity: 0.5; }
-
-.ui_carousel-multi .ui_carousel-images > section:nth-of-type(2) {
-  transform: translateX(220%);
-  opacity: 0.5; }
-
-.ui_carousel-multi .ui_carousel-images > section:nth-of-type(3) {
-  transform: translateX(330%);
-  opacity: 0.5; }
-=======
   opacity: 0.25; }
 
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(2) {
@@ -529,7 +451,6 @@ body {
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(3) {
   transform: translateX(330%);
   opacity: 0.25; }
->>>>>>> upstream/master
 
 .ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3), .ui_carousel-multi input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1), .ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(2) {
   background: transparent url(../images/carousel/left-dark.png) no-repeat;
@@ -563,21 +484,6 @@ body {
 
 .ui_carousel-multi input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-images section:nth-of-type(3) {
   opacity: 1; }
-<<<<<<< HEAD
-
-/****** General CSS that applies to entire area containing the tabs *********************/
-.tabs-container {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid black;
-  background-color: #fffefe;
-  line-height: 25px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 100px;
-  position: relative;
-  width: 960px;
-  box-sizing: border-box; }
-=======
 
 /******************************************************************************
  * Carousel Thumbs  ************************************************************
@@ -666,7 +572,6 @@ body {
   font-size: 14px;
   padding-bottom: 0;
   width: auto; }
->>>>>>> upstream/master
 
 .tabs-container h1, .tabs-container h2 {
   font-weight: 800; }
@@ -772,11 +677,7 @@ div.horizontal-tabs-1,
 div.horizontal-tabs-3 {
   margin: 100px 0;
   position: relative;
-<<<<<<< HEAD
-  width: 85%;
-=======
   width: auto;
->>>>>>> upstream/master
   height: 360px; }
 
 /*******CSS applying only to the first set horizontal tabs****************************/
@@ -906,11 +807,7 @@ div[class="horizontal-tabs-2"] {
   height: 360px; }
 
 .horizontal-tabs-2 .display-area {
-<<<<<<< HEAD
-  width: 645px; }
-=======
   width: auto; }
->>>>>>> upstream/master
 
 #highlight-bottom-1,
 #highlight-bottom-2,
@@ -945,11 +842,7 @@ div[class="horizontal-tabs-2"] {
 
 /***** CSS relating to the third set of horizontal tabs*********************************/
 div.horizontal-tabs-3 {
-<<<<<<< HEAD
-  width: 700px; }
-=======
   width: auto; }
->>>>>>> upstream/master
 
 .horizontal-tabs-3 .display-area {
   width: 90%;
@@ -1155,11 +1048,7 @@ div.vertical-tabs-1,
 div.vertical-tabs-2 {
   margin: 100px 0;
   position: relative;
-<<<<<<< HEAD
-  width: 83%;
-=======
   width: auto;
->>>>>>> upstream/master
   height: 360px;
   left: 100px; }
 
@@ -1293,15 +1182,68 @@ div.vertical-tabs-2 {
 .vertical-tabs h2 {
   position: relative;
   top: 50px; }
-<<<<<<< HEAD
 
-.dropButton1 {
+.grid-container {
   position: relative;
-  width: 100px;
-  width: 50px;
-  border: 1px solid black; }
-=======
->>>>>>> upstream/master
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid green; }
+
+.grid-container h1 {
+  text-align: center; }
+
+.grid-row {
+  display: flex;
+  line-height: 5;
+  width: 100%;
+  padding: 3px; }
+
+[class*="col"] {
+  float: left;
+  border: 2px solid black;
+  margin: 2px 2px 2px 2px;
+  background-color: #a06fbd;
+  text-align: center;
+  color: #fffefe; }
+
+.one-col-units {
+  width: 8.333333%; }
+
+.two-col-units {
+  width: 16.666667%; }
+
+.three-col-units {
+  width: 25%; }
+
+.four-col-units {
+  width: 33.333333%; }
+
+.five-col-units {
+  width: 41.666667%; }
+
+.six-col-units {
+  width: 50%; }
+
+.seven-col-units {
+  width: 58.333333%; }
+
+.eight-col-units {
+  width: 66.666667%; }
+
+.nine-col-units {
+  width: 75%; }
+
+.ten-col-units {
+  width: 83.333333%; }
+
+.eleven-col-units {
+  width: 91.666667%; }
+
+.twelve-col-units {
+  width: 100%; }
 
 .buttons-container {
   margin: 50px auto;
@@ -1592,56 +1534,6 @@ button,
     .btn-group-rounded .btn:last-child {
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px; }
-<<<<<<< HEAD
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  /* added to original reset */
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3 {
-  font-size: 24px; }
-
-h4 {
-  font-size: 18px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  font-size: 12px; }
-=======
->>>>>>> upstream/master
 
 .ui_accordion-holder {
   background-color: #fffefe;
@@ -1654,60 +1546,6 @@ h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .ui_accordion-holder > p {
     margin: 25px 0; }
-<<<<<<< HEAD
-
-.ui_accordion-list-wdb .ui_accordion-main {
-  list-style-type: none;
-  overflow: auto;
-  border: 1px solid #212121;
-  width: 375px; }
-  .ui_accordion-list-wdb .ui_accordion-main input {
-    display: none; }
-    .ui_accordion-list-wdb .ui_accordion-main input:checked ~ article {
-      display: block; }
-    .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label {
-      color: #fffefe; }
-      .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label header {
-        border-bottom: #6a497d 4px solid; }
-      .ui_accordion-list-wdb .ui_accordion-main input:checked ~ label i {
-        transform: rotate(180deg);
-        top: 8px; }
-  .ui_accordion-list-wdb .ui_accordion-main:last-child label header {
-    border-bottom: none; }
-  .ui_accordion-list-wdb .ui_accordion-main > label header {
-    line-height: 25px;
-    position: relative;
-    font-weight: 300;
-    text-transform: uppercase;
-    background-color: #fffefe;
-    color: #212121;
-    border-bottom: #c3c8ce 1px solid;
-    padding: 7px 10px; }
-    .ui_accordion-list-wdb .ui_accordion-main > label header:hover {
-      cursor: pointer;
-      background-color: #fafafa;
-      color: #a06fbd; }
-    .ui_accordion-list-wdb .ui_accordion-main > label header i {
-      transition: all 400ms ease;
-      position: absolute;
-      right: 8px;
-      top: 6px;
-      font-size: 25px; }
-  .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content {
-    display: none;
-    background-color: #212121;
-    color: #6a497d;
-    padding: 25px; }
-    .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text {
-      float: right;
-      width: 175px;
-      vertical-align: top;
-      padding-bottom: 15px; }
-      .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text header {
-        font-weight: bold;
-        padding-bottom: 15px; }
-      .ui_accordion-list-wdb .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
-=======
 
 .ui_accordion-large .ui_accordion-main {
   width: 775px; }
@@ -1797,14 +1635,11 @@ h6 {
         font-weight: bold;
         padding-bottom: 15px; }
       .ui_accordion-list .ui_accordion-main article.ui_accordion-content .ui_accordion-content-text p {
->>>>>>> upstream/master
         font-size: 12px;
         color: #999;
         letter-spacing: 1.2px;
         padding-bottom: 10px;
         padding-right: 15px; }
-<<<<<<< HEAD
-=======
 
 .pagination {
   display: flex;
@@ -1852,7 +1687,6 @@ h6 {
 
 .pagination__link:hover {
   color: #a06fbd; }
->>>>>>> upstream/master
 
 .forms-container {
   margin: 50px auto;
@@ -1945,18 +1779,10 @@ form input[type="checkbox"]:checked + label {
   height: 25px;
   padding-left: 35px;
   position: relative; }
-<<<<<<< HEAD
-
-input[type="radio"] + label:before,
-input[type="radio"] + label:after,
-input[type="checkbox"] + label:before,
-input[type="checkbox"] + label:after {
-=======
 form input[type="radio"] + label:before,
 form input[type="radio"] + label:after,
 form input[type="checkbox"] + label:before,
 form input[type="checkbox"] + label:after {
->>>>>>> upstream/master
   content: '';
   cursor: pointer;
   position: absolute;
@@ -1967,38 +1793,6 @@ form input[type="checkbox"] + label:after {
   height: 16px;
   z-index: 0;
   transition: 0.3s ease; }
-<<<<<<< HEAD
-
-input[type="radio"]:not(:checked) + label:before,
-input[type="radio"]:not(:checked) + label:after,
-input[type="radio"]:checked + label:before,
-input[type="radio"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:before,
-input[type="checkbox"]:not(:checked) + label:after,
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:checked + label:after {
-  border: 2px solid #a06fbd;
-  border-radius: 50%; }
-
-input[type="checkbox"]:not(:checked) + label:before,
-input[type="checkbox"]:not(:checked) + label:after,
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:checked + label:after {
-  border-radius: 0; }
-
-input[type="radio"]:checked + label:after,
-input[type="checkbox"]:checked + label:after {
-  background: #6a497d;
-  border-color: #6a497d; }
-
-input[type="checkbox"]:checked + label.label-icon:after {
-  display: none; }
-
-input[type="checkbox"] + label.label-icon i {
-  display: none; }
-
-input[type="checkbox"]:checked + label.label-icon i {
-=======
 form input[type="radio"]:not(:checked) + label:before,
 form input[type="radio"]:not(:checked) + label:after,
 form input[type="radio"]:checked + label:before,
@@ -2023,22 +1817,13 @@ form input[type="checkbox"]:checked + label.label-icon:after {
 form input[type="checkbox"] + label.label-icon i {
   display: none; }
 form input[type="checkbox"]:checked + label.label-icon i {
->>>>>>> upstream/master
   display: block;
   left: 6px;
   position: absolute;
   top: 2px; }
-<<<<<<< HEAD
-
-input[type="checkbox"]:checked + label.label-icon-light i {
-  color: #a06fbd; }
-
-input[type="checkbox"]:checked + label.label-icon-dark i {
-=======
 form input[type="checkbox"]:checked + label.label-icon-light i {
   color: #a06fbd; }
 form input[type="checkbox"]:checked + label.label-icon-dark i {
->>>>>>> upstream/master
   color: #6a497d; }
 
 input[type="range"] {
@@ -2133,8 +1918,6 @@ input:-ms-input-placeholder {
   height: 1px;
   width: 1px;
   overflow: hidden; }
-<<<<<<< HEAD
-=======
 
 .menu {
   list-style: none; }
@@ -2324,7 +2107,6 @@ input:-ms-input-placeholder {
 .error {
   background-color: #FFCDD2;
   color: #D50000; }
->>>>>>> upstream/master
 
 .pagination {
   display: flex;
@@ -2338,12 +2120,6 @@ input:-ms-input-placeholder {
   height: 2em;
   color: #6a497d;
   font-size: 18px; }
-<<<<<<< HEAD
-
-.pagination__item--round:hover {
-  background-color: #a06fbd; }
-=======
->>>>>>> upstream/master
 
 .pagination__item--round {
   border-radius: 50%;
@@ -2355,8 +2131,6 @@ input:-ms-input-placeholder {
 
 .pagination__item:not(:last-child) {
   margin-right: 10px; }
-<<<<<<< HEAD
-=======
 
 .pagination__item--round:hover,
 .pagination__item--square:hover {
@@ -2365,7 +2139,6 @@ input:-ms-input-placeholder {
 .pagination__item--round:hover > .pagination__link,
 .pagination__item--square:hover > .pagination__link {
   color: white; }
->>>>>>> upstream/master
 
 .pagination__link {
   cursor: pointer;
@@ -2382,19 +2155,16 @@ input:-ms-input-placeholder {
 .pagination__link:hover {
   color: #a06fbd; }
 
-<<<<<<< HEAD
 /****** General CSS that applies to entire area containing the tabs *********************/
 .tabs-container {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid black;
-  background-color: #fffefe;
-  line-height: 25px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 100px;
-  position: relative;
-  width: 960px;
-  box-sizing: border-box; }
+  font-size: 14px;
+  box-sizing: content-box; }
+
+.tabs-continer label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 0;
+  width: auto; }
 
 .tabs-container h1, .tabs-container h2 {
   font-weight: 800; }
@@ -2500,7 +2270,7 @@ div.horizontal-tabs-1,
 div.horizontal-tabs-3 {
   margin: 100px 0;
   position: relative;
-  width: 85%;
+  width: auto;
   height: 360px; }
 
 /*******CSS applying only to the first set horizontal tabs****************************/
@@ -2630,7 +2400,7 @@ div[class="horizontal-tabs-2"] {
   height: 360px; }
 
 .horizontal-tabs-2 .display-area {
-  width: 645px; }
+  width: auto; }
 
 #highlight-bottom-1,
 #highlight-bottom-2,
@@ -2665,7 +2435,7 @@ div[class="horizontal-tabs-2"] {
 
 /***** CSS relating to the third set of horizontal tabs*********************************/
 div.horizontal-tabs-3 {
-  width: 700px; }
+  width: auto; }
 
 .horizontal-tabs-3 .display-area {
   width: 90%;
@@ -2871,7 +2641,7 @@ div.vertical-tabs-1,
 div.vertical-tabs-2 {
   margin: 100px 0;
   position: relative;
-  width: 83%;
+  width: auto;
   height: 360px;
   left: 100px; }
 
@@ -3005,7 +2775,7 @@ div.vertical-tabs-2 {
 .vertical-tabs h2 {
   position: relative;
   top: 50px; }
-=======
+
 .markup__container {
   width: 100%;
   border: 1px solid black;
@@ -3071,7 +2841,6 @@ div.vertical-tabs-2 {
 
 .progress-bar--medium {
   height: 30px; }
->>>>>>> upstream/master
 
 .progress-bar--large {
   height: 40px; }
@@ -3090,3 +2859,5 @@ div.vertical-tabs-2 {
   bottom: 0;
   right: 0;
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent); }
+
+/*# sourceMappingURL=main.css.map */
