@@ -12,8 +12,11 @@
 
 @import "components/index";
 @import 'components/pagination';
+<<<<<<< HEAD
 @import 'components/tabs';
+=======
 @import 'components/markup';
 @import 'components/progress-bars';
-@import 'components/modal';
 
+
+>>>>>>> upstream/master

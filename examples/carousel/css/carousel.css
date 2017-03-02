@@ -24,29 +24,32 @@ body {
   font: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .carousel-content {
-  margin: 50px 0;
-  min-width: 1066px; }
+  margin: 0; }
+
+.ui_carousel label {
+  width: auto; }
 
 .ui_carousel {
-  position: relative;
-  margin: 0px auto 20px; }
+  margin: 0px auto 20px;
+  position: relative; }
 
 /******************************************************************************
  * Carousel Large  ************************************************************
  ******************************************************************************/
 .ui_carousel-large {
-  width: 786px;
-  height: 350px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  width: 786px; }
 
 .ui_carousel-large input[type=radio] {
   display: none; }
 
 .ui_carousel-large .ui_carousel-images {
-  margin-top: 20px;
-  transition: transform 0.5s ease 0s;
   background-color: #000;
-  height: 350px; }
+  border-radius: 5px;
+  height: 350px;
+  margin-top: 20px;
+  transition: transform 0.5s ease 0s; }
 
 .ui_carousel-large .ui_carousel-dots {
   bottom: 5px;
@@ -65,9 +68,10 @@ body {
   width: 15px; }
 
 .ui_carousel-large .ui_carousel-images img {
-  transition: all .5s ease;
+  border-radius: 5px;
   position: absolute;
-  top: 0; }
+  top: 0;
+  transition: all .5s ease; }
 
 .ui_carousel-large .ui_carousel-images > img:nth-of-type(1) {
   transform: translateX(0%);
@@ -128,17 +132,18 @@ body {
  * Carousel Multi  ************************************************************
  ******************************************************************************/
 .ui_carousel-multi {
-  width: 786px;
-  height: 350px;
-  overflow: hidden; }
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  width: 786px; }
 
 .ui_carousel-multi input[type=radio] {
   display: none; }
 
 .ui_carousel-multi .ui_carousel-images {
+  height: 350px;
   margin: 20px 0 0 30px;
-  transition: transform 0.5s ease 0s;
-  height: 350px; }
+  transition: transform 0.5s ease 0s; }
 
 .ui_carousel-multi img {
   margin: 0 5px; }
@@ -150,25 +155,27 @@ body {
   width: 30px; }
 
 .ui_carousel-multi .ui_carousel-images section {
-  margin: 10px 0px;
-  transition: all .5s ease;
   display: inline-block;
-  vertical-align: top;
+  height: 350px;
+  margin: 10px 0px;
+  overflow: hidden;
   position: absolute;
   top: 0;
+  transition: all .5s ease;
+  vertical-align: top;
   width: 728px; }
 
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(1) {
   transform: translateX(0%);
-  opacity: 0.5; }
+  opacity: 0.25; }
 
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(2) {
   transform: translateX(220%);
-  opacity: 0.5; }
+  opacity: 0.25; }
 
 .ui_carousel-multi .ui_carousel-images > section:nth-of-type(3) {
   transform: translateX(330%);
-  opacity: 0.5; }
+  opacity: 0.25; }
 
 .ui_carousel-multi input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3),
 .ui_carousel-multi input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1),
@@ -211,39 +218,52 @@ body {
  * Carousel Thumbs  ************************************************************
  ******************************************************************************/
 .ui_carousel-thumbs {
-  width: 786px;
-  height: 350px;
-  overflow: hidden; }
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 786px; }
 
 .ui_carousel-thumbs input[type=radio] {
   display: none; }
 
 .ui_carousel-thumbs .ui_carousel-images {
-  margin-top: 20px;
-  transition: transform 0.5s ease 0s;
   background-color: #000;
-  height: 350px; }
+  border-radius: 5px;
+  height: 350px;
+  transition: transform 0.5s ease 0s; }
 
-.ui_carousel-thumbs .ui_carousel-dots {
-  bottom: 5px;
+.ui_carousel-thumbs .ui_carousel-thumbnails {
+  bottom: 0px;
   position: absolute;
   text-align: center;
   width: 786px;
   z-index: 5; }
 
-.ui_carousel-thumbs .ui_carousel-dots .ui_carousel-dot {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
+.ui_carousel-thumbs .ui_carousel-thumbnails .ui_carousel-thumb-image {
   display: inline-block;
-  height: 15px;
+  height: 65px;
   list-style-type: none;
-  margin: 0 5px;
-  width: 15px; }
+  margin: 0;
+  width: 65px; }
+
+.ui_carousel-thumb-image img {
+  border-radius: 5px;
+  height: 45px;
+  opacity: 0.5;
+  transition: all .5s ease;
+  width: 45px; }
+
+.ui_carousel-thumb-image img:hover {
+  height: 65px;
+  width: 65px;
+  opacity: 1;
+  transform: translateY(10px); }
 
 .ui_carousel-thumbs .ui_carousel-images img {
-  transition: all .5s ease;
+  border-radius: 5px;
   position: absolute;
-  top: 0; }
+  top: 0;
+  transition: all .5s ease; }
 
 .ui_carousel-thumbs .ui_carousel-images > img:nth-of-type(1) {
   transform: translateX(0%);
@@ -256,33 +276,6 @@ body {
 .ui_carousel-thumbs .ui_carousel-images > img:nth-of-type(3) {
   transform: translateX(200%);
   opacity: 0.5; }
-
-.ui_carousel-thumbs > label {
-  height: 30px;
-  position: absolute;
-  top: 52.5%;
-  width: 30px; }
-
-.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(3),
-.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(1),
-.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(2) {
-  background: transparent url(../images/carousel/left.png) no-repeat;
-  display: block;
-  left: 10px;
-  z-index: 5; }
-
-.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(2),
-.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(3),
-.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ label:nth-of-type(1) {
-  background: transparent url(../images/carousel/right.png) no-repeat;
-  display: block;
-  right: 10px;
-  z-index: 4; }
-
-.ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(1),
-.ui_carousel-thumbs input[type=radio]:nth-of-type(2):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(2),
-.ui_carousel-thumbs input[type=radio]:nth-of-type(3):checked ~ .ui_carousel-dots .ui_carousel-dot:nth-of-type(3) {
-  background-color: rgba(255, 255, 255, 0.75); }
 
 .ui_carousel-thumbs input[type=radio]:nth-of-type(1):checked ~ .ui_carousel-images {
   transform: translateX(0%); }

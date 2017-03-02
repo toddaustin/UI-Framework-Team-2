@@ -98,8 +98,10 @@
 
 .sidebar {
 	float: left;
-	padding-top: 46px;
+	padding-top: 0px;
 	width: 265px;
+	position: sticky;
+	top: 20px;
 }
 
 .sidebar-heading {
