@@ -152,56 +152,6 @@ $color-menu-light: $gray-med-dark !default;
 				top: 0;
 			}
 		}
-
-		//li:first-of-type {
-		//	margin-left: 0;
-		//}
-		//
-		//.menu-item {
-		//	margin-left: 40px;
-		//}
-
-		//.menu-link {
-		//	padding: 0 5px 15px;
-		//
-		//	&:hover,
-		//	&:active,
-		//	&:focus {
-		//		color: $white-med-off;
-		//	}
-		//
-		//	&-border-bottom {
-		//		position: relative;
-		//
-		//		&:after {
-		//			background-color: $blue-light;
-		//			content: '';
-		//			position: absolute;
-		//			height: 4px;
-		//			left: 0;
-		//			bottom: 0;
-		//			transform: scale(0);
-		//			transition: transform 0.4s;
-		//			width: 100%;
-		//		}
-		//
-		//		&:hover {
-		//
-		//			&:after {
-		//				transform: scale(1);
-		//			}
-		//		}
-		//
-		//		&.menu-active {
-		//			color: $white-med-off;
-		//
-		//			&:after {
-		//				content: '';
-		//				transform: scale(1);
-		//			}
-		//		}
-		//	}
-		//}
 	}
 
 	// Dark variation
@@ -221,4 +171,4 @@ $color-menu-light: $gray-med-dark !default;
 			background-color: $color-menu-light;
 		}
 	}
-}
+}}
