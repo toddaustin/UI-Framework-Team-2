@@ -1,106 +1,224 @@
+// A couple of placement classes that hold the components.
+.menu__vertical-container {
+	max-width: 200px;
+	width: 100%;
+}
+
+.menu__horizontal-container {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+
 //--------------------------------------------------------------
-// MENUS
+// Menu Components
 //--------------------------------------------------------------
+$menu-width: 100% !default;
+$sub-menu-width: 175px !default;
+$menu-padding: 15px !default;
+
+// Dark menu colors.
+$color-menu-dark: $purple-dark-desat !default;
+$color-menu-light: $gray-med-dark !default;
+
 .menu {
 	list-style: none;
+	position: relative;
+	width: $menu-width;
 
-	.menu-link {
+	.menu__menu-item {
+		position: relative;
+
+		&:after {
+			background-color: $blue-light;
+			content: '';
+			position: absolute;
+			transform: scale(0);
+			transition: transform 0.4s;
+		}
+
+		// On hover.
+		&:hover {
+
+			&:after {
+				transform: scale(1);
+			}
+		}
+
+		// If the menu item is active.
+		&--active {
+
+			&:after {
+				content: '';
+				transform: scale(1);
+			}
+
+			.menu__menu-link {
+				color: $blue-light;
+			}
+		}
+	}
+
+	// Sub menus
+	// @todo Write a mixin that allows for setting the level of sub-menus you want to support.
+	.menu--sub-menu {
+		position: absolute;
+		left: -999em;
+		top: 0;
+		width: $sub-menu-width;
+
+		// Sub menu of sub menu
+		.menu--sub-menu {
+			left: -999em;
+			top: 0;
+		}
+
+		.menu__menu-item {
+
+			&:hover > .sub-menu,
+			&:focus > .sub-menu {
+				left: 100%;
+			}
+		}
+	}
+
+	// Adds a border right on hover.
+	.menu__menu-item--border-right {
+
+		&:after {
+			height: 100%;
+			right: -3px;
+			top: 0;
+			width: 6px;
+		}
+	}
+
+	// Adds a border bottom on hover.
+	.menu__menu-item--border-bottom {
+
+		&:after {
+			height: 4px;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+
+	// The <a> tags.
+	.menu__menu-link {
 		color: $gray-blue-light;
 		display: block;
 		font-size: $font-size-large;
 		font-weight: 500;
-		padding: 15px;
+		padding: $menu-padding;
 		text-decoration: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $blue-light;
+		}
 	}
 
-	&-vertical {
-
+	// -------------------------
+	// Menu variations.
+	// -------------------------
 		.menu-link {
 			padding: 15px 59px 0px 15px;
 
-			&:hover,
-			&:active,
-			&:focus {
-				color: $blue-light;
-			}
 
-			&-border-right {
-				position: relative;
+	// Vertical menus.
+	&.menu--vertical {
 
-				&:after {
-					background-color: $blue-light;
-					content: '';
-					position: absolute;
-					height: 100%;
-					right: -3px;
-					top: 0;
-					transition: transform 0.4s;
-					transform: scale(0);
-					width: 6px;
-				}
-
-				&:hover {
-
-					&:after {
-						transform: scale(1);
-					}
-				}
-			}
+		.menu__menu-item:hover > .menu--sub-menu {
+			left: 100%;
 		}
 	}
 
-	&-horizontal {
+	// Horizontal menu.
+	&.menu--horizontal {
 		align-items: center;
 		display: flex;
 
-		li:first-of-type {
-			margin-left: 0;
+		// First level sub-menu.
+		.menu__menu-item:hover > .menu--sub-menu {
+			left: 0;
+			top: 100%;
+
+			// Second level sub-menus.
+			.menu__menu-item:hover > .menu--sub-menu {
+				left: 100%;
+				top: 0;
+			}
 		}
 
-		.menu-item {
-			margin-left: 40px;
+		//li:first-of-type {
+		//	margin-left: 0;
+		//}
+		//
+		//.menu-item {
+		//	margin-left: 40px;
+		//}
+
+		//.menu-link {
+		//	padding: 0 5px 15px;
+		//
+		//	&:hover,
+		//	&:active,
+		//	&:focus {
+		//		color: $white-med-off;
+		//	}
+		//
+		//	&-border-bottom {
+		//		position: relative;
+		//
+		//		&:after {
+		//			background-color: $blue-light;
+		//			content: '';
+		//			position: absolute;
+		//			height: 4px;
+		//			left: 0;
+		//			bottom: 0;
+		//			transform: scale(0);
+		//			transition: transform 0.4s;
+		//			width: 100%;
+		//		}
+		//
+		//		&:hover {
+		//
+		//			&:after {
+		//				transform: scale(1);
+		//			}
+		//		}
+		//
+		//		&.menu-active {
+		//			color: $white-med-off;
+		//
+		//			&:after {
+		//				content: '';
+		//				transform: scale(1);
+		//			}
+		//		}
+		//	}
+		//}
+	}
+
+	// Dark variation
+	&.menu--dark {
+
+		// Menu items.
+		.menu__menu-item {
+			background-color: $color-menu-dark;
+
+			&:hover {
+				background-color: $color-menu-light;
+			}
 		}
 
-		.menu-link {
-			padding: 0 5px 15px;
-
-			&:hover,
-			&:active,
-			&:focus {
-				color: $white-med-off;
-			}
-
-			&-border-bottom {
-				position: relative;
-
-				&:after {
-					background-color: $blue-light;
-					content: '';
-					position: absolute;
-					height: 4px;
-					left: 0;
-					bottom: 0;
-					transform: scale(0);
-					transition: transform 0.4s;
-					width: 100%;
-				}
-
-				&:hover {
-
-					&:after {
-						transform: scale(1);
-					}
-				}
-
-				&.menu-active {
-					color: $white-med-off;
-
-					&:after {
-						content: '';
-						transform: scale(1);
-					}
-				}
-			}
+		// Active menu.
+		.menu__menu-item--active {
+			background-color: $color-menu-light;
 		}
 	}
 }
