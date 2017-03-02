@@ -124,6 +124,9 @@ $color-menu-light: $gray-med-dark !default;
 	// -------------------------
 	// Menu variations.
 	// -------------------------
+		.menu-link {
+			padding: 15px 59px 0px 15px;
+
 
 	// Vertical menus.
 	&.menu--vertical {
