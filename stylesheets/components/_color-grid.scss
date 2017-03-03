@@ -1,0 +1,78 @@
+@import "../utils/_variables.scss";
+
+.ui_color {
+    display: inline-block;
+    margin-bottom: 1.75rem;
+    vertical-align: top;
+}
+
+.ui_color-name, .values .ui_color-value {
+    font-size: 1rem;
+    line-height: 1.375;
+    padding-left: 5px;
+}
+
+.ui_color-name {
+    font-weight: bold;
+}
+
+.ui_color-swatch {
+    border: 1px solid #fff;
+    border-radius: 0.1875rem;
+    height: 60px;
+    margin-right: 5px;
+    text-align: center;
+    width: 185px;
+}
+
+.bg-blue-med {
+    background-color:$blue-med;
+}
+
+.bg-blue-med-light {
+    background-color: $blue-med-light;
+}
+
+.bg-blue-light {
+    background-color: $blue-light;
+}
+
+.bg-gray-dark {
+    background-color: $gray-dark;
+}
+
+.bg-gray-med-dark {
+    background-color: $gray-med-dark;
+}
+
+.bg-gray-blue {
+    background-color: $gray-blue;
+}
+
+.bg-gray-blue-light {
+    background-color: $gray-blue-light;
+}
+
+.bg-purple-dark-desat {
+    background-color: $purple-dark-desat;
+}
+
+.bg-purple-med {
+    background-color: $purple-medium;
+}
+
+.bg-purple-light {
+    background-color: $purple-light;
+}
+
+.bg-white-mid {
+    background-color: $white-mid;
+}
+
+.bg-white-med-off {
+    background-color: $white-med-off;
+}
+
+.bg-white-light-off {
+    background-color: $white-light-off;
+}

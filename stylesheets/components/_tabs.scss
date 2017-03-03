@@ -1,20 +1,26 @@
 /****** General CSS that applies to entire area containing the tabs *********************/
 
 .tabs-container{
-  // font-family: Arial, Helvetica, sans-serif;
-  // border:1px solid black;
-  // background-color:#fffefe;
-  // line-height:25px;
-  // margin-left:10%;
-  // margin-right:10%;
-  // padding:100px;
-  // position:relative;
-  // width:960px;
+  /*
+  font-family: Arial, Helvetica, sans-serif;
+  border:1px solid black;
+  background-color:#fffefe;
+  line-height:25px;
+  margin-left:10%;
+  margin-right:10%;
+  padding:100px;
+  width: 960px */
+  position:relative;
+  line-height:25px;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   box-sizing:content-box;
 }
+.tabs-container * {
+  box-sizing: content-box;
+}
 
-.tabs-continer label {
+.tabs-container label {
    display: block;
   font-size: 14px;
   padding-bottom: 0;
@@ -42,8 +48,7 @@
 .vertical-tabs-2 .display-area{
   display:none;
   position:absolute;
-  width:100%;
-  padding:50px 30px;
+  padding:50px 30px 24px;;
   top:55px;
   border-radius:0 0 1% 1%;
   border:1px solid black;
@@ -135,19 +140,8 @@
   }
 
   .btn{
-    font-weight:bold;
-    font-size:1em;
     float:right;
     width:125px;
-    height:30px;
-    text-align:center;
-    text-decoration:none;
-    padding:5px 0;
-    margin-top:8px;
-    color:#000;
-    border-radius:3%;
-    border:1px solid #212121;
-
   }
 }
 
@@ -156,7 +150,6 @@
 
 div.horizontal-tabs-1,
 div.horizontal-tabs-3{
-
   margin:100px 0;
   position:relative;
   width:auto;
@@ -190,7 +183,7 @@ div.horizontal-tabs-3{
   content:"";
   position:absolute;
   display:block;
-  width:125px;
+  width:208px;
   height:55px;
   left:581px;
   border-bottom:1px solid black;
@@ -305,7 +298,7 @@ background-color:#decde8;
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-label-2,
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-label-3,
 .horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-label-4{
-  max-width:7.2em;
+  max-width:8.2em;
     border-color:#9b68b9;
     transform:translateX(-60px);
   transition: max-width 0.5s, transform 0.5s;
@@ -355,7 +348,7 @@ div[class="horizontal-tabs-2"] {
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-bottom-2,
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-bottom-3,
 .horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-bottom-4{
-  max-width:698px;
+  max-width:788px;
   border-color:#9b68b9;
   transform:translateX(-379px);
   transition:max-width 0.5s, transform 0.5s;
@@ -554,7 +547,7 @@ div#tabs3-display-bottom-highlight4{
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-bottom-highlight2,
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-bottom-highlight3,
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-bottom-highlight4{
-  max-width:690px;
+  max-width:770px;
   border-color:#9b68b9;
 
   transition:max-width 0.4s;
@@ -601,7 +594,7 @@ div#tabs3-display-right-highlight4{
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3,
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4{
   max-width:330px;
-  left:525px;
+  left:606px;
   top:213px;
   border-color:#9b68b9;
   transition:max-width 0.6s left 0.6s;

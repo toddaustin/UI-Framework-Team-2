@@ -1,0 +1,55 @@
+//--------------------------------------------------------------
+// TABLES
+//--------------------------------------------------------------
+$table-border-color: $purple-medium !default;
+$table-row-color: lighten($gray-blue-light, 40%) !default;
+
+.ui_table {
+	border-bottom: 3px solid $table-border-color;
+	border-collapse: collapse;
+	width: 100%;
+
+	td,
+	th {
+		padding: 14px;
+		text-align: left;;
+	}
+
+	th {
+		border-bottom: 3px solid $table-border-color;
+		font-size: $font-size-large;
+		font-weight: 700;
+	}
+
+	// Bordered table.
+	&.ui_table--bordered {
+		border: 1px solid $table-border-color;
+
+		td,
+		th {
+			border: 1px solid $table-border-color;
+		}
+
+		th {
+			border-bottom: 3px solid $table-border-color;
+			border-top: 3px solid $table-border-color;
+			text-align: center;
+		}
+	}
+
+	// Row hover.
+	&.ui_table-row--hover {
+		tbody {
+			tr:hover {
+				background-color: $table-row-color;
+			}
+		}
+	}
+
+	// Color every other row.
+	&.ui_table-row--accented {
+		tr:nth-child(even) {
+			background-color: $table-row-color;
+		}
+	}
+}

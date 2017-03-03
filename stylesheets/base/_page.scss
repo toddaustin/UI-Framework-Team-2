@@ -100,7 +100,8 @@
 	float: left;
 	padding-top: 0px;
 	width: 265px;
-	position: fixed;
+	position: sticky;
+	top: 20px;
 }
 
 .sidebar-heading {
@@ -133,7 +134,7 @@
 		width: 100%;
 	}
 
-	.menu {
+	.site-menu {
 		justify-content: space-around;
 		margin-top: 30px;
 	}
