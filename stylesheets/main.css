@@ -30,8 +30,6 @@ time, mark, audio, video {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/*@import "../../stylesheets/utils/reset";
-@import "../../stylesheets/utils/variables";*/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -420,8 +418,6 @@ textarea {
     padding: 5px;
     margin-right: 10px; }
 
-/*@import "../../stylesheets/utils/reset";
-@import "../../stylesheets/utils/variables";*/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
