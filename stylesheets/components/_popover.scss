@@ -1,0 +1,194 @@
+/*****Popover Section CSS***********************/
+
+.popover{
+  position:relative;
+  width:100%;
+  max-width:960px;
+  margin:0 auto;
+  padding:0 10px;
+  box-sizing:border-box;
+
+  h1,h3{
+    text-align:center;
+  }
+
+/**********Menu appears from center of button***************/
+
+  .popover-menu-center-drop{
+   position:absolute;
+   margin-top:20px;
+
+   @media (max-width:360px){
+     margin-top:30px;
+     margin-left:-10px;
+   }
+  }
+
+/***********Menu appears to the right of button*************/
+
+  .popover-menu-right-drop{
+    position:absolute;
+    margin-left:154px;
+    margin-top:-19px;
+    @media (max-width:600px){
+       margin-left:100px;
+     }    
+   }
+
+/*********Menu appears to the left of button*******************/
+   .popover-menu-left-drop{
+     position:absolute;
+     margin-left:-155px;
+     margin-top:-19px;
+
+  }
+
+/********Column grid width containing each popover element***********/
+
+  .two-col-units{
+    position:relative;
+    background-color:transparent;
+    border-color:transparent;
+    padding:0;
+    margin:0 85px 150px 70px;
+
+    @media (min-width:601px) and (max-width:1000px){
+      width:20vw;
+      margin:50px 30px 150px 100px;
+    }
+
+    @media (max-width:600px){
+      width:40vw;
+      margin:0 100px 200px 90px;
+    }
+
+  }
+
+  /*******Custom configuration for the popover button being used***************/
+
+  .pop-down{
+    display:block;
+    color:black;
+    position:relative;
+    width:102%;
+    border:1px solid $purple-medium;
+    &:hover{
+      background-color:black;
+    }
+
+  }
+
+
+  .pop-down:focus + .popover-menu{
+    border-width:1px;
+    max-height:500px;
+    transition:max-height 0.5s;
+  }
+
+/*********Custom configuration for the pop up menu****************************/
+
+
+
+
+  div.popover-menu{postion:relative;
+    overflow:hidden;
+    border:0px solid $purple-light;
+    padding:0;
+    top:20px;
+    max-width:300px;
+    min-width:102%;
+    max-height:0;
+    transition:max-height 0.5s, border-width 0.5s;
+
+
+
+    a{
+      position:relative;
+      display:block;
+      text-decoration:none;
+      margin:0;
+      line-height:3em;
+      padding:0 49px;
+
+
+      &:hover{
+        background-color:#D3BECF;
+      }
+    }
+
+  }
+
+
+
+/*************Default position for slide down animations ***********************/
+
+  .slide{
+    transform:translateY(0px);
+    transition:transform 0.5s;
+  }
+
+/************Default position for slide up from center of button***************************/
+
+  .center-up{
+    transform:translateY(-210px);
+    transition:transform 0.5s;
+    @media (max-width:360px){
+      transform:translateY(-260px);
+    }
+    @media (min-width:361px) and (max-width:1000px){
+      transform:translateY(-240px);
+    }
+  }
+
+  /**********Default position for slide up and to the side ********************/
+
+  .side-up{
+    transform:translateY(0);
+    transition:transform 0.5s;
+  }
+
+/***********Animation settings when button clicked (given focus)******************/
+
+/**********Animation for sliding down all sides********************************/
+  .pop-down:focus + .slide{
+    animation: slide-down 0.5s;
+  }
+
+    @keyframes slide-down{
+    from {transform: translateY(-200px);}
+    to {transform: translateY(0px);}
+  }
+
+/**************Animation for sliding up from center***************************/
+  .pop-down:focus + .center-up{
+    animation: slide-up 0.5s;
+  }
+
+
+  @keyframes slide-up{
+    from {transform: translateY(0);}
+    to{transform:translateY(-210px);}
+    @media (max-width:360px){
+     from {transform: translateY(0);}
+     to{transform:translateY(-260px);}     
+    }
+    @media (min-width:361px) and (max-width:1000px){
+      from {transform: translateY(0);}
+      to {transform: translateY(-240px);}
+    }
+  }
+
+  /******************Animation for left/right side slide up *********************/
+
+  .pop-down:focus + .side-up{
+    animation: slide-side-up 0.5s;
+  }
+
+  @keyframes slide-side-up{
+    from{transform: translateY(100px);}
+    to{transform: translateY(0);}
+  }
+
+
+
+}
