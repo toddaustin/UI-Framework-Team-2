@@ -1,0 +1,11 @@
+#ui_components-typography {
+	ul {
+		li {
+			list-style: none;
+			+ * {
+				margin-bottom: 25px;
+				
+			}
+		}
+	}
+}
