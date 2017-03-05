@@ -1,0 +1,44 @@
+//--------------------------------------------------------------
+// CTA
+//--------------------------------------------------------------
+$cta-color-primary: $purple-medium !default;
+$cta-color-secondary: $purple-light !default;
+$cta-bg-color-secondary: #ffffff;
+$cta-height: 200px !default;
+$cta-content-width: 70% !default;
+$cta-title-color: #ffffff !default;
+$cta-bg-color-primary: linear-gradient(45deg, $cta-color-primary, $cta-color-secondary);
+
+.cta {
+	align-items: center;
+	background: $cta-bg-color-primary;
+	display: flex;
+	height: $cta-height;
+	justify-content: space-around;
+	width: 100%;
+
+	&__content {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		width: $cta-content-width;
+
+		.btn-primary {
+			height: 42px;
+			margin: 0;
+		}
+	}
+
+	&__title {
+		color: $cta-title-color;
+		margin-bottom: 0;
+	}
+
+	&--light {
+		background: $cta-bg-color-secondary;
+
+		.cta__title {
+			color: $cta-color-primary;
+		}
+	}
+}
