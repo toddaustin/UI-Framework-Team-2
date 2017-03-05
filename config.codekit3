@@ -479,7 +479,7 @@
 		},
 	"\/images\/carousel\/left-dark.png": {
 		"ft": 32768,
-		"iS": 1160,
+		"iS": 1621,
 		"oA": 0,
 		"oAP": "\/images\/carousel\/left-dark.png",
 		"oF": 0,
@@ -495,7 +495,7 @@
 		},
 	"\/images\/carousel\/right-dark.png": {
 		"ft": 32768,
-		"iS": 1166,
+		"iS": 1577,
 		"oA": 0,
 		"oAP": "\/images\/carousel\/right-dark.png",
 		"oF": 0,
@@ -723,6 +723,12 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/stylesheets\/base\/.sass-cache\/23494106b279541a45b2ca464109518011ea55c3\/_page.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/stylesheets\/base\/.sass-cache\/23494106b279541a45b2ca464109518011ea55c3\/_page.scssc",
+		"oF": 0
+		},
 	"\/stylesheets\/base\/_forms.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -800,6 +806,18 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/stylesheets\/components\/.sass-cache\/a6437f01f5ec04268b4efebff214e2e7e443e019\/_variables.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/stylesheets\/components\/.sass-cache\/a6437f01f5ec04268b4efebff214e2e7e443e019\/_variables.scssc",
+		"oF": 0
+		},
+	"\/stylesheets\/components\/.sass-cache\/d93507d9784c8d0a68369142f53ba9dc776f79e4\/_lists.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/stylesheets\/components\/.sass-cache\/d93507d9784c8d0a68369142f53ba9dc776f79e4\/_lists.scssc",
+		"oF": 0
 		},
 	"\/stylesheets\/components\/_accordion.scss": {
 		"aP": 0,

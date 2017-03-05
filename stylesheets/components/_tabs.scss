@@ -1,26 +1,20 @@
 /****** General CSS that applies to entire area containing the tabs *********************/
 
 .tabs-container{
-  /*
-  font-family: Arial, Helvetica, sans-serif;
-  border:1px solid black;
-  background-color:#fffefe;
-  line-height:25px;
-  margin-left:10%;
-  margin-right:10%;
-  padding:100px;
-  width: 960px */
-  position:relative;
-  line-height:25px;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
+  // border:1px solid black;
+  // background-color:#fffefe;
+  // line-height:25px;
+  // margin-left:10%;
+  // margin-right:10%;
+  // padding:100px;
+  // position:relative;
+  // width:960px;
   font-size: 14px;
   box-sizing:content-box;
 }
-.tabs-container * {
-  box-sizing: content-box;
-}
 
-.tabs-container label {
+.tabs-continer label {
    display: block;
   font-size: 14px;
   padding-bottom: 0;
@@ -48,8 +42,9 @@
 .vertical-tabs-2 .display-area{
   display:none;
   position:absolute;
-  padding:50px 30px 24px;;
-  top:55px;
+  width:750px;
+  padding:50px 30px;
+  top:45px;
   border-radius:0 0 1% 1%;
   border:1px solid black;
   border-color:transparent #000 #000 #000;
@@ -140,8 +135,19 @@
   }
 
   .btn{
+    font-weight:bold;
+    font-size:1em;
     float:right;
     width:125px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    padding:5px 0;
+    margin-top:8px;
+    color:#000;
+    border-radius:3%;
+    border:1px solid #212121;
+
   }
 }
 
@@ -150,6 +156,7 @@
 
 div.horizontal-tabs-1,
 div.horizontal-tabs-3{
+
   margin:100px 0;
   position:relative;
   width:auto;
@@ -164,7 +171,7 @@ div.horizontal-tabs-3{
   position:relative;
   float:left;
   text-align:center;
-  width:95px;
+  width:115px;
   height:30px;
   padding:15px 25px;
   margin:0;
@@ -183,39 +190,40 @@ div.horizontal-tabs-3{
   content:"";
   position:absolute;
   display:block;
-  width:208px;
+  width:290px;
   height:55px;
-  left:581px;
+  left:460px;
+  top:-10px;
   border-bottom:1px solid black;
 }
 
 
 .horizontal-tabs-1 label:nth-of-type(1){
   background-color:#5e3676;
-  height:30px;
+  height:50px;
   top:-5px;
 }
 
 .horizontal-tabs-1 label:nth-of-type(2){
 background-color:#633f8a;
-  height:25px;
+  height:45px;
   top:0;
 }
 
 .horizontal-tabs-1 label:nth-of-type(3){
 background-color:#a06fbd;
-  height:22px;
+  height:42px;
   top:3px;
 }
 
 .horizontal-tabs-1 label:nth-of-type(4){
 background-color:#decde8;
-  height:18px;
+  height:38px;
   top:7px;
 }
 
 .horizontal-tabs-1 input:checked + label{
-  height:36px;
+  height:56px;
   top:-11px;
   background-color:#fffefe;
   border:1px solid black;
@@ -241,6 +249,7 @@ background-color:#decde8;
   width:120px;
   height:20px;
   margin-right:5px;
+  line-height:5px;
   border: 0 solid transparent;
   border-bottom:5px solid #bdbdbd;
   color:#bdbdbd;
@@ -271,7 +280,7 @@ background-color:#decde8;
   position:relative;
   height:0px;
   max-width:0em;
-    top:20px;
+    top:15px;
     left:60px;
     transform:translateX(0);
   border:3px solid transparent;
@@ -279,17 +288,17 @@ background-color:#decde8;
 }
 
 #highlight-label-2{
-  top:8px;
+  top:2px;
   left:185px;
 }
 
 #highlight-label-3{
-  top:-4px;
+  top:-10px;
   left:310px;
 }
 
 #highlight-label-4{
-  top:-16px;
+  top:-22px;
   left:435px;;
 }
 
@@ -298,7 +307,7 @@ background-color:#decde8;
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-label-2,
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-label-3,
 .horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-label-4{
-  max-width:8.2em;
+  max-width:8.5em;
     border-color:#9b68b9;
     transform:translateX(-60px);
   transition: max-width 0.5s, transform 0.5s;
@@ -325,7 +334,7 @@ div[class="horizontal-tabs-2"] {
   position:relative;
   height:0px;
   max-width:0px;
-  top:377px;
+  top:396px;
   left:380px;
   transform:translateX(0);
   border:3px solid transparent;;
@@ -333,22 +342,22 @@ div[class="horizontal-tabs-2"] {
 }
 
 #highlight-bottom-2{
-  top:364px;
+  top:384px;
 }
 
 #highlight-bottom-3{
-  top:353px;
+  top:373px;
 }
 
 #highlight-bottom-4{
-  top:341px;
+  top:361px;
 }
 
 .horizontal-tabs-2 input:nth-of-type(1):checked ~ #highlight-bottom-1,
 .horizontal-tabs-2 input:nth-of-type(2):checked ~ #highlight-bottom-2,
 .horizontal-tabs-2 input:nth-of-type(3):checked ~ #highlight-bottom-3,
 .horizontal-tabs-2 input:nth-of-type(4):checked ~ #highlight-bottom-4{
-  max-width:788px;
+  max-width:790px;
   border-color:#9b68b9;
   transform:translateX(-379px);
   transition:max-width 0.5s, transform 0.5s;
@@ -370,7 +379,7 @@ div.horizontal-tabs-3 {
   position:relative;
   float:left;
   text-align:center;
-  width:95px;
+  width:144px;
   height:10px;
   padding:15px 25px;
   margin-right:10px;
@@ -419,17 +428,17 @@ div.horizontal-tabs-3 {
 }
 
 #tabs3-label-top-highlight2{
-  left:295px;
+  left:291px;
   top:-8px;
 }
 
 #tabs3-label-top-highlight3{
-  left:451px;
+  left:445px;
   top:-17px;
 }
 
 #tabs3-label-top-highlight4{
-  left:609px;
+  left:599px;
   top:-24px
 }
 
@@ -465,18 +474,18 @@ div.horizontal-tabs-3 {
 }
 
 #tabs3-label-right-highlight2{
-  left:294px;
+  left:290px;
   top:-10px;
 }
 
 #tabs3-label-right-highlight3{
-  left:450px;
-  top:-17px;
+  left:445px;
+  top:-18px;
 }
 
 #tabs3-label-right-highlight4{
-  left:606px;
-  top:-23px;
+  left:600px;
+  top:-26px;
 }
 
 /*******Tab highlight animation for right of first tab when clicked*********************/
@@ -495,26 +504,26 @@ div.horizontal-tabs-3 {
 
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ #tabs3-label-right-highlight2{
 
-    left:282px;
+    left:278px;
     top:10px;
 
 }
 
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ #tabs3-label-right-highlight3{
 
-    left:437px;
+    left:432px;
     top:1px;
 
 }
 
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ #tabs3-label-right-highlight4{
 
-    left:596px;
+    left:586px;
     top:-6px;
 
 }
 
-/**************Tab highlight animation for bottom of tab 1 third set******************/
+/**************Tab highlight animation for bottom of tabs for third set******************/
 
 div#tabs3-display-bottom-highlight1,
 div#tabs3-display-bottom-highlight2,
@@ -524,7 +533,7 @@ div#tabs3-display-bottom-highlight4{
   height:0px;
   max-width:0px;
   /*width:705px;*/
-  top:380px;
+  top:400px;
   left:0px;
   transform:translateX(0);
   border:1px solid transparent;;
@@ -532,28 +541,28 @@ div#tabs3-display-bottom-highlight4{
 }
 
 div#tabs3-display-bottom-highlight2{
-  top:372px;
+  top:392px;
 }
 
 div#tabs3-display-bottom-highlight3{
-  top:364px;
+  top:384px;
 }
 
 div#tabs3-display-bottom-highlight4{
-  top:356px;
+  top:376px;
 }
 
 .horizontal-tabs-3 input:nth-of-type(1):checked ~ div#tabs3-display-bottom-highlight1,
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-bottom-highlight2,
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-bottom-highlight3,
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-bottom-highlight4{
-  max-width:770px;
+  max-width:710px;
   border-color:#9b68b9;
 
   transition:max-width 0.4s;
 }
 
-/************Tab highlight animation for right of tab 1 third set************************/
+/************Tab highlight animation for right of tabs for third set************************/
 
 div#tabs3-display-right-highlight1,
 div#tabs3-display-right-highlight2,
@@ -566,7 +575,7 @@ div#tabs3-display-right-highlight4,{
   /*width:40px;*/
   max-width:0;
     top:50px;
-    left:690px;
+    left:710px;
     transform:rotate(90deg);
   border:1px solid transparent;
   transition: max-width 0.3s, left 0.3s, top 0.3s, border-color 1s;
@@ -593,23 +602,23 @@ div#tabs3-display-right-highlight4{
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-right-highlight2,
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3,
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4{
-  max-width:330px;
-  left:606px;
-  top:213px;
+  max-width:363px;
+  left:529px;
+  top:217px;
   border-color:#9b68b9;
   transition:max-width 0.6s left 0.6s;
 }
 
 .horizontal-tabs-3 input:nth-of-type(2):checked ~ div#tabs3-display-right-highlight2{
-  top:205px;
+  top:210px;
 }
 
 .horizontal-tabs-3 input:nth-of-type(3):checked ~ div#tabs3-display-right-highlight3{
-  top:196px;
+  top:201px;
 }
 
 .horizontal-tabs-3 input:nth-of-type(4):checked ~ div#tabs3-display-right-highlight4{
-  top:188px;
+  top:193px;
 }
 
 /****** VERTICAL TABS SEcTION *************************************************/
@@ -630,6 +639,7 @@ div.vertical-tabs-2{
 
 .vertical-tabs-1 .display-area{
   border-color:#000 #000 #000 transparent;
+  border-radius-bottom-left:0;
 }
 
 
@@ -639,9 +649,10 @@ div.vertical-tabs-2{
   display:block;
   text-align:right;
   width:95px;
-  height:20px;
-  left:-145px;
-  top:55px;
+  height:50px;
+  line-height:2em;
+  left:-125px;
+  top:45px;
   padding:15px 25px;
   margin:0;
   border:1px solid black;
@@ -655,26 +666,26 @@ div.vertical-tabs-2{
 
 .vertical-tabs-1 label:nth-of-type(1){
   background-color:#5e3676;
-  width:100px;
-  left:-149px;
+  width:135px;
+  left:-132px;
 }
 
 .vertical-tabs-1 label:nth-of-type(2){
 background-color:#633f8a;
-  width:90px;
-  left:-139px;
+  width:130px;
+  left:-127px;
 }
 
 .vertical-tabs-1 label:nth-of-type(3){
 background-color:#a06fbd;
-  width:80px;
-  left:-129px;
+  width:120px;
+  left:-117px;
 }
 
 .vertical-tabs-1 label:nth-of-type(4){
 background-color:#decde8;
-  width:70px;
-  left:-119px;
+  width:110px;
+  left:-107px;
 }
 
 .vertical-tabs-1 input:checked + label{
@@ -693,10 +704,11 @@ background-color:#decde8;
   position:absolute;
   display:block;
   width:125px;
-  height:122px;
+  height:161px;
   left:2px;
-  top:262px;
+  top:244px;
   border-left:1px solid #000;
+  border-radius-bottom-left:3%;
 }
 
 
@@ -751,7 +763,7 @@ background-color:#decde8;
   max-width:0;
   /*width:114px;*/
   height:0px;
-  top:-82px;
+  top:-20px;
     /*left:-114px;*/
     left:-1px;
   /*border:1px solid #bdbdbd;*/
@@ -763,15 +775,15 @@ background-color:#decde8;
 }
 
 #vertical-bottom-label-highlight2{
-  top:-30px;
+  top:12px;
 }
 
 #vertical-bottom-label-highlight3{
-  top:22px;
+  top:44px;
 }
 
 #vertical-bottom-label-highlight4{
-  top:74px;
+  top:76px;
 }
 
 .vertical-tabs-2 input:nth-of-type(1):checked ~ #vertical-bottom-label-highlight1,
