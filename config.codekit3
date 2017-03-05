@@ -311,6 +311,12 @@
 		"oAP": "\/examples\/paper\/paper.html",
 		"oF": 0
 		},
+	"\/examples\/popover\/popover.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/popover\/popover.html",
+		"oF": 0
+		},
 	"\/examples\/progress-bars\/progress.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -1010,6 +1016,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/stylesheets\/components\/_paper.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/stylesheets\/components\/_popover.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/stylesheets\/components\/_popover.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
