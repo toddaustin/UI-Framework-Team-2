@@ -1,0 +1,66 @@
+//--------------------------------------------------------------
+// BADGES
+//--------------------------------------------------------------
+$badge-height: 30px !default;
+$badge-width: 30px !default;
+$badge-bg-color: #FFFFFF !default;
+$badge-border-color: $purple-light !default;
+$badge-font-color: $purple-light !default;
+$badge-font-color-hover: $white-light-off;
+$badge-font-size: $font-size-large !default;
+$badge-bg-color-dark: $purple-light !default;
+$badge-font-color-light: $white-light-off !default;
+
+.badge {
+	align-items: center;
+	border: 1px solid $purple-light;
+	border-radius: 50%;
+	color: $badge-font-color;
+	cursor: pointer;
+	display: inline-flex;
+	height: $badge-height;
+	justify-content: center;
+	transition: background 0.3s, color 0.3s;
+	width: $badge-width;
+
+	&:hover {
+		background-color: $badge-bg-color-dark;
+		color: $badge-font-color-hover;
+	}
+
+	&--dark {
+		background-color: $badge-bg-color-dark;
+		color: $badge-font-color-light;
+
+		&:hover {
+			background-color: $badge-bg-color;
+			color: $badge-font-color;
+		}
+	}
+
+	&--square {
+		border-radius: 2px;
+	}
+
+	&--pill {
+		border-radius: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: auto;
+
+		.badge__icon {
+			margin-right: 5px;
+		}
+	}
+
+	&--rectangle {
+		border-radius: 2px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: auto;
+
+		.badge__icon {
+			margin-right: 5px;
+		}
+	}
+}
