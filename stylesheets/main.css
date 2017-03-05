@@ -1416,8 +1416,7 @@ div.vertical-tabs-2 {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 10px;
-  box-sizing: border-box;
-  border: 1px solid green; }
+  box-sizing: border-box; }
 
 .grid-container h1 {
   text-align: center; }
@@ -1479,8 +1478,9 @@ div.vertical-tabs-2 {
   margin: 0 auto;
   padding: 0 10px;
   box-sizing: border-box; }
-  .paper-shadows h1 {
-    text-align: center; }
+  .paper-shadows h1, .paper-shadows h3 {
+    text-align: center;
+    margin-top: 20px; }
 
 .paper-shadows div {
   display: inline-block;
@@ -1517,6 +1517,138 @@ div.vertical-tabs-2 {
   margin-left: 35px;
   box-shadow: 0px 11px 40px 5px #888888; }
 
+/*****Popover Section CSS***********************/
+.popover {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  /**********Menu appears from center of button***************/
+  /***********Menu appears to the right of button*************/
+  /*********Menu appears to the left of button*******************/
+  /********Column grid width containing each popover element***********/
+  /*******Custom configuration for the popover button being used***************/
+  /*********Custom configuration for the pop up menu****************************/
+  /*************Default position for slide down animations ***********************/
+  /************Default position for slide up from center of button***************************/
+  /**********Default position for slide up and to the side ********************/
+  /***********Animation settings when button clicked (given focus)******************/
+  /**********Animation for sliding down all sides********************************/
+  /**************Animation for sliding up from center***************************/
+  /******************Animation for left/right side slide up *********************/ }
+  .popover h1, .popover h3 {
+    text-align: center; }
+  .popover .popover-menu-center-drop {
+    position: absolute;
+    margin-top: 20px; }
+    @media (max-width: 360px) {
+      .popover .popover-menu-center-drop {
+        margin-top: 30px;
+        margin-left: -10px; } }
+  .popover .popover-menu-right-drop {
+    position: absolute;
+    margin-left: 154px;
+    margin-top: -19px; }
+    @media (max-width: 600px) {
+      .popover .popover-menu-right-drop {
+        margin-left: 100px; } }
+  .popover .popover-menu-left-drop {
+    position: absolute;
+    margin-left: -155px;
+    margin-top: -19px; }
+  .popover .two-col-units {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0 85px 150px 70px; }
+    @media (min-width: 601px) and (max-width: 1000px) {
+      .popover .two-col-units {
+        width: 20vw;
+        margin: 50px 30px 150px 100px; } }
+    @media (max-width: 600px) {
+      .popover .two-col-units {
+        width: 40vw;
+        margin: 0 100px 200px 90px; } }
+  .popover .pop-down {
+    display: block;
+    color: black;
+    position: relative;
+    width: 102%;
+    border: 1px solid #6a497d; }
+    .popover .pop-down:hover {
+      background-color: black; }
+  .popover .pop-down:focus + .popover-menu {
+    border-width: 1px;
+    max-height: 500px;
+    transition: max-height 0.5s; }
+  .popover div.popover-menu {
+    postion: relative;
+    overflow: hidden;
+    border: 0px solid #a06fbd;
+    padding: 0;
+    top: 20px;
+    max-width: 300px;
+    min-width: 102%;
+    max-height: 0;
+    transition: max-height 0.5s, border-width 0.5s; }
+    .popover div.popover-menu a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      margin: 0;
+      line-height: 3em;
+      padding: 0 49px; }
+      .popover div.popover-menu a:hover {
+        background-color: #D3BECF; }
+  .popover .slide {
+    transform: translateY(0px);
+    transition: transform 0.5s; }
+  .popover .center-up {
+    transform: translateY(-210px);
+    transition: transform 0.5s; }
+    @media (max-width: 360px) {
+      .popover .center-up {
+        transform: translateY(-260px); } }
+    @media (min-width: 361px) and (max-width: 1000px) {
+      .popover .center-up {
+        transform: translateY(-240px); } }
+  .popover .side-up {
+    transform: translateY(0);
+    transition: transform 0.5s; }
+  .popover .pop-down:focus + .slide {
+    animation: slide-down 0.5s; }
+@keyframes slide-down {
+  from {
+    transform: translateY(-200px); }
+  to {
+    transform: translateY(0px); } }
+  .popover .pop-down:focus + .center-up {
+    animation: slide-up 0.5s; }
+@keyframes slide-up {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-210px); }
+  @media (max-width: 360px) {
+    from {
+      transform: translateY(0); }
+    to {
+      transform: translateY(-260px); } }
+  @media (min-width: 361px) and (max-width: 1000px) {
+    from {
+      transform: translateY(0); }
+    to {
+      transform: translateY(-240px); } } }
+  .popover .pop-down:focus + .side-up {
+    animation: slide-side-up 0.5s; }
+@keyframes slide-side-up {
+  from {
+    transform: translateY(100px); }
+  to {
+    transform: translateY(0); } }
 .buttons-container {
   margin: 50px auto;
   max-width: 1066px; }
