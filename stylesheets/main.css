@@ -3188,6 +3188,52 @@ input:-ms-input-placeholder {
   margin-bottom: 25px;
 }
 
+.badge {
+  align-items: center;
+  border: 1px solid #a06fbd;
+  border-radius: 50%;
+  color: #a06fbd;
+  cursor: pointer;
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+  width: 30px;
+}
+.badge:hover {
+  background-color: #a06fbd;
+  color: #fffefe;
+}
+.badge--dark {
+  background-color: #a06fbd;
+  color: #fffefe;
+}
+.badge--dark:hover {
+  background-color: #FFFFFF;
+  color: #a06fbd;
+}
+.badge--square {
+  border-radius: 2px;
+}
+.badge--pill {
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: auto;
+}
+.badge--pill .badge__icon {
+  margin-right: 5px;
+}
+.badge--rectangle {
+  border-radius: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: auto;
+}
+.badge--rectangle .badge__icon {
+  margin-right: 5px;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
