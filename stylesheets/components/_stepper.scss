@@ -1,5 +1,6 @@
 #steppers-container{
   position:relative;
+  height: 650px;
 }
 
 .stepper-linear-horizontal,
@@ -7,16 +8,13 @@
   position:relative;
   width:100%;
   margin-top:50px;
-  h1{
-    margin-left:37%;
-  }
 }
 
 /*******************Stepper icons and text ********************************/
 .step-view{
   position:relative;
-  width:80%;
-  left:300px;
+  width:100%;
+  left:0px;
 }
 .step-view > div.stepper-text{
   display:inline-block;

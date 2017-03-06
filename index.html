@@ -1391,6 +1391,132 @@
                                 </div>
                             </div>
                         </section>
+                        <section id="stepper">
+                            <header class="component-section">
+                                <h2>Stepper</h2>
+                            </header>
+                            <div class="component-container">
+                        <div id="steppers-container">
+                            <div class="stepper-linear-horizontal">
+                                <h3>Horizontal Stepper</h3>
+                                <input type="checkbox" id="stepper-step3">
+                                <input type="checkbox" id="stepper-step1">
+                                <input type="checkbox" id="stepper-step2">
+                                <button class="btn btn-primary stepper-button-back" disabled>
+                                    <label class="stepper-back">Back</label>
+                                </button>
+                                <button class="btn btn-primary stepper-button-back">
+                                    <label for="stepper-step1" class="stepper-back">Back</label>
+                                </button>
+                                <button class="btn btn-primary stepper-button-back">
+                                    <label for="stepper-step2" class="stepper-back">Back</label>
+                                </button>
+                                <button class="btn btn-primary stepper-button-next">
+                                    <label for="stepper-step1" class="stepper-next">Next</label>
+                                </button>
+                                <button class="btn btn-primary stepper-button-next">
+                                    <label for="stepper-step2" class="stepper-next">Next</label>
+                                </button>
+                                <button class="btn btn-primary stepper-button-next">
+                                    <label for="stepper-step3" class="stepper-next">Finish</label>
+                                </button>
+                                <div class="stepper-instruction">Complete Step One...</div>
+                                <div class="stepper-instruction">Complete Step Two...</div>
+                                <div class="stepper-instruction">Complete Step Three...</div>
+                                <div class="stepper-complete">Process Complete</div>
+                                <div class="step-view">
+                                    <span class="fa-stack fa-lg stepper-number">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <div class="stepper-one stepper-inside-number">1</div>
+                              </span>
+                                    <span class="fa-stack fa-lg stepper-check" id="stepper-check1">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <i class="fa fa-check fa-stack-1x"></i>
+                              </span>
+                                    <div class="stepper-text" id="step1-text">Step One</div>
+                                    <div class="stepper-line"></div>
+                                    <span class="fa-stack fa-lg stepper-number">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <div class="stepper-two stepper-inside-number">2</div>
+                              </span>
+                                    <span class="fa-stack fa-lg stepper-check">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <i class="fa fa-check fa-stack-1x"></i>
+                              </span>
+                                    <div class="stepper-text" id="step2-text">Step Two</div>
+                                    <div class="stepper-line"></div>
+                                    <span class="fa-stack fa-lg stepper-number">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <div class="stepper-three stepper-inside-number">3</div>
+                              </span>
+                                    <span class="fa-stack fa-lg stepper-check">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <i class="fa fa-check fa-stack-1x"></i>
+                              </span>
+                                    <div class="stepper-text" id="step3-text">Step Three</div>
+                                </div>
+                            </div>
+                            <div class="stepper-non-linear-horizontal">
+                                <h3>Non-Linear Horizontal Stepper</h3>
+                                <input type="radio" name="non-linear-stepper-step" id="stepper2-step1" checked>
+                                <input type="radio" name="non-linear-stepper-step" id="stepper2-step2">
+                                <input type="radio" name="non-linear-stepper-step" id="stepper2-step3">
+                                <div class="step-view">
+                                    <button class="btn button-secondary">
+                                        <label for="stepper2-step1">
+                                            <span class="fa-stack fa-lg stepper-number">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <div class="stepper-one stepper-inside-number">1</div>
+                              </span>
+                                            <div class="stepper-text" id="stepper2-step1-text">Step One</div>
+                                        </label>
+                                    </button>
+                                    <div class="stepper-line"></div>
+                                    <button class="btn button-secondary">
+                                        <label for="stepper2-step2">
+                                            <span class="fa-stack fa-lg stepper-number">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <div class="stepper-one stepper-inside-number">2</div>
+                              </span>
+                                            <div class="stepper-text" id="stepper2-step2-text">Step Two</div>
+                                        </label>
+                                    </button>
+                                    <div class="stepper-line"></div>
+                                    <button class="btn button-secondary">
+                                        <label for="stepper2-step3">
+                                            <span class="fa-stack fa-lg stepper-number">
+                                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                                <div class="stepper-one stepper-inside-number">3</div>
+                              </span>
+                                            <div class="stepper-text" id="stepper2-step3-text">Step Three</div>
+                                        </label>
+                                    </button>
+                                    <button class="btn btn-primary stepper-button-back" id="back0" disabled>
+                                        <label class="stepper-back">Back</label>
+                                    </button>
+                                    <button class="btn btn-primary stepper-button-back">
+                                        <label for="stepper2-step1" class="stepper-back">Back</label>
+                                    </button>
+                                    <button class="btn btn-primary stepper-button-back">
+                                        <label for="stepper2-step2" class="stepper-back">Back</label>
+                                    </button>
+                                    <button class="btn btn-primary stepper-button-next" id="next2">
+                                        <label for="stepper2-step2" class="stepper-next">Next</label>
+                                    </button>
+                                    <button class="btn btn-primary stepper-button-next">
+                                        <label for="stepper2-step3" class="stepper-next">Next</label>
+                                    </button>
+                                    <button class="btn btn-primary stepper-button-next" disabled>
+                                        <label for="stepper2-step3" class="stepper-next">Next</label>
+                                    </button>
+                                    <div class="stepper-instruction">Complete Step One...</div>
+                                    <div class="stepper-instruction">Complete Step Two...</div>
+                                    <div class="stepper-instruction">Complete Step Three...</div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </section>
                         <section id="tables">
                             <header class="component-section">
                                 <h2>Tables</h2>
@@ -1938,6 +2064,9 @@
                         </li>
                         <li class="menu-item text-align-right">
                             <a href="#progress" class="menu-link uppercase menu-link-border-right">Progress Bar</a>
+                        </li>
+                        <li class="menu-item text-align-right">
+                            <a href="#stepper" class="menu-link uppercase menu-link-border-right">Stepper</a>
                         </li>
                         <li class="menu-item text-align-right">
                             <a href="#tables" class="menu-link uppercase menu-link-border-right">Tables</a>
