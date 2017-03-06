@@ -1,0 +1,332 @@
+#steppers-container{
+  position:relative;
+}
+
+.stepper-linear-horizontal,
+.stepper-non-linear-horizontal{
+  position:relative;
+  width:100%;
+  margin-top:50px;
+  h1{
+    margin-left:37%;
+  }
+}
+
+/*******************Stepper icons and text ********************************/
+.step-view{
+  position:relative;
+  width:80%;
+  left:300px;
+}
+.step-view > div.stepper-text{
+  display:inline-block;
+  color:#bdbdbd;
+}
+
+/*************Horizontal NON-LINEAR stepper setting **************************/
+
+.stepper-non-linear-horizontal > .step-view > button{
+  color:#bdbdbd; 
+  font-size:0.3em;
+  width:200px;
+  height:80px;
+  div.stepper-text{
+    display:inline-block;
+  }
+
+  > label{
+    border:1px solid white;
+    width:200px;
+    height:80px;
+    left:-25px;
+    top:-12px;
+    padding-top:16px;
+
+    > .stepper-text{
+        color:$purple-dark-desat;
+        font-style:italic;
+    }
+
+  }
+
+}
+
+
+/*******First step text starts highlighted and bold to signal current step******/
+
+.step-view > #step1-text{
+  color:$purple-dark-desat;
+  font-weight:600;
+}
+
+.stepper-line{
+  position:relative;
+  display:inline-block;
+  width:20%;
+  height:0;
+  border:1px solid #bdbdbd;
+}
+
+/************Horizontal NON-LINEAR stepper line setting*******************/
+
+.stepper-non-linear-horizontal > .step-view > .stepper-line{
+	width:10%;
+	top:-13px;
+}
+
+.stepper-inside-number{
+  position:absolute;
+  left:13px;
+}
+
+/******************************************TEST****************************************
+.stepper-non-linear-horizontal >  input[id*="stepper"]{
+	display:none;
+}******************************************************************************************/
+
+.stepper-non-linear-horizontal > .step-view  label{
+    position:relative;
+}
+
+/*******Horizontal NON-LINEAR .stepper-number alignment******************/
+
+.stepper-non-linear-horizontal > .step-view .stepper-inside-number{
+	left:18px;
+	font-size:0.8em;
+}
+
+
+.stepper-number{
+  position:absolute;
+  left:0px;
+}
+
+
+
+span.stepper-check{
+  display:none;
+  left:0px;
+}
+
+
+/***********Instructions text for each step**************************/
+
+.stepper-linear-horizontal .stepper-instruction,
+.stepper-non-linear-horizontal .stepper-instruction{
+  position:absolute;
+  top:150px;
+  left:42%;
+  display:none;
+}
+
+.stepper-non-linear-horizontal .stepper-instruction{
+  position:absolute;
+  margin-top:-140px;
+  left:400px;
+}
+
+/*****Settings for non-linear horizontal stepper***********************/
+
+.stepper-non-linear-horizontal .stepper-instruction{
+  top:250px;
+	
+}
+
+/**********Navigation buttons for the stepper*********************/
+
+label.stepper-next, label.stepper-back,
+.stepper-non-linear-horizontal button > label.stepper-next,
+.stepper-non-linear-horizontal button > label.stepper-back{
+  position:relative;
+  display:block;
+  width:100px; height:50px;
+  left:-25px;
+  top:-13px;
+  padding-top:13px;
+}
+
+.stepper-non-linear-horizontal button > label.stepper-next{
+	left:-26px;
+}
+
+.stepper-non-linear-horizontal button > label.stepper-back{
+
+	left:-26px;
+}
+
+
+button.stepper-button-next,
+button.stepper-button-back{
+  display:none;
+  position:absolute;
+  width:100px;
+  height:50px;
+  left:50%;
+  top:200px;
+}
+
+.stepper-non-linear-horizontal button.stepper-button-next,
+.stepper-non-linear-horizontal button.stepper-button-back{
+  width:100px;
+  height:50px;
+  top:150px;
+  margin-bottom:200px;
+}
+
+.stepper-linear-horizontal button.stepper-button-back{
+  left:40%;
+}
+
+.stepper-non-linear-horizontal button.stepper-button-back{
+  left:25%;
+}
+
+.stepper-non-linear-horizontal button.stepper-button-next{
+  left:40%;
+}
+
+.stepper-complete{
+  position:absolute;
+  display:none;
+  left:42%;
+  top:200px;
+  font-size:$font-size-large;
+  font-weight:700;
+  color:$purple-medium;  
+}
+
+.stepper-linear-horizontal .fa-circle{
+  color:#bdbdbd;
+}
+
+
+/*****First step visual starts highlighted to signal current step*********/
+
+.stepper-linear-horizontal span[class*="stepper-number"]:nth-of-type(1) > .fa-circle,
+.stepper-linear-horizontal span[class*="stepper-check"] > .fa-circle{
+  color:$purple-medium;
+}
+
+.fa-check{
+  color:$white-med-off;
+}
+
+.stepper-inside-number{
+  color:$white-mid;
+  font-size:0.8em;
+}
+
+/*******Horizontal Linear Stepper button settings *****************************/
+
+div.stepper-linear-horizontal > input[id*="step1"]:not(:checked) ~ button:nth-of-type(4),
+div.stepper-linear-horizontal > input[id*="step1"]:not(:checked) ~ button:nth-of-type(1),
+div.stepper-linear-horizontal > input[id*="step1"]:not(:checked) ~ div.stepper-instruction:nth-of-type(1),
+
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ button:nth-of-type(2),
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ button:nth-of-type(5),
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ div.stepper-instruction:nth-of-type(2),
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ .step-view > span:nth-of-type(2),
+
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ button:nth-of-type(6),
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ button:nth-of-type(3),
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ div.stepper-instruction:nth-of-type(3),
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ .step-view > span:nth-of-type(4),
+
+div.stepper-linear-horizontal > input[id*="step3"]:checked ~ .stepper-complete,
+div.stepper-linear-horizontal > input[id*="step3"]:checked ~ .step-view > span:nth-of-type(6),
+
+/***********Horizontal NON-LINEAR Stepper button settings *******************************/
+.stepper-non-linear-horizontal > input[id*="step1"]:checked ~ .step-view >  button:nth-of-type(4),
+.stepper-non-linear-horizontal > input[id*="step1"]:checked ~ .step-view >  button:nth-of-type(7),
+.stepper-non-linear-horizontal > input[id*="step2"]:checked ~ .step-view >  button:nth-of-type(5),
+.stepper-non-linear-horizontal > input[id*="step2"]:checked ~ .step-view >  button:nth-of-type(8),
+.stepper-non-linear-horizontal > input[id*="step3"]:checked ~ .step-view >  button:nth-of-type(6),
+.stepper-non-linear-horizontal > input[id*="step3"]:checked ~ .step-view >  button:nth-of-type(9),
+
+.stepper-non-linear-horizontal > input[id*="step1"]:checked ~ .step-view > .stepper-instruction:nth-of-type(3),
+.stepper-non-linear-horizontal > input[id*="step2"]:checked ~ .step-view > .stepper-instruction:nth-of-type(4),
+.stepper-non-linear-horizontal > input[id*="step3"]:checked ~ .step-view > .stepper-instruction:nth-of-type(5){
+
+  display:inline-block; 
+}
+
+/*************Horizontal Linear settings *****************************************************/
+
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ button:nth-of-type(4),
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ button:nth-of-type(1),
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ .step-view > span:nth-of-type(1),
+
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ button:nth-of-type(5),
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ button:nth-of-type(2),
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ div.stepper-instruction:nth-of-type(2),
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ .step-view > span:nth-of-type(3),
+
+
+div.stepper-linear-horizontal > input[id*="step3"]:checked ~ button[class*="stepper-button"],
+div.stepper-linear-horizontal > input[id*="step3"]:checked ~ div.stepper-instruction:nth-of-type(3),
+div.stepper-linear-horizontal > input[id*="step3"]:checked ~ .step-view > span:nth-of-type(5){
+
+  display:none;
+}
+
+/**************Horizontal Linear stepper settings ******************************************************/
+
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ .step-view > #step2-text,
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ .step-view > #step3-text,
+
+/**************Horizontal NON-LINEAR stepper settings *************************************************/
+
+.stepper-non-linear-horizontal > input[id*="step1"]:checked ~ .step-view >  button:nth-of-type(1) .stepper-text,
+.stepper-non-linear-horizontal > input[id*="step2"]:checked ~ .step-view >  button:nth-of-type(2) .stepper-text,
+.stepper-non-linear-horizontal > input[id*="step3"]:checked ~ .step-view >  button:nth-of-type(3) .stepper-text{
+
+  font-weight:600;
+  color:$purple-dark-desat;
+}
+
+/**************Horizontal Linear Stepper Settings****************************************/
+
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ .step-view > #step1-text,
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ .step-view > #step2-text,
+div.stepper-linear-horizontal > input[id*="step3"]:checked ~ .step-view > #step3-text,
+
+/***************Horizontal NON-LINEAR Stepper Settings***************************************/
+
+div.stepper-non-linear-horizontal > input[id*="step1"]:checked ~ .step-view > #stepper-step1-text,
+div.stepper-non-linear-horizontal > input[id*="step2"]:checked ~ .step-view > #stepper-step2-text,
+div.stepper-non-linear-horizontal > input[id*="step3"]:checked ~ .step-view > #stepper-step3-text{
+
+  font-style:italic;
+  font-weight:normal;
+}
+
+/***************************Horizontal Linear Stepper Settings *********************************************/
+
+div.stepper-linear-horizontal > input[id*="step1"]:checked ~ .step-view > span:nth-of-type(3) > .fa-circle,
+div.stepper-linear-horizontal > input[id*="step2"]:checked ~ .step-view > span:nth-of-type(5) > .fa-circle,
+
+/*****************************NON-LINEAR STEPPER SETTING *********************/
+.stepper-non-linear-horizontal > input[id*="step1"]:checked ~ .step-view > button:nth-of-type(1) span > .fa-circle,
+.stepper-non-linear-horizontal > input[id*="step2"]:checked ~ .step-view > button:nth-of-type(2) span > .fa-circle,
+.stepper-non-linear-horizontal > input[id*="step3"]:checked ~ .step-view > button:nth-of-type(3) span > .fa-circle{
+  color:$purple-medium;
+}
+
+/**************************Horizontal NON-LINEAR Stepper Settings *******************************************/
+
+div.stepper-non-linear-horizontal > input[id*="step1"]:not(:checked) ~ .step-view > button:nth-of-type(2) > span > .fa-circle,
+div.stepper-non-linear-horizontal > input[id*="step2"]:not(:checked) ~ .step-view > button:nth-of-type(3) > span > .fa-circle{
+  color:#bdbdbd;
+}
+
+.stepper-non-linear-horizontal{
+  position:relative;
+  width:100%;
+  top:230px;
+  margin-top:50px;
+  h1{
+    margin-left:37%;
+  }
+}
+
+
