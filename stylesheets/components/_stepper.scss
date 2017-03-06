@@ -120,7 +120,7 @@ span.stepper-check{
 .stepper-non-linear-horizontal .stepper-instruction{
   position:absolute;
   margin-top:-140px;
-  left:400px;
+  /*left:400px; */
 }
 
 /*****Settings for non-linear horizontal stepper***********************/
@@ -159,7 +159,7 @@ button.stepper-button-back{
   position:absolute;
   width:100px;
   height:50px;
-  left:50%;
+  left:40%;
   top:200px;
 }
 
@@ -172,7 +172,7 @@ button.stepper-button-back{
 }
 
 .stepper-linear-horizontal button.stepper-button-back{
-  left:35%;
+  left:25%;
 }
 
 .stepper-non-linear-horizontal button.stepper-button-back{
