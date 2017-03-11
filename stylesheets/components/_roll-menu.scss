@@ -1,0 +1,269 @@
+//--------------------------------------------------------------
+// ROLL MENU
+//--------------------------------------------------------------
+$roll-height: 90px;
+$roll-width: 90px;
+$roll-item-space: 10px;
+$roll-hover-color: rgba(0,0,0, 0.5);
+$roll-text-color: #fff;
+$roll-trigger-background: $purple-medium;
+
+.container {
+	margin: 0 auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+.roll {
+	height: $roll-height;
+	position: relative;
+	width: $roll-width;
+}
+
+.roll__menu {
+	align-items: center;
+	border-radius: 50%;
+	display: flex;
+	height: $roll-height;
+	width: $roll-width;
+	justify-content: center;
+	list-style: none;
+}
+
+.roll__item {
+	border-radius: 50%;
+	height: $roll-height;
+	position: absolute;
+	width: $roll-width;
+	z-index: 1;
+
+	&:before {
+		background: $roll-hover-color;
+		border-radius: 50%;
+		bottom: 0;
+		content: '';
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity 0.3s;
+	}
+
+	&:hover {
+
+		.roll__item--text {
+			color: $roll-text-color;
+			opacity: 1;
+			transition: opacity 0.3s 0.3s;
+		}
+	}
+
+	&:hover:before {
+		opacity: 1;
+	}
+}
+
+.roll__item--image {
+	border-radius: 50%;
+}
+
+.roll__item--text {
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.roll__trigger {
+	display: none;
+}
+
+.roll__trigger--label {
+	align-items: center;
+	background: $roll-trigger-background;
+	border-radius: 50%;
+	color: $white-light-off;
+	font-size: $font-size-base;
+	display: flex;
+	cursor: pointer;
+	height: $roll-height;
+	justify-content: center;
+	padding: 0;
+	position: absolute;
+	width: $roll-width;
+	transition: background 0.3s;
+	z-index: 5;
+
+	&:hover {
+		background: $purple-dark-desat;
+	}
+}
+
+.roll__trigger:checked + .roll__trigger--label {
+	background: $purple-dark-desat;
+}
+
+.roll__trigger ~ .roll__menu {
+
+	> .roll__item--1 {
+		animation: roll-1-start 0.5s 0s 1 normal forwards;
+	}
+
+	> .roll__item--2 {
+		animation: roll-2-start 0.5s 0s 1 normal forwards;
+	}
+
+	> .roll__item--3 {
+		animation: roll-3-start 0.5s 0s 1 normal forwards;
+	}
+
+	> .roll__item--4 {
+		animation: roll-4-start 0.5s 0s 1 normal forwards;
+	}
+
+	> .roll__item--5 {
+		animation: roll-5-tart 0.5s 0s 1 normal forwards;
+	}
+
+	> .roll__item--6 {
+		animation: roll-6-start 0.5s 0s 1 normal forwards;
+	}
+}
+
+.roll__trigger:checked ~ .roll__menu {
+
+	> .roll__item--1 {
+		animation: roll-1 0.4s 0.3s 1 normal forwards;
+	}
+
+	> .roll__item--2 {
+		animation: roll-2 0.4s 0.4s 1 normal forwards;
+	}
+
+	> .roll__item--3 {
+		animation: roll-3 0.4s 0.5s 1 normal forwards;
+	}
+
+	> .roll__item--4 {
+		animation: roll-4 .4s 0.6s 1 normal forwards;
+	}
+
+	> .roll__item--5 {
+		animation: roll-5 .4s 0.7s 1 normal forwards;
+	}
+
+	> .roll__item--6 {
+		animation: roll-6 .4s 0.8s 1 normal forwards;
+	}
+}
+
+@keyframes roll-1-start {
+	0% {
+		transform: translateX($roll-width + $roll-item-space);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes roll-2-start {
+	0% {
+		transform: translateX(-$roll-width + $roll-item-space);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes roll-3-start {
+	0% {
+		transform: translateX(($roll-width * 2) + $roll-item-space);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes roll-4-start {
+	0% {
+		transform: translateX(-($roll-width * 2) + $roll-item-space);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes roll-5-start {
+	0% {
+		transform: translateX(($roll-width * 3) + $roll-item-space);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes roll-6-start {
+	0% {
+		transform: translateX(-($roll-width * 3) + $roll-item-space);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes roll-1 {
+	0% {
+		transform: translateX(0) rotate(0);
+	}
+	100% {
+		transform: translateX($roll-width + $roll-item-space) rotate(360deg);
+	}
+}
+
+@keyframes roll-2 {
+	0% {
+		transform: translateX(0) rotate(0);
+	}
+	100% {
+		transform: translateX(-$roll-width - $roll-item-space) rotate(360deg);
+	}
+}
+
+@keyframes roll-3 {
+	0% {
+		transform: translateX(0) rotate(0);
+	}
+	100% {
+		transform: translateX(($roll-width * 2) + ($roll-item-space * 2)) rotate(360deg);
+	}
+}
+
+@keyframes roll-4 {
+	0% {
+		transform: translateX(0) rotate(0);
+	}
+	100% {
+		transform: translateX(-($roll-width * 2) - ($roll-item-space * 2)) rotate(360deg);
+	}
+}
+
+@keyframes roll-5 {
+	0% {
+		transform: translateX(0) rotate(0);
+	}
+	100% {
+		transform: translateX(($roll-width * 3) + ($roll-item-space * 3)) rotate(360deg);
+	}
+}
+
+@keyframes roll-6 {
+	0% {
+		transform: translateX(0) rotate(0);
+	}
+	100% {
+		transform: translateX(-($roll-width * 3) - ($roll-item-space * 3)) rotate(360deg);
+	}
+}
